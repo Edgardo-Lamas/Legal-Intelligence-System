@@ -1,0 +1,68 @@
+/* Split Layout for Visual Learning */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    position: relative;
+}
+
+/* On Desktop, create the 2-column grid */
+@media (min-width: 1024px) {
+    .split-layout {
+        grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+        align-items: start;
+    }
+}
+
+.split-layout__content {
+    /* Ensure content doesn't overflow */
+    min-width: 0;
+}
+
+.split-layout__visuals {
+    /* Sticky behavior for the right column */
+    position: sticky;
+    top: var(--space-8);
+    /* Height limit to ensure scrolling if visual content is too tall */
+    max-height: calc(100vh - var(--space-16));
+    overflow-y: auto;
+
+    /* Visual styling for the container */
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+
+    /* Start hidden on mobile if desired, or stack below */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.visual-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.visual-card__title {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+    font-weight: var(--font-weight-bold);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: var(--space-2);
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.visual-card__content {
+    /* Flexible content area for charts/diagrams */
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
