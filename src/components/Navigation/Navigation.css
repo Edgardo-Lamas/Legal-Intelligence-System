@@ -1,0 +1,135 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--color-bg-nav);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.navigation__header {
+    padding: var(--space-6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navigation__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-nav-active);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.navigation__subtitle {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.navigation__menu {
+    flex: 1;
+    padding: var(--space-4) 0;
+    list-style: none;
+}
+
+.navigation__item {
+    margin: 0;
+}
+
+.navigation__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-6);
+    color: var(--color-text-nav);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.navigation__link:hover {
+    background-color: var(--color-bg-nav-hover);
+    color: var(--color-text-nav-active);
+}
+
+.navigation__link--active {
+    background-color: var(--color-bg-nav-hover);
+    color: var(--color-text-nav-active);
+    border-left-color: var(--color-accent);
+}
+
+.navigation__icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.navigation__link--active .navigation__icon,
+.navigation__link:hover .navigation__icon {
+    opacity: 1;
+}
+
+.navigation__footer {
+    padding: var(--space-4) var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navigation__version {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Mobile Navigation Toggle */
+.navigation__toggle {
+    display: none;
+    position: fixed;
+    top: var(--space-4);
+    left: var(--space-4);
+    z-index: 101;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-nav);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--color-text-nav-active);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navigation {
+        transform: translateX(-100%);
+        transition: transform var(--transition-base);
+    }
+
+    .navigation--open {
+        transform: translateX(0);
+    }
+
+    .navigation__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navigation__overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
+
+    .navigation--open+.navigation__overlay {
+        display: block;
+    }
+}
