@@ -4,6 +4,7 @@ import '../../styles/content.css'
 const sections = [
     { id: 'core-concepts', title: 'Core Concepts' },
     { id: 'models-vs-agents', title: 'Modelos vs Agentes' },
+    { id: 'chatgpt-vs-gemini', title: 'Comparativa: ChatGPT vs Gemini' },
     { id: 'system-architectures', title: 'System Architectures' },
     { id: 'validation-reasoning', title: 'Validation & Reasoning Criteria' },
     { id: 'risks-errors', title: 'Risks, Errors & Bad Practices' },
@@ -97,6 +98,86 @@ function Foundations() {
                     </article>
                 </section>
 
+
+
+                <section id="chatgpt-vs-gemini" className="page__section">
+                    <h2 className="page__section-title">Comparativa: ChatGPT vs Gemini</h2>
+                    <article className="long-form-content">
+                        <h3>Propósito de la Comparación</h3>
+                        <p>
+                            En el diseño de sistemas de inteligencia legal, la elección del modelo subyacente no es una preferencia de marca, sino una decisión de arquitectura. No se trata de determinar cuál herramienta es "mejor" en abstracto, sino de entender sus topologías cognitivas. ChatGPT (OpenAI) y Gemini (Google) representan dos filosofías de procesamiento distintas: la primera orientada al razonamiento estructurado y la síntesis narrativa; la segunda, a la exploración masiva de corpus y ventanas de contexto extendidas.
+                        </p>
+                        <p>
+                            Para el profesional legal, entender esta distinción es la diferencia entre obtener una respuesta alucinada pero convincente, o un análisis basado en datos concretos pero quizás menos elocuente.
+                        </p>
+
+                        <h3>ChatGPT: Fortalezas y Limitaciones</h3>
+                        <p>
+                            <strong>El Motor de Razonamiento.</strong> La arquitectura de OpenAI (modelos o1/GPT-4) destaca por su capacidad de seguir instrucciones complejas (instruction following) y mantener coherencia lógica en argumentos densos. Es ideal para tareas que requieren una estructura silogística fuerte: redactar una cláusula basada en tres condiciones previas, reformular un argumento defensivo o sintetizar un texto legal corto manteniendo un tono específico.
+                        </p>
+                        <p>
+                            Su limitación principal en el ámbito legal es la "miopía de contexto". Aunque sus ventanas de contexto han crecido, su rendimiento se degrada cuando se le pide que analice cientos de documentos simultáneamente. Tiende a "olvidar" detalles del medio del contexto (lost-in-the-middle phenomenon) y priorizar la información más reciente, lo cual es fatal en una revisión de debida diligencia (due diligence) exhaustiva.
+                        </p>
+
+                        <h3>Gemini: Fortalezas y Limitaciones</h3>
+                        <p>
+                            <strong>El Motor de Exploración.</strong> Gemini (particularmente los modelos Pro y Flash 1.5) ha sido diseñado para ventanas de contexto masivas (1M+ tokens). Esto cambia el paradigma: permite cargar un expediente judicial completo (cientos de PDFs, correos, audios) en una sola llamada (prompt). Su fortaleza no es necesariamente la redacción poética, sino la "aguja en el pajar": encontrar esa contradicción específica entre una declaración de fojas 5 y un contrato de fojas 200.
+                        </p>
+                        <p>
+                            Su limitación radica a veces en la profundidad del razonamiento abstracto "zero-shot". Puede recuperar la información perfectamente, pero a veces requiere más "mano guiada" (chain-of-thought prompting) para construir un argumento legal complejo a partir de esos datos sin caer en generalidades.
+                        </p>
+
+                        <h3>Diferencias Clave para Análisis Legal</h3>
+                        <p>
+                            <strong>Razonamiento vs. Exploración:</strong> ChatGPT funciona mejor "pensando" sobre un texto limitado y curado. Gemini funciona mejor "leyendo" una biblioteca entera desordenada.
+                            <br />
+                            <strong>Profundidad vs. Amplitud:</strong> Si necesitas analizar la jurisprudencia de un solo fallo de la Corte Suprema en profundidad, usa ChatGPT. Si necesitas encontrar patrones en 50 fallos de tribunales inferiores, usa Gemini.
+                            <br />
+                            <strong>Coherencia Narrativa vs. Escaneo de Corpus:</strong> Para redactar el alegato final, ChatGPT. Para la etapa probatoria y discovery, Gemini.
+                        </p>
+
+                        <h3>Estrategia Multimodelo en Sistemas de Inteligencia</h3>
+                        <p>
+                            El error del novato es casarse con un solo modelo. Un Sistema de Inteligencia Legal robusto utiliza una estrategia de enrutamiento (model routing).
+                        </p>
+                        <p>
+                            <em>Ejemplo de Flujo de Trabajo:</em>
+                            1. <strong>Fase de Ingesta (Gemini):</strong> Se carga todo el expediente desordenado. Se le pide a Gemini que extraiga cronológicamente todos los hechos y cree un índice estructurado.
+                            2. <strong>Fase de Orquestación (Código/Agente):</strong> El sistema toma ese índice y separa los hechos relevantes de los irrelevantes.
+                            3. <strong>Fase de Análisis (ChatGPT):</strong> El sistema envía solo los hechos relevantes y disputados a ChatGPT para que redacte un análisis de viabilidad de la demanda basado en la teoría del caso.
+                        </p>
+
+                        <h3>Riesgos y Errores Comunes</h3>
+                        <p>
+                            Usar ChatGPT para leer expedientes enteros lleva a alucinaciones por desbordamiento de contexto: inventará fechas para llenar vacíos de memoria. Usar Gemini para redacción creativa legal sin supervisión puede resultar en textos secos o robóticos. El mayor riesgo es la falsa confianza: creer que porque el modelo resumió bien las primeras 10 páginas, leyó correctamente las otras 900. Sin validación cruzada, esto es negligencia profesional tecnológica.
+                        </p>
+
+                        <h3>Casos de Uso Prácticos</h3>
+                        <p>
+                            <strong>Preparación de Caso:</strong> Subir toda la prueba documental a Gemini para generar una línea de tiempo interactiva.
+                            <br />
+                            <strong>Análisis de Jurisprudencia:</strong> Tomar los 3 fallos más citados por la contraparte, pasarlos por ChatGPT para deconstruir sus argumentos lógicos y encontrar falacias.
+                            <br />
+                            <strong>Investigación Multicausa:</strong> Usar Gemini para buscar si un mismo actor ha iniciado demandas similares en distintas jurisdicciones (detectando "forum shopping") analizando múltiples PDFs de demandas simultáneamente.
+                        </p>
+
+                        <h3>Implicancias Profesionales</h3>
+                        <p>
+                            La selección correcta del modelo impacta directamente en la credibilidad. Un abogado que usa la herramienta incorrecta entregará trabajo con errores fácticos (por usar un modelo de razonamiento para búsqueda) o con argumentos pobres (por usar un modelo de búsqueda para argumentar). El "Ingeniero Legal" no "usa IA"; diseña el flujo de información eligiendo el procesador cognitivo adecuado para cada etapa del litigio.
+                        </p>
+
+                        <h3>Verificación de Comprensión</h3>
+                        <p><em>Responda para sus adentros o en sus notas personales:</em></p>
+                        <ul>
+                            <li><strong>Escenario 1:</strong> Tienes 400 correos electrónicos desordenados entre tu cliente y un proveedor, y necesitas saber si en alguno de ellos se mencionó explícitamente la palabra "renuncia" antes de mayo de 2023. ¿Qué modelo usarías y por qué?</li>
+                            <li><strong>Escenario 2:</strong> Tienes un contrato de 5 páginas y necesitas redactar una cláusula adicional que sea coherente con el estilo de redacción very formal y arcaico del resto del documento. ¿Cuál eliges?</li>
+                            <li><strong>Escenario 3:</strong> Necesitas comparar las declaraciones de 5 testigos distintos (cada una de 20 páginas) para encontrar contradicciones sutiles en los horarios que mencionan. ¿Estrategia?</li>
+                            <li><strong>Escenario 4:</strong> Estás construyendo un bot para responder preguntas sobre el reglamento interno de la empresa (un solo PDF de 50 págs) para empleados. ¿Importa más la ventana de contexto o la capacidad de instrucción?</li>
+                            <li><strong>Escenario 5:</strong> Quieres analizar si la sentencia que acabas de recibir (30 págs) aplica correctamente un precedente de la Corte que también tienes en PDF. ¿Cómo orquestarías esto?</li>
+                        </ul>
+                    </article>
+                </section>
+
                 <section id="system-architectures" className="page__section">
                     <h2 className="page__section-title">System Architectures</h2>
                     <div className="page__section-content">
@@ -118,7 +199,7 @@ function Foundations() {
                     </div>
                 </section>
             </div>
-        </div>
+        </div >
     )
 }
 
