@@ -4,25 +4,31 @@ import '../../styles/split-layout.css'
 import MermaidDiagram from '../../components/Visualizations/MermaidDiagram'
 import ModelComparisonChart from '../../components/Visualizations/ModelComparisonChart'
 
-const modelsVsAgentsChart = `
+const modelFlowChart = `
 graph TD
-    subgraph Model [Flujo del Modelo]
-        Input((Prompt)) --> Box[Caja Negra]
-        Box --> Output((Respuesta))
-    end
+    Input((Prompt)) --> Box[Caja Negra]
+    Box --> Output((Respuesta))
+    
+    style Input fill:#fff,stroke:#333,stroke-width:2px
+    style Box fill:#f9f9fab0,stroke:#d4d4d4
+    style Output fill:#fff,stroke:#333,stroke-width:2px
+    linkStyle default stroke:#7a7a7a,stroke-width:2px
+`
 
-    subgraph Agent [Flujo del Agente]
-        Task((Tarea)) --> Think[Razonamiento]
-        Think --> Tool[Uso de Herramienta]
-        Tool --> Env[Entorno / Web / Docs]
-        Env --> Obs[Observación de Datos]
-        Obs --> Think
-        Think --> Action[Acción Final]
-    end
+const agentFlowChart = `
+graph TD
+    Task((Tarea)) --> Think[Razonamiento]
+    Think --> Tool[Uso de Herramienta]
+    Tool --> Env[Entorno / Web / Docs]
+    Env --> Obs[Observación de Datos]
+    Obs --> Think
+    Think --> Action[Acción Final]
 
-    style Model fill:#f9f9fab0,stroke:#d4d4d4
-    style Agent fill:#f9f9fab0,stroke:#d4d4d4
-    style Think fill:#e8c078,stroke:#e8c078,color:#333
+    style Think fill:#e8c078,stroke:#e8c078,color:#1a2234,stroke-width:2px
+    style Tool fill:#f9f9fab0,stroke:#d4d4d4
+    style Env fill:#f9f9fab0,stroke:#d4d4d4
+    style Obs fill:#f9f9fab0,stroke:#d4d4d4
+    linkStyle default stroke:#7a7a7a,stroke-width:2px
 `
 
 const sections = [
@@ -44,17 +50,18 @@ function Foundations() {
                 </p>
             </header>
 
-            <div className="split-layout">
-                {/* Left Column: Long-form Text */}
-                <div className="split-layout__content page__content">
-                    <section id="core-concepts" className="page__section">
-                        <h2 className="page__section-title">Core Concepts</h2>
-                        <div className="page__section-content">
-                            <span className="page__section-placeholder">Content to be added</span>
-                        </div>
-                    </section>
+            <div className="page__content">
+                {/* Section 1: Core Concepts (No Visual yet) */}
+                <section id="core-concepts" className="page__section">
+                    <h2 className="page__section-title">Core Concepts</h2>
+                    <div className="page__section-content">
+                        <span className="page__section-placeholder">Content to be added</span>
+                    </div>
+                </section>
 
-                    <section id="models-vs-agents" className="page__section">
+                {/* Section 2: Models vs Agents (Visual: Mermaid) */}
+                <section id="models-vs-agents" className="page__section section-grid">
+                    <div className="section-grid__content">
                         <h2 className="page__section-title">Modelos vs Agentes</h2>
                         <article className="long-form-content">
                             <h3>Definición Técnica</h3>
@@ -121,9 +128,20 @@ function Foundations() {
                                 A diferencia del "entusiasta de legal tech" que persigue la última aplicación, este especialista construye infraestructura a largo plazo. Se enfocan en la soberanía de los datos, la auditabilidad y la "industrialización" del razonamiento legal. Su trayectoria profesional no está ligada a la hora facturable sino a la escalabilidad de los sistemas de inteligencia que despliegan.
                             </p>
                         </article>
-                    </section>
+                    </div>
+                    {/* Visual Sidecar 1 */}
+                    <div className="section-grid__visual">
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', width: '100%' }}>
+                            <MermaidDiagram chart={modelFlowChart} title="1. Flujo del Modelo (Estático)" />
+                            <MermaidDiagram chart={agentFlowChart} title="2. Flujo del Agente (Dinámico)" />
+                        </div>
+                    </div>
+                </section>
 
-                    <section id="chatgpt-vs-gemini" className="page__section">
+
+                {/* Section 3: ChatGPT vs Gemini (Visual: Radar) */}
+                <section id="chatgpt-vs-gemini" className="page__section section-grid">
+                    <div className="section-grid__content">
                         <h2 className="page__section-title">Comparativa: ChatGPT vs Gemini</h2>
                         <article className="long-form-content">
                             <h3>Propósito de la Comparación</h3>
@@ -199,35 +217,42 @@ function Foundations() {
                                 <li><strong>Escenario 5:</strong> Quieres analizar si la sentencia que acabas de recibir (30 págs) aplica correctamente un precedente de la Corte que también tienes en PDF. ¿Cómo orquestarías esto?</li>
                             </ul>
                         </article>
-                    </section>
+                    </div>
+                    {/* Visual Sidecar 2 */}
+                    <div className="section-grid__visual">
+                        <ModelComparisonChart />
+                    </div>
+                </section>
 
-                    <section id="system-architectures" className="page__section">
-                        <h2 className="page__section-title">System Architectures</h2>
-                        <div className="page__section-content">
-                            <span className="page__section-placeholder">Content to be added</span>
-                        </div>
-                    </section>
+                <section id="system-architectures" className="page__section">
+                    <h2 className="page__section-title">System Architectures</h2>
+                    <div className="page__section-content">
+                        <span className="page__section-placeholder">Content to be added</span>
+                    </div>
+                </section>
 
-                    <section id="validation-reasoning" className="page__section">
-                        <h2 className="page__section-title">Validation & Reasoning Criteria</h2>
-                        <div className="page__section-content">
-                            <span className="page__section-placeholder">Content to be added</span>
-                        </div>
-                    </section>
+                <section id="validation-reasoning" className="page__section">
+                    <h2 className="page__section-title">Validation & Reasoning Criteria</h2>
+                    <div className="page__section-content">
+                        <span className="page__section-placeholder">Content to be added</span>
+                    </div>
+                </section>
 
-                    <section id="risks-errors" className="page__section">
+                {/* Section with Sticky Insight */}
+                <section id="risks-errors" className="page__section section-grid">
+                    <div className="section-grid__content">
                         <h2 className="page__section-title">Risks, Errors & Bad Practices</h2>
                         <div className="page__section-content">
                             <span className="page__section-placeholder">Content to be added</span>
                         </div>
-                    </section>
-                </div>
-
-                {/* Right Column: Visual Learning Tools */}
-                <aside className="split-layout__visuals">
-                    <MermaidDiagram chart={modelsVsAgentsChart} title="Arquitectura Agente vs Modelo" />
-                    <ModelComparisonChart />
-                </aside>
+                    </div>
+                    <div className="section-grid__visual">
+                        <div className="visual-insight">
+                            <h4>Insight Crítico</h4>
+                            <p>La validación no es opcional. Un sistema sin bucles de verificación humana o algorítmica es simplemente un generador de alucinaciones a escala industrial.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     )

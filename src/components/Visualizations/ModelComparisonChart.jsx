@@ -12,9 +12,9 @@ const ModelComparisonChart = () => {
     return (
         <div className="visual-card">
             <h4 className="visual-card__title">Perfil de Capacidades</h4>
-            <div className="visual-card__content" style={{ height: '300px' }}>
-                <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+            <div className="visual-card__content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', minHeight: '500px' }}>
+                <ResponsiveContainer width="100%" height={500}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="85%" data={data}>
                         <PolarGrid />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: '#4a4a4a', fontSize: 11 }} />
                         <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
