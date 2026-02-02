@@ -239,7 +239,9 @@ function PromptEngineeringM2U2() {
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <span className="next-title">Unidad 3 – Filtrado de jurisprudencia y doctrina</span>
+                        <Link to="/prompt-engineering-u3" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 3 – Preparación de Juicio e Interrogatorios →
+                        </Link>
                     </div>
                 </div>
             </div>

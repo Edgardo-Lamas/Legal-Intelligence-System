@@ -33,10 +33,10 @@ const courseData = [
                 title: 'Módulo 2 – ChatGPT: El mejor colaborador que vas a tener',
                 units: [
                     { id: 'u2.1', title: 'Ingeniería de Prompts Jurídicos', path: '/prompt-engineering', status: 'completed', topics: ['El prompt como acto de delegación cognitiva', 'Prompt común vs prompt jurídico', 'Componentes obligatorios de un prompt seguro', 'Ejemplos profesionales'] },
-                    { id: 'u2.2', title: 'Control de contexto y documentos extensos', path: '/prompt-engineering-u2', status: 'current', topics: ['Ventanas de contexto', 'Trabajo con expedientes largos', 'Segmentación y continuidad', 'Riesgos de pérdida de información'] },
+                    { id: 'u2.2', title: 'Control de contexto y documentos extensos', path: '/prompt-engineering-u2', status: 'completed', topics: ['Ventanas de contexto', 'Trabajo con expedientes largos', 'Segmentación y continuidad', 'Riesgos de pérdida de información'] },
                     { id: 'u2.3', title: 'Filtrado de jurisprudencia y doctrina', path: null, topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
                     { id: 'u2.4', title: 'Redacción jurídica asistida', path: null, topics: ['Demandas', 'Contratos', 'Dictámenes', 'Escritos procesales'] },
-                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: null, topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
+                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: '/prompt-engineering-u3', status: 'completed', topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
                     { id: 'u2.6', title: 'GPTs personalizados y librerías de prompts', path: null, topics: ['Qué son los GPTs personalizados', 'Casos de uso legales', 'Organización de prompts reutilizables'] },
                 ]
             }
@@ -52,7 +52,7 @@ const courseData = [
                 id: 'm3',
                 title: 'Módulo 3 – Gestión, marca y práctica profesional',
                 units: [
-                    { id: 'u3.1', title: 'Gestión contable y fiscal automatizada', path: null, topics: ['Organización administrativa', 'Automatización básica'] },
+                    { id: 'u3.1', title: 'Gestión contable y fiscal automatizada', path: '/solo-practice', status: 'current', topics: ['Organización administrativa', 'Automatización básica'] },
                     { id: 'u3.2', title: 'Escritura persuasiva digital', path: null, topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
                     { id: 'u3.3', title: 'Marketing legal y posicionamiento', path: null, topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
                 ]

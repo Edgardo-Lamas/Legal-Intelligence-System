@@ -484,3 +484,109 @@
         text-align: center;
     }
 }
+
+/* ========================================
+   Additional styles for Unit 3
+   ======================================== */
+
+/* Strategic Uses */
+.strategic-uses {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.strategic-use {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-bg-secondary);
+    border-radius: 6px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.strategic-use__icon {
+    font-size: var(--font-size-xl);
+}
+
+/* Risk List */
+.risk-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.risk-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(220, 80, 80, 0.05);
+    border: 1px solid rgba(220, 80, 80, 0.2);
+    border-radius: 6px;
+}
+
+.risk-icon {
+    font-size: var(--font-size-lg);
+}
+
+/* Result Box */
+.result-box {
+    padding: var(--space-6);
+    background: linear-gradient(135deg, rgba(74, 148, 94, 0.1) 0%, rgba(74, 148, 94, 0.05) 100%);
+    border: 1px solid rgba(74, 148, 94, 0.3);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.result-box p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+/* ========================================
+   Additional styles for Module 3 Unit 1
+   ======================================== */
+
+/* Failure Causes */
+.failure-causes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.failure-cause {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(220, 80, 80, 0.05);
+    border-radius: 6px;
+    font-size: var(--font-size-base);
+}
+
+.failure-icon {
+    font-size: var(--font-size-xl);
+}
+
+/* Task Criteria */
+.task-criteria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.task-criterion {
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 20px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
