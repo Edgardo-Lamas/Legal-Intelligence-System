@@ -1,0 +1,278 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../../styles/pages.css'
+import '../../styles/course-map.css'
+
+const courseData = [
+    {
+        id: 1,
+        emoji: '🧱',
+        title: 'Fundamentos y Estrategia con Modelos de Lenguaje',
+        color: '#4a7c94',
+        modules: [
+            {
+                id: 'm1',
+                title: 'Módulo 1 – La Importancia de la IA para Abogados',
+                units: [
+                    { id: 'u1.1', title: 'IA generativa y agentes de IA', path: '/foundations', topics: ['Qué es IA generativa y qué no', 'Qué son agentes de IA', 'Diferencias prácticas para el ejercicio profesional'] },
+                    { id: 'u1.2', title: 'ChatGPT vs Gemini en el ámbito legal', path: '/foundations', topics: ['Fortalezas y debilidades de cada modelo', 'Casos de uso recomendados', 'Cuándo usar uno u otro'] },
+                    { id: 'u1.3', title: 'RAG aplicado al derecho', path: null, topics: ['Qué es RAG (Retrieval-Augmented Generation)', 'Uso con jurisprudencia, doctrina y normativa', 'Ventajas frente a prompts simples'] },
+                    { id: 'u1.4', title: 'Glosario esencial de IA para abogados', path: '/glossary', topics: ['Términos clave explicados en lenguaje jurídico', 'Conceptos mínimos para no quedar afuera'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        emoji: '🧱',
+        title: 'ChatGPT como colaborador jurídico',
+        color: '#e8c078',
+        modules: [
+            {
+                id: 'm2',
+                title: 'Módulo 2 – ChatGPT: El mejor colaborador que vas a tener',
+                units: [
+                    { id: 'u2.1', title: 'Ingeniería de Prompts Jurídicos', path: '/prompt-engineering', status: 'completed', topics: ['El prompt como acto de delegación cognitiva', 'Prompt común vs prompt jurídico', 'Componentes obligatorios de un prompt seguro', 'Ejemplos profesionales'] },
+                    { id: 'u2.2', title: 'Control de contexto y documentos extensos', path: '/prompt-engineering-u2', status: 'current', topics: ['Ventanas de contexto', 'Trabajo con expedientes largos', 'Segmentación y continuidad', 'Riesgos de pérdida de información'] },
+                    { id: 'u2.3', title: 'Filtrado de jurisprudencia y doctrina', path: null, topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
+                    { id: 'u2.4', title: 'Redacción jurídica asistida', path: null, topics: ['Demandas', 'Contratos', 'Dictámenes', 'Escritos procesales'] },
+                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: null, topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
+                    { id: 'u2.6', title: 'GPTs personalizados y librerías de prompts', path: null, topics: ['Qué son los GPTs personalizados', 'Casos de uso legales', 'Organización de prompts reutilizables'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
+        emoji: '🧱',
+        title: 'Abogacía por cuenta propia',
+        color: '#94644a',
+        modules: [
+            {
+                id: 'm3',
+                title: 'Módulo 3 – Gestión, marca y práctica profesional',
+                units: [
+                    { id: 'u3.1', title: 'Gestión contable y fiscal automatizada', path: null, topics: ['Organización administrativa', 'Automatización básica'] },
+                    { id: 'u3.2', title: 'Escritura persuasiva digital', path: null, topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
+                    { id: 'u3.3', title: 'Marketing legal y posicionamiento', path: null, topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 4,
+        emoji: '🧱',
+        title: 'Gemini y herramientas visuales',
+        color: '#4a9478',
+        modules: [
+            {
+                id: 'm4',
+                title: 'Módulo 4 – Gemini: otra inteligencia, nuevas funciones',
+                units: [
+                    { id: 'u4.1', title: 'Deep Research aplicado a casos legales', path: null, topics: ['Investigación jurídica asistida', 'Preparación estratégica de casos'] },
+                    { id: 'u4.2', title: 'Tareas automáticas y memoria', path: null, topics: ['Seguimiento de temas', 'Organización de información'] },
+                ]
+            },
+            {
+                id: 'm5',
+                title: 'Módulo 5 – Gemini Canvas',
+                units: [
+                    { id: 'u5.1', title: 'Infografías y visualización legal', path: null, topics: ['Esquemas procesales', 'Mapas conceptuales'] },
+                    { id: 'u5.2', title: 'Herramientas web para abogados', path: null, topics: ['Calculadoras legales', 'Landing pages profesionales'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 5,
+        emoji: '🧱',
+        title: 'Ecosistema avanzado y automatización',
+        color: '#7c4a94',
+        modules: [
+            {
+                id: 'm6',
+                title: 'Módulo 6 – Dominando el ecosistema de IA',
+                units: [
+                    { id: 'u6.1', title: 'NotebookLM para gestión documental', path: null, topics: ['Estudio', 'Organización de fuentes'] },
+                    { id: 'u6.2', title: 'Claude para redacción técnica', path: null, topics: ['Precisión y control'] },
+                    { id: 'u6.3', title: 'Búsquedas avanzadas', path: null, topics: ['Perplexity', 'Manus'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 6,
+        emoji: '🧱',
+        title: 'Marketing y creación de contenido',
+        color: '#944a6e',
+        modules: [
+            {
+                id: 'm7',
+                title: 'Módulo 7 – IA para comunicación legal',
+                units: [
+                    { id: 'u7.1', title: 'Clonación de voz y avatares', path: null, topics: ['Comunicación institucional', 'Contenido audiovisual jurídico'] },
+                ]
+            }
+        ]
+    },
+    {
+        id: 7,
+        emoji: '🧱',
+        title: 'Implementación real',
+        color: '#4a5c94',
+        modules: [
+            {
+                id: 'm8',
+                title: 'Módulo 8 – De la teoría a la práctica',
+                units: [
+                    { id: 'u8.1', title: 'Digitalización de un despacho', path: null, topics: ['Hoja de ruta', 'Checklist operativo'] },
+                ]
+            },
+            {
+                id: 'm9',
+                title: 'Módulo 9 – Creación de agentes de IA',
+                units: [
+                    { id: 'u9.1', title: 'Automatización con Make / n8n', path: null, topics: ['Correos', 'Transcripciones'] },
+                ]
+            },
+            {
+                id: 'm10',
+                title: 'Módulo 10 – MCPs y conexiones externas',
+                units: [
+                    { id: 'u10.1', title: 'Integraciones prácticas', path: null, topics: ['WhatsApp', 'Trello', 'WordPress'] },
+                ]
+            }
+        ]
+    }
+]
+
+function CourseMap() {
+    const [expandedBlocks, setExpandedBlocks] = useState([1, 2])
+    const [expandedModules, setExpandedModules] = useState(['m2'])
+
+    const toggleBlock = (blockId) => {
+        setExpandedBlocks(prev =>
+            prev.includes(blockId)
+                ? prev.filter(id => id !== blockId)
+                : [...prev, blockId]
+        )
+    }
+
+    const toggleModule = (moduleId) => {
+        setExpandedModules(prev =>
+            prev.includes(moduleId)
+                ? prev.filter(id => id !== moduleId)
+                : [...prev, moduleId]
+        )
+    }
+
+    const getUnitStatus = (unit) => {
+        if (unit.status === 'current') return 'current'
+        if (unit.path) return 'available'
+        return 'pending'
+    }
+
+    return (
+        <div className="page">
+            <header className="page__header">
+                <span className="page__module-tag">📍 Guía de Navegación</span>
+                <h1 className="page__title">Mapa del Curso</h1>
+                <p className="page__description">
+                    IA para Abogados — Tu recorrido formativo completo
+                </p>
+            </header>
+
+            <div className="page__content">
+                <div className="course-stats">
+                    <div className="course-stat">
+                        <span className="course-stat__number">7</span>
+                        <span className="course-stat__label">Bloques</span>
+                    </div>
+                    <div className="course-stat">
+                        <span className="course-stat__number">10</span>
+                        <span className="course-stat__label">Módulos</span>
+                    </div>
+                    <div className="course-stat">
+                        <span className="course-stat__number">24</span>
+                        <span className="course-stat__label">Unidades</span>
+                    </div>
+                </div>
+
+                <div className="roadmap">
+                    {courseData.map((block) => (
+                        <div key={block.id} className="roadmap-block" style={{ '--block-color': block.color }}>
+                            <button
+                                className={`roadmap-block__header ${expandedBlocks.includes(block.id) ? 'is-expanded' : ''}`}
+                                onClick={() => toggleBlock(block.id)}
+                            >
+                                <span className="roadmap-block__emoji">{block.emoji}</span>
+                                <span className="roadmap-block__number">Bloque {block.id}</span>
+                                <span className="roadmap-block__title">{block.title}</span>
+                                <span className="roadmap-block__toggle">{expandedBlocks.includes(block.id) ? '−' : '+'}</span>
+                            </button>
+
+                            {expandedBlocks.includes(block.id) && (
+                                <div className="roadmap-block__content">
+                                    {block.modules.map((module) => (
+                                        <div key={module.id} className="roadmap-module">
+                                            <button
+                                                className={`roadmap-module__header ${expandedModules.includes(module.id) ? 'is-expanded' : ''}`}
+                                                onClick={() => toggleModule(module.id)}
+                                            >
+                                                <span className="roadmap-module__title">{module.title}</span>
+                                                <span className="roadmap-module__count">{module.units.length} unidades</span>
+                                                <span className="roadmap-module__toggle">{expandedModules.includes(module.id) ? '−' : '+'}</span>
+                                            </button>
+
+                                            {expandedModules.includes(module.id) && (
+                                                <ul className="roadmap-units">
+                                                    {module.units.map((unit) => (
+                                                        <li key={unit.id} className={`roadmap-unit roadmap-unit--${getUnitStatus(unit)}`}>
+                                                            {unit.path ? (
+                                                                <Link to={unit.path} className="roadmap-unit__link">
+                                                                    <span className="roadmap-unit__id">{unit.id}</span>
+                                                                    <span className="roadmap-unit__title">{unit.title}</span>
+                                                                    {unit.status === 'current' && <span className="roadmap-unit__badge">Actual</span>}
+                                                                </Link>
+                                                            ) : (
+                                                                <span className="roadmap-unit__link roadmap-unit__link--disabled">
+                                                                    <span className="roadmap-unit__id">{unit.id}</span>
+                                                                    <span className="roadmap-unit__title">{unit.title}</span>
+                                                                    <span className="roadmap-unit__badge roadmap-unit__badge--pending">Próximamente</span>
+                                                                </span>
+                                                            )}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                <div className="course-legend">
+                    <h4>Leyenda</h4>
+                    <div className="course-legend__items">
+                        <div className="course-legend__item">
+                            <span className="course-legend__dot course-legend__dot--current"></span>
+                            <span>En curso</span>
+                        </div>
+                        <div className="course-legend__item">
+                            <span className="course-legend__dot course-legend__dot--available"></span>
+                            <span>Disponible</span>
+                        </div>
+                        <div className="course-legend__item">
+                            <span className="course-legend__dot course-legend__dot--pending"></span>
+                            <span>Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default CourseMap
