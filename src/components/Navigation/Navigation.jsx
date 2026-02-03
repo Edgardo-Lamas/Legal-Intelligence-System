@@ -12,6 +12,7 @@ const navItems = [
     { path: '/prompt-engineering', label: 'M2 · Prompt Jurídico', icon: 'edit' },
     { path: '/solo-practice', label: 'M3 · Abogacía por Cuenta Propia', icon: 'briefcase' },
     { path: '/gemini', label: 'M4 · Gemini & Deep Research', icon: 'search' },
+    { path: '/ecosystem', label: 'M5 · Ecosistema & Auto', icon: 'layers' },
     { path: '/glossary', label: 'Glossary', icon: 'list' },
     { path: '/notes', label: 'Notes', icon: 'edit' },
 ]

@@ -200,7 +200,9 @@ function GeminiM4U3() {
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <span className="next-title next-title--disabled">M4 Completo. Sigue al Módulo 5 →</span>
+                        <Link to="/ecosystem" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Módulo 5: Ecosistema avanzado →
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -75,14 +75,7 @@ const courseData = [
                     { id: 'u4.3', title: 'Tareas automáticas y memoria jurídica', path: '/gemini-u3', status: 'current', topics: ['Uso proactivo de IA', 'Programación de alertas', 'Gestión de conocimiento'] },
                 ]
             },
-            {
-                id: 'm5',
-                title: 'Módulo 5 – Gemini Canvas',
-                units: [
-                    { id: 'u5.1', title: 'Infografías y visualización legal', path: null, topics: ['Esquemas procesales', 'Mapas conceptuales'] },
-                    { id: 'u5.2', title: 'Herramientas web para abogados', path: null, topics: ['Calculadoras legales', 'Landing pages profesionales'] },
-                ]
-            }
+
         ]
     },
     {
@@ -91,6 +84,14 @@ const courseData = [
         title: 'Ecosistema avanzado y automatización',
         color: '#7c4a94',
         modules: [
+            {
+                id: 'm5',
+                title: 'Módulo 5 – Ecosistema avanzado y automatización',
+                units: [
+                    { id: 'u5.1', title: 'Pensar la IA como ecosistema de trabajo jurídico', path: '/ecosystem', status: 'completed', topics: ['Arquitectura mental del abogado', 'Roles de la IA (investigación, redacción, revisión)', 'Automatización vs. Criterio humano'] },
+                    { id: 'u5.2', title: 'Automatización jurídica: qué y por qué', path: '/ecosystem-u2', status: 'current', topics: ['Riesgo decisional vs Repetitividad', 'Criterio del borrador imperfecto', 'Automatizar sin programar'] },
+                ]
+            },
             {
                 id: 'm6',
                 title: 'Módulo 6 – Dominando el ecosistema de IA',

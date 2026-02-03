@@ -16,6 +16,8 @@ import SoloPracticeM3U3 from './pages/SoloPractice/SoloPracticeM3U3'
 import GeminiM4U1 from './pages/Gemini/GeminiM4U1'
 import GeminiM4U2 from './pages/Gemini/GeminiM4U2'
 import GeminiM4U3 from './pages/Gemini/GeminiM4U3'
+import EcosystemM5U1 from './pages/Ecosystem/EcosystemM5U1'
+import EcosystemM5U2 from './pages/Ecosystem/EcosystemM5U2'
 import CourseMap from './pages/CourseMap/CourseMap'
 
 import ScrollToTop from './components/ScrollToTop'
@@ -40,6 +42,8 @@ function App() {
         <Route path="/gemini" element={<GeminiM4U1 />} />
         <Route path="/gemini-u2" element={<GeminiM4U2 />} />
         <Route path="/gemini-u3" element={<GeminiM4U3 />} />
+        <Route path="/ecosystem" element={<EcosystemM5U1 />} />
+        <Route path="/ecosystem-u2" element={<EcosystemM5U2 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />
