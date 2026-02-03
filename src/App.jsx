@@ -11,6 +11,7 @@ import PromptEngineeringM2U1 from './pages/PromptEngineering/PromptEngineeringM2
 import PromptEngineeringM2U2 from './pages/PromptEngineering/PromptEngineeringM2U2'
 import PromptEngineeringM2U3 from './pages/PromptEngineering/PromptEngineeringM2U3'
 import SoloPracticeM3U1 from './pages/SoloPractice/SoloPracticeM3U1'
+import SoloPracticeM3U2 from './pages/SoloPractice/SoloPracticeM3U2'
 import CourseMap from './pages/CourseMap/CourseMap'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/prompt-engineering-u2" element={<PromptEngineeringM2U2 />} />
         <Route path="/prompt-engineering-u3" element={<PromptEngineeringM2U3 />} />
         <Route path="/solo-practice" element={<SoloPracticeM3U1 />} />
+        <Route path="/solo-practice-u2" element={<SoloPracticeM3U2 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />

@@ -52,9 +52,10 @@ const courseData = [
                 id: 'm3',
                 title: 'Módulo 3 – Gestión, marca y práctica profesional',
                 units: [
-                    { id: 'u3.1', title: 'Gestión contable y fiscal automatizada', path: '/solo-practice', status: 'current', topics: ['Organización administrativa', 'Automatización básica'] },
-                    { id: 'u3.2', title: 'Escritura persuasiva digital', path: null, topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
-                    { id: 'u3.3', title: 'Marketing legal y posicionamiento', path: null, topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
+                    { id: 'u3.1', title: 'Abogacía por cuenta propia', path: '/solo-practice', status: 'completed', topics: ['Organización operativa', 'Automatización básica', 'Sistema mínimo viable'] },
+                    { id: 'u3.2', title: 'Gestión contable y fiscal automatizada', path: '/solo-practice-u2', status: 'current', topics: ['Flujos contables', 'Control y alertas', 'Trazabilidad'] },
+                    { id: 'u3.3', title: 'Escritura persuasiva digital', path: null, topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
+                    { id: 'u3.4', title: 'Marketing legal y posicionamiento', path: null, topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
                 ]
             }
         ]

@@ -3,14 +3,14 @@ import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
 
-function SoloPracticeM3U1() {
+function SoloPracticeM3U2() {
     return (
         <div className="page">
             <header className="page__header">
-                <span className="page__module-tag">Módulo 3 · Unidad 1</span>
-                <h1 className="page__title">Abogacía por Cuenta Propia</h1>
+                <span className="page__module-tag">Módulo 3 · Unidad 2</span>
+                <h1 className="page__title">Gestión Contable y Fiscal Automatizada</h1>
                 <p className="page__description">
-                    Organización, Automatización y Control del Estudio Jurídico
+                    Orden administrativo sin perder control profesional
                 </p>
             </header>
 
@@ -21,11 +21,11 @@ function SoloPracticeM3U1() {
                     <article className="long-form-content">
                         <p>Al finalizar esta unidad vas a poder:</p>
                         <ul className="learning-objectives">
-                            <li>Entender cómo la IA se integra en la <strong>gestión diaria real</strong> de un abogado independiente.</li>
-                            <li>Automatizar tareas administrativas sin perder control ni criterio profesional.</li>
-                            <li>Separar claramente <strong>producción jurídica</strong> de <strong>operación del estudio</strong>.</li>
-                            <li>Usar IA para reducir fricción operativa y liberar tiempo cognitivo.</li>
-                            <li>Diseñar un <strong>sistema mínimo viable</strong> de despacho asistido por IA.</li>
+                            <li>Comprender qué partes de la gestión contable y fiscal <strong>sí pueden automatizarse</strong> con IA.</li>
+                            <li>Diseñar flujos simples para registrar ingresos, gastos y comprobantes.</li>
+                            <li>Reducir errores administrativos sin perder trazabilidad ni control.</li>
+                            <li>Preparar información clara y ordenada para tu contador.</li>
+                            <li>Evitar riesgos legales derivados de una automatización mal diseñada.</li>
                         </ul>
                     </article>
                 </section>
@@ -35,74 +35,59 @@ function SoloPracticeM3U1() {
                     <h2 className="page__section-title">2. Concepto central</h2>
                     <article className="long-form-content">
                         <blockquote className="concept-quote">
-                            La IA no sirve primero para litigar mejor, sino para no desperdiciar tiempo fuera del litigio.
+                            La IA no reemplaza al contador: ordena la información para que el contador trabaje mejor y más rápido.
                         </blockquote>
-                        <p>La mayoría de los abogados independientes no fracasan por falta de conocimiento jurídico, sino por:</p>
-                        <div className="failure-causes">
-                            <div className="failure-cause">
-                                <span className="failure-icon">📋</span>
-                                <span>Desorden operativo</span>
-                            </div>
-                            <div className="failure-cause">
-                                <span className="failure-icon">⏱️</span>
-                                <span>Carga administrativa excesiva</span>
-                            </div>
-                            <div className="failure-cause">
-                                <span className="failure-icon">🔧</span>
-                                <span>Falta de sistemas</span>
-                            </div>
-                        </div>
-                        <p className="highlight-warning">
-                            La IA aplicada a la abogacía por cuenta propia no es sofisticación: es <strong>supervivencia profesional</strong>.
+                        <p>
+                            El objetivo no es hacer contabilidad "con IA", sino <strong>eliminar fricción administrativa</strong> entre el abogado, sus datos y el profesional contable.
                         </p>
                     </article>
                 </section>
 
-                {/* Sección 3: Producción vs Operación */}
-                <section id="produccion-operacion" className="page__section">
-                    <h2 className="page__section-title">3. Producción jurídica vs Operación del estudio</h2>
+                {/* Sección 3: Problemas que resuelve */}
+                <section id="problemas" className="page__section">
+                    <h2 className="page__section-title">3. Qué problemas resuelve la automatización</h2>
                     <article className="long-form-content">
-                        <div className="comparison-grid">
-                            <div className="comparison-box comparison-box--good">
-                                <h4>⚖️ Producción jurídica</h4>
-                                <ul>
-                                    <li>Análisis de casos</li>
-                                    <li>Redacción de escritos</li>
-                                    <li>Estrategia procesal</li>
-                                </ul>
+                        <p>En la práctica diaria del abogado independiente, los principales problemas son:</p>
+                        <div className="failure-causes">
+                            <div className="failure-cause">
+                                <span className="failure-icon">📄</span>
+                                <span>Comprobantes dispersos</span>
                             </div>
-                            <div className="comparison-box comparison-box--neutral">
-                                <h4>🏢 Operación del estudio</h4>
-                                <ul>
-                                    <li>Agenda</li>
-                                    <li>Facturación</li>
-                                    <li>Seguimiento de clientes</li>
-                                    <li>Recordatorios y vencimientos</li>
-                                </ul>
+                            <div className="failure-cause">
+                                <span className="failure-icon">💰</span>
+                                <span>Ingresos mal registrados</span>
+                            </div>
+                            <div className="failure-cause">
+                                <span className="failure-icon">📊</span>
+                                <span>Gastos sin clasificar</span>
+                            </div>
+                            <div className="failure-cause">
+                                <span className="failure-icon">📅</span>
+                                <span>Información incompleta al cierre del mes</span>
                             </div>
                         </div>
                         <p className="highlight-warning">
-                            <strong>Error común:</strong> usar IA solo para escribir textos jurídicos y seguir gestionando todo lo demás de forma manual.
+                            La IA actúa como <strong>sistema de orden previo</strong>, no como autoridad fiscal.
                         </p>
                     </article>
                 </section>
 
                 {/* Sección 4: Qué automatizar */}
                 <section id="que-automatizar" className="page__section">
-                    <h2 className="page__section-title">4. Qué tareas sí conviene automatizar</h2>
+                    <h2 className="page__section-title">4. Qué tareas contables son automatizables</h2>
                     <article className="long-form-content">
-                        <p>La IA es especialmente eficaz en tareas:</p>
+                        <p>Conviene automatizar tareas que sean:</p>
                         <div className="task-criteria">
                             <span className="task-criterion">Repetitivas</span>
                             <span className="task-criterion">Basadas en reglas</span>
-                            <span className="task-criterion">De bajo riesgo jurídico</span>
+                            <span className="task-criterion">Verificables</span>
                         </div>
-                        <p>Ejemplos:</p>
+                        <p>Ejemplos concretos:</p>
                         <ul className="application-list">
-                            <li>Resúmenes de llamadas con clientes</li>
-                            <li>Clasificación de correos</li>
-                            <li>Preparación de borradores administrativos</li>
-                            <li>Generación de checklists procesales</li>
+                            <li>Lectura y clasificación de facturas</li>
+                            <li>Extracción de datos (fecha, monto, proveedor)</li>
+                            <li>Etiquetado de gastos por categoría</li>
+                            <li>Generación de reportes mensuales preliminares</li>
                         </ul>
                     </article>
                 </section>
@@ -115,115 +100,124 @@ function SoloPracticeM3U1() {
                         <div className="risk-list">
                             <div className="risk-item">
                                 <span className="risk-icon">🚫</span>
-                                <span>Decisión jurídica final</span>
+                                <span>Interpretación normativa</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">🚫</span>
-                                <span>Evaluación de riesgo procesal</span>
+                                <span>Declaraciones fiscales</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">🚫</span>
-                                <span>Comunicación sensible con clientes sin revisión</span>
+                                <span>Presentaciones ante organismos</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">🚫</span>
-                                <span>Firma y presentación de escritos</span>
+                                <span>Decisiones impositivas estratégicas</span>
                             </div>
                         </div>
                         <p className="highlight-warning">
-                            La automatización sin criterio es <strong>negligencia profesional</strong>.
+                            Automatizar estas tareas <strong>no es eficiencia, es riesgo</strong>.
                         </p>
                     </article>
                 </section>
 
-                {/* Sección 6: Sistema Mínimo Viable */}
-                <section id="smv" className="page__section">
-                    <h2 className="page__section-title">6. Sistema Mínimo Viable (SMV) para abogado independiente</h2>
+                {/* Sección 6: Flujo básico */}
+                <section id="flujo" className="page__section">
+                    <h2 className="page__section-title">6. Flujo básico de gestión contable asistida</h2>
                     <article className="long-form-content">
-                        <p>Un despacho asistido por IA debería, como mínimo:</p>
+                        <p>Ejemplo de flujo simple:</p>
                         <div className="layer-diagram">
                             <div className="layer-step">
                                 <div className="layer-step__number">1</div>
                                 <div className="layer-step__content">
-                                    <h4>Centralizar información de clientes</h4>
+                                    <h4>Recepción de comprobantes</h4>
+                                    <p>Mail, PDF, foto</p>
                                 </div>
                             </div>
                             <div className="layer-connector">↓</div>
                             <div className="layer-step">
                                 <div className="layer-step__number">2</div>
                                 <div className="layer-step__content">
-                                    <h4>Registrar tareas y vencimientos</h4>
+                                    <h4>Extracción automática de datos</h4>
                                 </div>
                             </div>
                             <div className="layer-connector">↓</div>
                             <div className="layer-step">
                                 <div className="layer-step__number">3</div>
                                 <div className="layer-step__content">
-                                    <h4>Generar borradores administrativos</h4>
+                                    <h4>Clasificación preliminar</h4>
                                 </div>
                             </div>
                             <div className="layer-connector">↓</div>
                             <div className="layer-step">
                                 <div className="layer-step__number">4</div>
                                 <div className="layer-step__content">
-                                    <h4>Asistir en redacción preliminar</h4>
+                                    <h4>Revisión humana</h4>
                                 </div>
                             </div>
                             <div className="layer-connector">↓</div>
                             <div className="layer-step">
                                 <div className="layer-step__number">5</div>
                                 <div className="layer-step__content">
-                                    <h4>Mantener trazabilidad de decisiones</h4>
+                                    <h4>Entrega de reporte al contador</h4>
                                 </div>
                             </div>
                         </div>
                         <p className="highlight-success">
-                            No hace falta un sistema complejo. Hace falta <strong>consistencia</strong>.
+                            Este flujo reduce errores y tiempo <strong>sin invadir incumbencias</strong>.
                         </p>
                     </article>
                 </section>
 
-                {/* Sección 7: Ejemplo de flujo */}
-                <section id="ejemplo-flujo" className="page__section">
-                    <h2 className="page__section-title">7. Ejemplo de flujo simple con IA</h2>
+                {/* Sección 7: Control y alertas */}
+                <section id="alertas" className="page__section">
+                    <h2 className="page__section-title">7. Uso de IA para control y alertas</h2>
                     <article className="long-form-content">
-                        <div className="flow-steps">
-                            <div className="flow-step">📞 Reunión con cliente</div>
-                            <div className="flow-step">🎙️ Transcripción automática</div>
-                            <div className="flow-step">📋 Resumen estructurado con IA</div>
-                            <div className="flow-step">✅ Lista de acciones sugeridas</div>
-                            <div className="flow-step">👤 Revisión y decisión humana</div>
+                        <p>La IA puede ayudar a:</p>
+                        <div className="strategic-uses">
+                            <div className="strategic-use">
+                                <span className="strategic-use__icon">⚠️</span>
+                                <span>Detectar gastos atípicos</span>
+                            </div>
+                            <div className="strategic-use">
+                                <span className="strategic-use__icon">📉</span>
+                                <span>Señalar períodos sin facturación</span>
+                            </div>
+                            <div className="strategic-use">
+                                <span className="strategic-use__icon">📋</span>
+                                <span>Alertar sobre documentación faltante</span>
+                            </div>
                         </div>
                         <p className="highlight-success">
-                            La IA acelera. <strong>El abogado valida</strong>.
+                            Siempre como <strong>sistema de alerta</strong>, no de decisión.
                         </p>
                     </article>
                 </section>
 
                 {/* Sección 8: Riesgos */}
                 <section id="riesgos" className="page__section">
-                    <h2 className="page__section-title">8. Riesgos comunes en abogacía independiente con IA</h2>
+                    <h2 className="page__section-title">8. Riesgos comunes y malas prácticas</h2>
                     <article className="long-form-content">
                         <div className="risk-list">
                             <div className="risk-item">
                                 <span className="risk-icon">⚠️</span>
-                                <span>Automatizar por moda</span>
+                                <span>Confiar ciegamente en clasificaciones automáticas</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">⚠️</span>
-                                <span>Perder control del contenido enviado</span>
+                                <span>Mezclar datos personales y del estudio</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">⚠️</span>
-                                <span>No auditar salidas de la IA</span>
+                                <span>No revisar reportes generados</span>
                             </div>
                             <div className="risk-item">
                                 <span className="risk-icon">⚠️</span>
-                                <span>Mezclar datos sensibles sin criterio</span>
+                                <span>Perder respaldo documental</span>
                             </div>
                         </div>
                         <blockquote className="concept-quote" style={{ fontSize: 'var(--font-size-xl)' }}>
-                            La clave no es usar más IA, sino usarla mejor delimitada.
+                            La automatización sin auditoría es un error recurrente.
                         </blockquote>
                     </article>
                 </section>
@@ -233,11 +227,11 @@ function SoloPracticeM3U1() {
                     <h2 className="page__section-title">9. Ideas clave para memorizar</h2>
                     <article className="long-form-content">
                         <ul className="key-points">
-                            <li>IA para <strong>operar</strong>, no solo para escribir.</li>
-                            <li>Separar <strong>gestión</strong> de <strong>estrategia</strong>.</li>
-                            <li>Automatizar lo repetitivo.</li>
-                            <li>Revisar siempre lo sensible.</li>
-                            <li><strong>Sistemas simples</strong> vencen a soluciones complejas.</li>
+                            <li>IA para <strong>ordenar</strong>, no para declarar.</li>
+                            <li>El contador <strong>sigue siendo central</strong>.</li>
+                            <li>Automatizar lo repetitivo <strong>reduce errores</strong>.</li>
+                            <li><strong>Revisión humana</strong> obligatoria.</li>
+                            <li><strong>Trazabilidad</strong> siempre.</li>
                         </ul>
                     </article>
                 </section>
@@ -246,17 +240,8 @@ function SoloPracticeM3U1() {
                 <section id="conexion" className="page__section">
                     <h2 className="page__section-title">10. Conexión con el sistema completo</h2>
                     <article className="long-form-content">
-                        <p>Esta unidad inaugura el paso desde:</p>
-                        <ul>
-                            <li><strong>Uso táctico de IA</strong> (Módulo 2)</li>
-                            <li>A <strong>integración estructural en la práctica profesional</strong></li>
-                        </ul>
-                        <p>Es la base para:</p>
+                        <p>Esta unidad continúa la organización operativa (Unidad 1) y prepara el terreno para:</p>
                         <div className="strategic-uses">
-                            <div className="strategic-use">
-                                <span className="strategic-use__icon">💰</span>
-                                <span>Gestión contable automatizada</span>
-                            </div>
                             <div className="strategic-use">
                                 <span className="strategic-use__icon">📢</span>
                                 <span>Marketing legal</span>
@@ -265,7 +250,14 @@ function SoloPracticeM3U1() {
                                 <span className="strategic-use__icon">📈</span>
                                 <span>Escalabilidad del estudio</span>
                             </div>
+                            <div className="strategic-use">
+                                <span className="strategic-use__icon">📊</span>
+                                <span>Reportes financieros claros</span>
+                            </div>
                         </div>
+                        <p className="highlight-warning">
+                            Sin orden contable, <strong>no hay crecimiento sostenible</strong>.
+                        </p>
                     </article>
                 </section>
 
@@ -275,7 +267,7 @@ function SoloPracticeM3U1() {
                     <article className="long-form-content">
                         <div className="result-box">
                             <p>
-                                El abogado que completa esta unidad deja de improvisar su estudio y comienza a <strong>operarlo como un sistema</strong>, usando IA como soporte, no como sustituto.
+                                El abogado que completa esta unidad deja de improvisar su gestión fiscal y comienza a <strong>operar con información clara, ordenada y auditada</strong>, usando IA como soporte administrativo.
                             </p>
                         </div>
                     </article>
@@ -284,19 +276,17 @@ function SoloPracticeM3U1() {
                 {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
-                        <Link to="/prompt-engineering-u3" className="unit-nav-link">
-                            <span className="unit-nav-label">← Módulo anterior</span>
-                            <span className="unit-nav-title">M2 U3: Preparación de Juicio</span>
+                        <Link to="/solo-practice" className="unit-nav-link">
+                            <span className="unit-nav-label">← Unidad anterior</span>
+                            <span className="unit-nav-title">M3 U1: Abogacía por Cuenta Propia</span>
                         </Link>
                     </div>
                     <div className="unit-status">
-                        <span className="status-badge status-badge--complete">✓ Unidad 1 Completa</span>
+                        <span className="status-badge status-badge--complete">✓ Unidad 2 Completa</span>
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <Link to="/solo-practice-u2" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            Unidad 2 – Gestión Contable y Fiscal →
-                        </Link>
+                        <span className="next-title">Unidad 3 – Escritura persuasiva digital</span>
                     </div>
                 </div>
             </div>
@@ -304,4 +294,4 @@ function SoloPracticeM3U1() {
     )
 }
 
-export default SoloPracticeM3U1
+export default SoloPracticeM3U2
