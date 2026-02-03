@@ -10,11 +10,18 @@ const navItems = [
     { path: '/analysis-patterns', label: 'Analysis & Patterns', icon: 'search' },
     { path: '/automation-agents', label: 'Automation & Agents', icon: 'cpu' },
     { path: '/prompt-engineering', label: 'M2 · Prompt Jurídico', icon: 'edit' },
+    { path: '/solo-practice', label: 'M3 · Abogacía por Cuenta Propia', icon: 'briefcase' },
     { path: '/glossary', label: 'Glossary', icon: 'list' },
     { path: '/notes', label: 'Notes', icon: 'edit' },
 ]
 
 const icons = {
+    briefcase: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        </svg>
+    ),
     compass: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
