@@ -13,11 +13,17 @@ import PromptEngineeringM2U3 from './pages/PromptEngineering/PromptEngineeringM2
 import SoloPracticeM3U1 from './pages/SoloPractice/SoloPracticeM3U1'
 import SoloPracticeM3U2 from './pages/SoloPractice/SoloPracticeM3U2'
 import SoloPracticeM3U3 from './pages/SoloPractice/SoloPracticeM3U3'
+import GeminiM4U1 from './pages/Gemini/GeminiM4U1'
+import GeminiM4U2 from './pages/Gemini/GeminiM4U2'
+import GeminiM4U3 from './pages/Gemini/GeminiM4U3'
 import CourseMap from './pages/CourseMap/CourseMap'
+
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <PageLayout>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Navigate to="/overview" replace />} />
         <Route path="/overview" element={<Overview />} />
@@ -31,6 +37,9 @@ function App() {
         <Route path="/solo-practice" element={<SoloPracticeM3U1 />} />
         <Route path="/solo-practice-u2" element={<SoloPracticeM3U2 />} />
         <Route path="/solo-practice-u3" element={<SoloPracticeM3U3 />} />
+        <Route path="/gemini" element={<GeminiM4U1 />} />
+        <Route path="/gemini-u2" element={<GeminiM4U2 />} />
+        <Route path="/gemini-u3" element={<GeminiM4U3 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />

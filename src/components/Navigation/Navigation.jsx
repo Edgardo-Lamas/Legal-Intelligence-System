@@ -11,6 +11,7 @@ const navItems = [
     { path: '/automation-agents', label: 'Automation & Agents', icon: 'cpu' },
     { path: '/prompt-engineering', label: 'M2 · Prompt Jurídico', icon: 'edit' },
     { path: '/solo-practice', label: 'M3 · Abogacía por Cuenta Propia', icon: 'briefcase' },
+    { path: '/gemini', label: 'M4 · Gemini & Deep Research', icon: 'search' },
     { path: '/glossary', label: 'Glossary', icon: 'list' },
     { path: '/notes', label: 'Notes', icon: 'edit' },
 ]

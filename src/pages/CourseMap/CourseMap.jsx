@@ -70,8 +70,9 @@ const courseData = [
                 id: 'm4',
                 title: 'Módulo 4 – Gemini: otra inteligencia, nuevas funciones',
                 units: [
-                    { id: 'u4.1', title: 'Deep Research aplicado a casos legales', path: null, topics: ['Investigación jurídica asistida', 'Preparación estratégica de casos'] },
-                    { id: 'u4.2', title: 'Tareas automáticas y memoria', path: null, topics: ['Seguimiento de temas', 'Organización de información'] },
+                    { id: 'u4.1', title: 'Deep Research aplicado a casos legales', path: '/gemini', status: 'completed', topics: ['Investigación jurídica asistida', 'Preparación estratégica de casos'] },
+                    { id: 'u4.2', title: 'Gemini Canvas: Visualización y estructura', path: '/gemini-u2', status: 'completed', topics: ['Mapas conceptuales', 'Estructuración cognitiva', 'Productos legales inteligentes'] },
+                    { id: 'u4.3', title: 'Tareas automáticas y memoria jurídica', path: '/gemini-u3', status: 'current', topics: ['Uso proactivo de IA', 'Programación de alertas', 'Gestión de conocimiento'] },
                 ]
             },
             {
