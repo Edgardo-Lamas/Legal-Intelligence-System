@@ -286,7 +286,9 @@ function SoloPracticeM3U2() {
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <span className="next-title">Unidad 3 – Escritura persuasiva digital</span>
+                        <Link to="/solo-practice-u3" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 3 – Escritura Persuasiva Digital →
+                        </Link>
                     </div>
                 </div>
             </div>
