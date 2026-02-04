@@ -1,0 +1,192 @@
+import '../../styles/pages.css'
+import '../../styles/content.css'
+import '../../styles/study-page.css'
+import { Link } from 'react-router-dom'
+
+function PracticeM8U2() {
+    return (
+        <div className="page">
+            <header className="page__header">
+                <span className="page__module-tag">Módulo 8 · Unidad 2</span>
+                <h1 className="page__title">Diseño de flujos de trabajo con IA</h1>
+                <p className="page__description">
+                    Cómo pasar de una idea general de "uso de IA" a una estructura operativa sostenible.
+                </p>
+            </header>
+
+            <div className="page__content">
+                {/* Intro */}
+                <section className="page__section">
+                    <article className="long-form-content">
+                        <p>
+                            Una vez comprendida la diferencia entre usar herramientas aisladas y operar con sistemas, el siguiente paso lógico es aprender a <strong>diseñar flujos de trabajo</strong> que integren la inteligencia artificial de manera funcional y coherente.
+                        </p>
+                        <p>
+                            Esta unidad se centra precisamente en ese punto: cómo pasar de una idea general de "uso de IA" a una <strong>estructura operativa</strong> que pueda sostenerse en el tiempo.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 1: Qué es un flujo */}
+                <section id="flujo" className="page__section">
+                    <h2 className="page__section-title">1. ¿Qué es un flujo de trabajo?</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Un flujo de trabajo puede entenderse como la <strong>secuencia ordenada de acciones</strong> que permiten transformar una necesidad profesional en un resultado concreto.
+                        </p>
+                        <p>En la práctica jurídica y profesional, estos flujos suelen repetirse:</p>
+                        <ul className="application-list">
+                            <li>Análisis de un caso</li>
+                            <li>Producción de documentos</li>
+                            <li>Comunicación con clientes</li>
+                            <li>Investigación normativa</li>
+                            <li>Generación de contenidos</li>
+                            <li>Seguimiento de tareas</li>
+                        </ul>
+                        <div className="highlight-success">
+                            El valor de la IA aparece cuando se la incorpora de forma consciente dentro de esas secuencias, y no como un agregado improvisado.
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 2: No automatizar todo */}
+                <section id="criterio" className="page__section">
+                    <h2 className="page__section-title">2. No se trata de automatizar todo</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Diseñar un flujo con IA no consiste en automatizar todo. Por el contrario, exige identificar con claridad qué partes del proceso se benefician de la asistencia automatizada y cuáles requieren criterio humano.
+                        </p>
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--good">
+                                <h4>🤖 IA eficaz en:</h4>
+                                <p>Exploración, síntesis, reformulación, estructuración inicial y apoyo creativo.</p>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>👤 Humano indelegable:</h4>
+                                <p>Decisiones estratégicas, validación final y responsabilidad profesional.</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 3: Partir del proceso */}
+                <section id="proceso" className="page__section">
+                    <h2 className="page__section-title">3. Partir del proceso, no de la herramienta</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Un error frecuente es comenzar el diseño desde la herramienta: "¿cómo uso tal modelo o tal aplicación?"
+                        </p>
+                        <blockquote className="concept-quote">
+                            El enfoque correcto invierte esa lógica y parte del proceso.
+                        </blockquote>
+                        <p>Las preguntas correctas son:</p>
+                        <ul className="application-list">
+                            <li><strong>¿Qué necesito hacer?</strong></li>
+                            <li><strong>¿Qué pasos lo componen?</strong></li>
+                            <li><strong>¿Qué insumos entran y qué resultados espero en cada etapa?</strong></li>
+                        </ul>
+                        <div className="highlight-warning">
+                            Recién después de responder esas preguntas tiene sentido decidir si la IA interviene y de qué manera.
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 4: El prompt como pieza */}
+                <section id="prompt" className="page__section">
+                    <h2 className="page__section-title">4. El prompt como pieza del flujo</h2>
+                    <article className="long-form-content">
+                        <p>
+                            En este contexto, el prompt deja de ser un texto aislado y pasa a funcionar como <strong>una pieza dentro de un flujo mayor</strong>.
+                        </p>
+                        <p>Cada prompt cumple una función específica:</p>
+                        <ul className="application-list">
+                            <li>Analizar información</li>
+                            <li>Generar un borrador</li>
+                            <li>Proponer alternativas</li>
+                            <li>Verificar coherencia</li>
+                            <li>Adaptar un texto a un destinatario concreto</li>
+                        </ul>
+                        <div className="highlight-success">
+                            Pensar en términos de flujo permite diseñar prompts más precisos y reducir la improvisación.
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 5: Modularidad */}
+                <section id="modularidad" className="page__section">
+                    <h2 className="page__section-title">5. Modularidad: la clave de la flexibilidad</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Un buen flujo de trabajo con IA se construye en <strong>módulos</strong> que pueden ajustarse, mejorarse o reemplazarse sin afectar todo el sistema.
+                        </p>
+                        <p>
+                            Esto es especialmente importante en un entorno tecnológico cambiante, donde las herramientas evolucionan rápidamente.
+                        </p>
+                        <blockquote className="concept-quote">
+                            El foco no está en la herramienta puntual, sino en la lógica del proceso.
+                        </blockquote>
+                    </article>
+                </section>
+
+                {/* Sección 6: Impacto organizacional */}
+                <section id="impacto" className="page__section">
+                    <h2 className="page__section-title">6. Impacto organizacional</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Desde una perspectiva profesional, diseñar flujos también implica considerar el <strong>impacto organizacional</strong>.
+                        </p>
+                        <p>Un flujo bien diseñado:</p>
+                        <ul className="application-list">
+                            <li>Reduce la carga cognitiva</li>
+                            <li>Mejora la consistencia del trabajo</li>
+                            <li>Libera tiempo para tareas de mayor valor estratégico</li>
+                        </ul>
+                        <div className="highlight-success">
+                            En el caso del ejercicio independiente o de estudios pequeños, esto puede marcar una diferencia real en productividad y calidad del servicio.
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 7: Colaborador estructurado */}
+                <section id="colaborador" className="page__section">
+                    <h2 className="page__section-title">7. IA como colaborador estructurado</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Esta unidad invita a pensar la IA como un <strong>colaborador estructurado</strong>, no como un asistente caótico.
+                        </p>
+                        <blockquote className="concept-quote">
+                            El objetivo no es hacer más cosas, sino trabajar mejor, con mayor claridad sobre qué se delega, cómo se controla y dónde se interviene.
+                        </blockquote>
+                        <p>
+                            Al finalizar esta unidad, el estudiante debería ser capaz de visualizar sus propias actividades profesionales como flujos, identificar puntos de mejora y comenzar a esbozar sistemas de trabajo donde la IA tenga un rol definido, controlado y alineado con sus objetivos.
+                        </p>
+                        <p>
+                            En la próxima unidad, este diseño conceptual se traducirá en escenarios concretos de implementación, cerrando el pasaje definitivo de la teoría a la práctica real.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Footer de navegación */}
+                <div className="unit-navigation">
+                    <div className="unit-nav-prev">
+                        <Link to="/practice" className="unit-nav-link">
+                            <span className="unit-nav-label">← Unidad anterior</span>
+                            <span className="unit-nav-title">M8 U1: Del concepto al sistema</span>
+                        </Link>
+                    </div>
+                    <div className="unit-status">
+                        <span className="status-badge status-badge--current">📖 Unidad Actual</span>
+                    </div>
+                    <div className="next-unit">
+                        <span className="next-label">Próxima unidad:</span>
+                        <Link to="/practice-u3" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 3 – Implementación práctica y validación →
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default PracticeM8U2

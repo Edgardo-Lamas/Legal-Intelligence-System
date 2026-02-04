@@ -13,6 +13,9 @@ const navItems = [
     { path: '/solo-practice', label: 'M3 · Abogacía por Cuenta Propia', icon: 'briefcase' },
     { path: '/gemini', label: 'M4 · Gemini & Deep Research', icon: 'search' },
     { path: '/ecosystem', label: 'M5 · Ecosistema & Auto', icon: 'layers' },
+    { path: '/mastering', label: 'M6 · Dominando el Ecosistema', icon: 'cpu' },
+    { path: '/communication', label: 'M7 · Comunicación Legal', icon: 'edit' },
+    { path: '/practice', label: 'M8 · De la Teoría a la Práctica', icon: 'cpu' },
     { path: '/glossary', label: 'Glossary', icon: 'list' },
     { path: '/notes', label: 'Notes', icon: 'edit' },
 ]

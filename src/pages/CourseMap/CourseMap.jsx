@@ -97,42 +97,44 @@ const courseData = [
             },
             {
                 id: 'm6',
-                title: 'Módulo 6 – Dominando el ecosistema de IA',
+                title: 'Módulo 6 – Dominio de herramientas específicas',
                 units: [
-                    { id: 'u6.1', title: 'Pensar la IA como ecosistema profesional', path: '/mastering', status: 'current', topics: ['Ecosistema vs herramienta aislada', 'Especialización funcional', 'Costo cognitivo'] },
-                    { id: 'u6.2', title: 'NotebookLM para gestión documental', path: null, topics: ['Estudio', 'Organización de fuentes'] },
-                    { id: 'u6.3', title: 'Claude para redacción técnica', path: null, topics: ['Precisión y control'] },
-                    { id: 'u6.4', title: 'Búsquedas avanzadas', path: null, topics: ['Perplexity', 'Manus'] },
+                    { id: 'u6.1', title: 'Claude Projects para gestión de casos', path: '/mastering', status: 'completed', topics: ['Configuración', 'Prompts reales', 'Caso práctico', 'Checklist'] },
+                    { id: 'u6.2', title: 'ChatGPT para análisis jurídico', path: '/mastering-u2', status: 'completed', topics: ['Custom GPTs', 'Análisis de contratos', 'Prompts normativos'] },
+                    { id: 'u6.3', title: 'Perplexity/Manus para investigación', path: '/mastering-u3', status: 'completed', topics: ['Búsqueda jurisprudencial', 'Verificación de fuentes'] },
+                    { id: 'u6.4', title: 'Gemini Deep Research para doctrina', path: '/mastering-u4', status: 'current', topics: ['Investigación doctrinal', 'Síntesis de fuentes'] },
                 ]
             }
         ]
     },
     {
         id: 6,
-        emoji: '🧱',
-        title: 'Marketing y creación de contenido',
+        emoji: '📢',
+        title: 'Comunicación Legal',
         color: '#944a6e',
         modules: [
             {
                 id: 'm7',
                 title: 'Módulo 7 – IA para comunicación legal',
                 units: [
-                    { id: 'u7.1', title: 'Clonación de voz y avatares', path: null, topics: ['Comunicación institucional', 'Contenido audiovisual jurídico'] },
+                    { id: 'u7.1', title: 'IA para comunicación legal', path: '/communication', status: 'completed', topics: ['Comunicación estratégica', 'Posicionamiento profesional', 'Ética comunicacional'] },
                 ]
             }
         ]
     },
     {
         id: 7,
-        emoji: '🧱',
-        title: 'Implementación real',
+        emoji: '🔧',
+        title: 'De la Teoría a la Práctica',
         color: '#4a5c94',
         modules: [
             {
                 id: 'm8',
                 title: 'Módulo 8 – De la teoría a la práctica',
                 units: [
-                    { id: 'u8.1', title: 'Digitalización de un despacho', path: null, topics: ['Hoja de ruta', 'Checklist operativo'] },
+                    { id: 'u8.1', title: 'Del concepto al sistema', path: '/practice', status: 'completed', topics: ['Pensamiento sistémico', 'Preguntas estratégicas', 'Arquitecto de sistemas'] },
+                    { id: 'u8.2', title: 'Diseño de flujos de trabajo con IA', path: '/practice-u2', status: 'completed', topics: ['Secuencias ordenadas', 'Modularidad', 'Impacto organizacional'] },
+                    { id: 'u8.3', title: 'Implementación práctica y validación', path: '/practice-u3', status: 'current', topics: ['Enfoque progresivo', 'Criterios de control', 'Documentación'] },
                 ]
             },
             {
