@@ -14,10 +14,10 @@ const courseData = [
                 id: 'm1',
                 title: 'Módulo 1 – La Importancia de la IA para Abogados',
                 units: [
-                    { id: 'u1.1', title: 'IA generativa y agentes de IA', path: '/foundations', topics: ['Qué es IA generativa y qué no', 'Qué son agentes de IA', 'Diferencias prácticas para el ejercicio profesional'] },
-                    { id: 'u1.2', title: 'ChatGPT vs Gemini en el ámbito legal', path: '/foundations', topics: ['Fortalezas y debilidades de cada modelo', 'Casos de uso recomendados', 'Cuándo usar uno u otro'] },
-                    { id: 'u1.3', title: 'RAG aplicado al derecho', path: null, topics: ['Qué es RAG (Retrieval-Augmented Generation)', 'Uso con jurisprudencia, doctrina y normativa', 'Ventajas frente a prompts simples'] },
-                    { id: 'u1.4', title: 'Glosario esencial de IA para abogados', path: '/glossary', topics: ['Términos clave explicados en lenguaje jurídico', 'Conceptos mínimos para no quedar afuera'] },
+                    { id: 'u1.1', title: 'IA generativa y agentes de IA', path: '/foundations', status: 'completed', topics: ['Qué es IA generativa y qué no', 'Qué son agentes de IA', 'Diferencias prácticas para el ejercicio profesional'] },
+                    { id: 'u1.2', title: 'ChatGPT vs Gemini en el ámbito legal', path: '/foundations-u2', status: 'completed', topics: ['Fortalezas y debilidades de cada modelo', 'Casos de uso recomendados', 'Cuándo usar uno u otro'] },
+                    { id: 'u1.3', title: 'RAG aplicado al derecho', path: '/foundations-u3', status: 'completed', topics: ['Qué es RAG (Retrieval-Augmented Generation)', 'Uso con jurisprudencia, doctrina y normativa', 'Ventajas frente a prompts simples'] },
+                    { id: 'u1.4', title: 'Glosario esencial de IA para abogados', path: '/glossary', status: 'completed', topics: ['Términos clave explicados en lenguaje jurídico', 'Conceptos mínimos para no quedar afuera'] },
                 ]
             }
         ]

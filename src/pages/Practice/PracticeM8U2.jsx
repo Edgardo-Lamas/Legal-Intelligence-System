@@ -166,6 +166,183 @@ function PracticeM8U2() {
                     </article>
                 </section>
 
+                {/* Sección 7.5: Prompts para diseño de flujos */}
+                <section id="prompts-flujos" className="page__section">
+                    <h2 className="page__section-title">7.5. Prompts para diseño de flujos de trabajo</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a estructurar flujos específicos:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📊 Mapeo de proceso actual</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como analista de procesos legales.<br /><br />
+
+                                    Proceso a mapear: [ej: "atención de nueva consulta laboral"]<br /><br />
+
+                                    Ayudame a documentar el flujo actual:<br />
+                                    1. Listá todos los pasos desde el trigger inicial hasta el entregable final<br />
+                                    2. Para cada paso, indicá: tiempo promedio, herramientas usadas, inputs y outputs<br />
+                                    3. Identificá cuellos de botella y puntos de espera<br />
+                                    4. Señalá decisiones que requieren criterio profesional<br />
+                                    5. Destacá tareas repetitivas susceptibles de asistencia IA<br /><br />
+
+                                    Formato: diagrama de flujo textual + tabla resumen.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🔄 Diseño de flujo optimizado</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como diseñador de workflows legales asistidos por IA.<br /><br />
+
+                                    Proceso actual mapeado: [pegar el análisis anterior]<br />
+                                    Objetivo de mejora: [reducir tiempo / mejorar calidad / estandarizar]<br /><br />
+
+                                    Diseñá un flujo optimizado que:<br />
+                                    1. Integre IA en los puntos de mayor impacto<br />
+                                    2. Mantenga control humano en las decisiones críticas<br />
+                                    3. Sea implementable con herramientas accesibles (ChatGPT, Gemini, etc.)<br />
+                                    4. Tenga puntos de validación claros<br />
+                                    5. Pueda medirse con métricas simples<br /><br />
+
+                                    Formato: flujo paso a paso + comparativa antes/después.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>⚡ Cadena de prompts para flujo completo</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como arquitecto de prompts jurídicos.<br /><br />
+
+                                    Flujo a soportar: [describir el proceso optimizado]<br /><br />
+
+                                    Creá una cadena de prompts donde cada uno:<br />
+                                    1. Tenga un objetivo específico dentro del flujo<br />
+                                    2. Reciba el output del paso anterior como input<br />
+                                    3. Produzca un output claro para el siguiente paso<br />
+                                    4. Incluya instrucciones de formato consistentes<br />
+                                    5. Tenga checkpoints de validación humana donde corresponda<br /><br />
+
+                                    Formato: secuencia numerada de prompts con descripción de conexión entre cada uno.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 7.6: Ejemplo de flujo completo */}
+                <section id="ejemplo-flujo" className="page__section">
+                    <h2 className="page__section-title">7.6. Ejemplo: Flujo de análisis de caso nuevo</h2>
+                    <article className="long-form-content">
+                        <h3>Flujo tradicional vs. Flujo con IA</h3>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--bad">
+                                <h4>❌ Flujo tradicional</h4>
+                                <ol>
+                                    <li>Recibir documentación (email)</li>
+                                    <li>Leer todos los documentos (2h)</li>
+                                    <li>Tomar notas en papel</li>
+                                    <li>Buscar jurisprudencia manual (1h)</li>
+                                    <li>Redactar análisis (2h)</li>
+                                    <li>Enviarlo al cliente (email)</li>
+                                </ol>
+                                <p><strong>Tiempo total: 5+ horas</strong></p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>✅ Flujo optimizado con IA</h4>
+                                <ol>
+                                    <li>Recibir documentación</li>
+                                    <li>Cargar en Gemini → resumen estructurado (15min)</li>
+                                    <li>Prompt de análisis jurídico → borrador (10min)</li>
+                                    <li>Búsqueda asistida de jurisprudencia (20min)</li>
+                                    <li>Revisión y ajuste humano (30min)</li>
+                                    <li>Prompt de comunicación a cliente (10min)</li>
+                                </ol>
+                                <p><strong>Tiempo total: ~1.5 horas</strong></p>
+                            </div>
+                        </div>
+
+                        <h3>Cadena de prompts para este flujo</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">P1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de síntesis documental</h4>
+                                        <p>Input: documentos del caso → Output: resumen estructurado con hechos, actores, fechas</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓ Validación humana rápida</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">P2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de análisis jurídico</h4>
+                                        <p>Input: resumen validado → Output: opciones legales, riesgos, recomendación</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓ Validación técnica</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">P3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de comunicación</h4>
+                                        <p>Input: análisis validado → Output: texto para cliente en lenguaje claro</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Clave:</strong> Cada prompt tiene un propósito específico y el profesional valida entre pasos críticos.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 7.7: Templates de flujos */}
+                <section id="templates-flujos" className="page__section">
+                    <h2 className="page__section-title">7.7. Templates de flujos por tipo de tarea</h2>
+                    <article className="long-form-content">
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>📥 Flujo: Ingreso de caso nuevo</h4>
+                                <ul>
+                                    <li>Recepción → Análisis inicial → Viabilidad → Presupuesto → Apertura</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>📝 Flujo: Producción de escritos</h4>
+                                <ul>
+                                    <li>Investigación → Estructura → Borrador → Revisión → Final</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>⚖️ Flujo: Preparación de audiencia</h4>
+                                <ul>
+                                    <li>Análisis de expediente → Puntos clave → Preguntas → Simulación → Checklist</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>📊 Flujo: Informe periódico a cliente</h4>
+                                <ul>
+                                    <li>Recopilación → Síntesis → Redacción → Revisión → Envío</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="highlight-warning">
+                            <strong>Consejo:</strong> Empezá con el flujo que más repetís. Una vez dominado, aplicá la lógica a otros.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">

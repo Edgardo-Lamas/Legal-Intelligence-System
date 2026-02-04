@@ -101,6 +101,197 @@ function GeminiM4U1() {
                     </article>
                 </section>
 
+                {/* Sección 5.5: Prompts específicos para Deep Research */}
+                <section id="prompts-deep-research" className="page__section">
+                    <h2 className="page__section-title">5.5. Prompts específicos para Deep Research</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts están diseñados para aprovechar la capacidad de lectura masiva de Gemini:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🔍 Análisis exhaustivo de expediente</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de investigación jurídica con capacidad de lectura profunda.<br /><br />
+
+                                    Analizá los documentos adjuntos que componen este expediente de [tipo de caso].<br /><br />
+
+                                    Tu tarea:<br />
+                                    1. Identificá todos los hechos relevantes con fecha y fuente<br />
+                                    2. Detectá contradicciones entre declaraciones o documentos<br />
+                                    3. Señalá información faltante que sería crítica para el caso<br />
+                                    4. Listá los actores mencionados y sus roles<br />
+                                    5. Creá una línea de tiempo ordenada cronológicamente<br /><br />
+
+                                    Formato: estructurado, con referencias exactas a los documentos.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>⚖️ Investigación jurisprudencial masiva</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como investigador jurídico especializado en análisis de jurisprudencia.<br /><br />
+
+                                    Tema a investigar: [describir tema jurídico]<br />
+                                    Jurisdicción: Argentina<br />
+                                    Período: últimos 5 años<br /><br />
+
+                                    Necesito que:<br />
+                                    1. Identifiques las líneas jurisprudenciales principales<br />
+                                    2. Detectes cambios de criterio o evolución doctrinal<br />
+                                    3. Señales los fallos más citados y su fundamento central<br />
+                                    4. Alertes sobre criterios contradictorios entre tribunales<br />
+                                    5. Sugieras qué argumentos tienen mayor respaldo actual<br /><br />
+
+                                    Formato: resumen ejecutivo + tabla comparativa + análisis detallado.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📋 Due Diligence documental</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de due diligence legal.<br /><br />
+
+                                    Revisá los documentos adjuntos correspondientes a [tipo de operación].<br /><br />
+
+                                    Analizá cada documento buscando:<br />
+                                    1. Cláusulas con riesgos potenciales (penalidades, limitaciones, exclusiones)<br />
+                                    2. Obligaciones que permanecen vigentes post-operación<br />
+                                    3. Garantías otorgadas y su alcance<br />
+                                    4. Inconsistencias entre documentos relacionados<br />
+                                    5. Información que debería existir pero no aparece<br /><br />
+
+                                    Priorizá hallazgos por nivel de riesgo: ALTO, MEDIO, BAJO.<br />
+                                    Incluí referencia exacta al documento y sección donde encontraste cada issue.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 5.6: Caso práctico */}
+                <section id="caso-practico" className="page__section">
+                    <h2 className="page__section-title">5.6. Caso práctico: Preparación de litigio complejo</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Escenario:</strong> Demanda laboral con:</p>
+                            <ul>
+                                <li>15 años de relación laboral</li>
+                                <li>200+ emails entre las partes</li>
+                                <li>12 recibos de sueldo con inconsistencias</li>
+                                <li>3 testigos con declaraciones previas</li>
+                                <li>Acuerdo verbal nunca documentado</li>
+                            </ul>
+                            <p><strong>Problema:</strong> El abogado no puede leer todo a tiempo para la audiencia.</p>
+                        </div>
+
+                        <h3>Flujo con Gemini Deep Research</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Cargar todo el corpus</h4>
+                                        <p>Subir todos los documentos + emails + declaraciones a Gemini</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de análisis exhaustivo</h4>
+                                        <p>→ Línea de tiempo con todos los eventos relevantes</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de contradicciones</h4>
+                                        <p>→ Lista de inconsistencias entre declaraciones y documentos</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de gaps informativos</h4>
+                                        <p>→ Qué información falta y cómo obtenerla</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">5</div>
+                                    <div className="layer-step__content">
+                                        <h4>Análisis humano</h4>
+                                        <p>El abogado valida hallazgos y diseña estrategia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> En 2 horas, el abogado tiene una visión completa que manualmente hubiera tomado 2-3 días de lectura.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 5.7: Paso a paso */}
+                <section id="paso-a-paso" className="page__section">
+                    <h2 className="page__section-title">5.7. Paso a paso: Tu primera investigación profunda</h2>
+                    <article className="long-form-content">
+                        <div className="layer-diagram">
+                            <div className="layer-step">
+                                <div className="layer-step__number">1</div>
+                                <div className="layer-step__content">
+                                    <h4>Preparar documentos</h4>
+                                    <p>Convertí todo a PDF o texto limpio. Eliminá páginas irrelevantes (carátulas, sellos repetidos).</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">2</div>
+                                <div className="layer-step__content">
+                                    <h4>Organizar por tipo</h4>
+                                    <p>Agrupá: contratos, comunicaciones, documentación técnica, jurisprudencia.</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">3</div>
+                                <div className="layer-step__content">
+                                    <h4>Definir objetivo claro</h4>
+                                    <p>¿Qué pregunta específica querés responder? Cuanto más precisa, mejor resultado.</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">4</div>
+                                <div className="layer-step__content">
+                                    <h4>Usar prompt estructurado</h4>
+                                    <p>Aplicá uno de los prompts anteriores, adaptándolo a tu caso.</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">5</div>
+                                <div className="layer-step__content">
+                                    <h4>Validar hallazgos</h4>
+                                    <p>Verificá las citas y referencias. La IA encuentra, vos confirmás.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-warning">
+                            <strong>Regla de oro:</strong> Gemini es tu mejor asistente de investigación, pero nunca tu único verificador. Todo hallazgo crítico debe chequearse en la fuente original.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Sección 6: Limitaciones y riesgos */}
                 <section id="limitaciones" className="page__section">
                     <h2 className="page__section-title">6. Limitaciones y riesgos específicos</h2>

@@ -161,6 +161,213 @@ function CommunicationM7U1() {
                     </article>
                 </section>
 
+                {/* Sección 5.5: Prompts de comunicación */}
+                <section id="prompts-comunicacion" className="page__section">
+                    <h2 className="page__section-title">5.5. Prompts específicos para comunicación legal</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a comunicar mejor sin perder rigor jurídico:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📧 Carta a cliente explicando situación procesal</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como abogado comunicando resultados a un cliente sin formación jurídica.<br /><br />
+
+                                    Situación procesal: [describir estado del caso]<br />
+                                    Audiencia/Resolución reciente: [describir qué ocurrió]<br />
+                                    Próximos pasos: [listar]<br /><br />
+
+                                    Redactá una comunicación que:<br />
+                                    1. Explique qué pasó en términos comprensibles<br />
+                                    2. Evite tecnicismos innecesarios pero mantenga precisión<br />
+                                    3. Transmita control profesional<br />
+                                    4. Indique claramente qué necesitás del cliente (si algo)<br />
+                                    5. Cierre con los plazos relevantes<br /><br />
+
+                                    Tono: profesional, claro, tranquilizador pero realista.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📝 Artículo de divulgación jurídica</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como abogado especialista escribiendo para público general.<br /><br />
+
+                                    Tema: [describir tema jurídico]<br />
+                                    Público objetivo: [empresarios / público general / colegas]<br />
+                                    Extensión: [500-800 palabras]<br /><br />
+
+                                    El artículo debe:<br />
+                                    1. Comenzar con un gancho que conecte con problemas reales<br />
+                                    2. Explicar el marco legal de forma accesible<br />
+                                    3. Dar ejemplos prácticos<br />
+                                    4. Incluir advertencias sobre riesgos comunes<br />
+                                    5. Cerrar con recomendación práctica<br /><br />
+
+                                    Evitá: promesas de resultados, publicidad encubierta, simplificaciones que induzcan a error.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📱 Contenido para redes profesionales</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como estratega de contenido legal para LinkedIn/redes profesionales.<br /><br />
+
+                                    Tema central: [describir]<br />
+                                    Objetivo: [posicionamiento como especialista / educación / captación]<br /><br />
+
+                                    Generá 3 variantes de publicación:<br />
+                                    1. Post corto (150 palabras) con insight valioso<br />
+                                    2. Post narrativo (300 palabras) con caso ilustrativo<br />
+                                    3. Carrusel de 5 puntos con tips prácticos<br /><br />
+
+                                    Cada variante debe:<br />
+                                    - Demostrar expertise sin autopromoción directa<br />
+                                    - Aportar valor educativo real<br />
+                                    - Incluir llamado a la reflexión (no CTA comercial)<br />
+                                    - Mantener tono profesional pero accesible
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🎓 Material educativo para clientes</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como abogado creando material educativo para clientes recurrentes.<br /><br />
+
+                                    Tema: [describir tema que genere consultas frecuentes]<br />
+                                    Formato: [guía PDF / FAQ / checklist]<br /><br />
+
+                                    El material debe:<br />
+                                    1. Responder las preguntas más frecuentes sobre el tema<br />
+                                    2. Usar lenguaje claro sin perder precisión legal<br />
+                                    3. Incluir ejemplos de situaciones comunes<br />
+                                    4. Señalar cuándo SÍ es necesario consultar al abogado<br />
+                                    5. Evitar crear falsa seguridad o autoconsulta riesgosa<br /><br />
+
+                                    Estructura: secciones breves con títulos descriptivos.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 5.6: Caso práctico comunicación */}
+                <section id="caso-practico-com" className="page__section">
+                    <h2 className="page__section-title">5.6. Caso práctico: De la resolución al cliente</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Problema:</strong> Recibís una sentencia de 40 páginas con fallo parcialmente favorable.</p>
+                            <ul>
+                                <li>El cliente llama preguntando "¿ganamos o perdimos?"</li>
+                                <li>La respuesta es matizada y técnica</li>
+                                <li>Riesgo de generar falsas expectativas o decepción innecesaria</li>
+                            </ul>
+                        </div>
+
+                        <h3>Flujo con IA</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Cargar sentencia en Gemini</h4>
+                                        <p>Deep Research para análisis exhaustivo</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de síntesis para abogado</h4>
+                                        <p>Resumen técnico: qué se obtuvo, qué no, recursos posibles</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de comunicación a cliente</h4>
+                                        <p>Versión clara sin tecnicismos + próximos pasos</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Revisión y ajuste humano</h4>
+                                        <p>Validar tono, agregar contexto personal, enviar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> El cliente recibe comunicación profesional en horas (no días), entiende su situación, y percibe acompañamiento efectivo.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 5.7: Templates de comunicación */}
+                <section id="templates-comunicacion" className="page__section">
+                    <h2 className="page__section-title">5.7. Templates de comunicación profesional</h2>
+                    <article className="long-form-content">
+                        <h3>Biblioteca de formatos reutilizables</h3>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>📧 Comunicaciones a clientes</h4>
+                                <ul>
+                                    <li>Actualización de estado procesal</li>
+                                    <li>Explicación de resolución judicial</li>
+                                    <li>Solicitud de documentación</li>
+                                    <li>Recordatorio de vencimientos</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>📝 Contenido de posicionamiento</h4>
+                                <ul>
+                                    <li>Artículo de opinión (800 palabras)</li>
+                                    <li>Post de LinkedIn (150-300 palabras)</li>
+                                    <li>Newsletter mensual</li>
+                                    <li>Comentario de jurisprudencia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>🎓 Material educativo</h4>
+                                <ul>
+                                    <li>FAQ sobre área de práctica</li>
+                                    <li>Guía paso a paso para clientes</li>
+                                    <li>Checklist de documentación</li>
+                                    <li>Glosario para no-abogados</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>🏢 Comunicación institucional</h4>
+                                <ul>
+                                    <li>Presentación del estudio</li>
+                                    <li>Propuesta de servicios</li>
+                                    <li>Informe de gestión para empresas</li>
+                                    <li>Biografías profesionales</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="highlight-warning">
+                            <strong>Regla de oro:</strong> La IA redacta, vos firmás. Todo lo que sale con tu nombre debe pasar por tu validación final.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Sección 6: Cierre conceptual */}
                 <section id="cierre" className="page__section">
                     <h2 className="page__section-title">6. Cierre conceptual: el dominio del lenguaje</h2>

@@ -161,6 +161,193 @@ function PracticeM8U1() {
                     </article>
                 </section>
 
+                {/* Sección 7.5: Prompts de diseño de sistemas */}
+                <section id="prompts-sistemas" className="page__section">
+                    <h2 className="page__section-title">7.5. Prompts para diseñar tu sistema de trabajo</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a reflexionar y diseñar tu propio sistema:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🔍 Diagnóstico de práctica actual</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como consultor de productividad legal.<br /><br />
+
+                                    Mi práctica profesional es: [describir área, tipo de clientes, volumen]<br /><br />
+
+                                    Ayudame a diagnosticar mi flujo de trabajo actual:<br />
+                                    1. ¿Cuáles son las tareas más repetitivas que hago?<br />
+                                    2. ¿Dónde pierdo más tiempo sin agregar valor?<br />
+                                    3. ¿Qué tareas requieren criterio jurídico irremplazable?<br />
+                                    4. ¿Qué información manejo repetidamente?<br />
+                                    5. ¿Dónde hay mayor riesgo de error humano?<br /><br />
+
+                                    Formato: tabla con [Tarea, Tiempo estimado, Valor agregado, Automatizable S/N, Prioridad].
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🏗️ Diseño de sistema mínimo viable</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como arquitecto de sistemas legales con enfoque práctico.<br /><br />
+
+                                    Contexto de mi práctica: [describir]<br />
+                                    Principal dolor identificado: [tarea/proceso problemático]<br />
+                                    Herramientas que ya uso: [listar]<br /><br />
+
+                                    Diseñá un sistema mínimo viable que:<br />
+                                    1. Ataque el problema principal primero<br />
+                                    2. Use herramientas que ya conozco o son fáciles de aprender<br />
+                                    3. Pueda implementarse en menos de 1 semana<br />
+                                    4. Tenga puntos claros de control humano<br />
+                                    5. Sea escalable si funciona bien<br /><br />
+
+                                    Formato: diagrama de flujo + lista de pasos de implementación.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>⚙️ Checklist de implementación</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como project manager de implementación tecnológica legal.<br /><br />
+
+                                    Sistema a implementar: [describir el flujo diseñado]<br />
+                                    Tiempo disponible: [X horas/días]<br /><br />
+
+                                    Creá un checklist de implementación que incluya:<br />
+                                    1. Prerequisitos técnicos (cuentas, accesos, configuraciones)<br />
+                                    2. Pasos de configuración en orden<br />
+                                    3. Pruebas de validación para cada etapa<br />
+                                    4. Plan B si algo falla<br />
+                                    5. Métricas para saber si funciona<br /><br />
+
+                                    Formato: checklist con casillas, agrupado por día/etapa.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 7.6: Caso práctico diseño */}
+                <section id="caso-practico-diseño" className="page__section">
+                    <h2 className="page__section-title">7.6. Caso práctico: De herramientas sueltas a sistema integrado</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Problema:</strong> Abogado que usa IA de forma fragmentada</p>
+                            <ul>
+                                <li>ChatGPT para redactar emails</li>
+                                <li>Gemini para leer documentos largos</li>
+                                <li>Excel para control de causas</li>
+                                <li>Ninguna conexión entre herramientas</li>
+                                <li>Duplicación de trabajo manual</li>
+                            </ul>
+                        </div>
+
+                        <h3>Diseño del sistema integrado</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Identificar proceso central</h4>
+                                        <p>Gestión de nuevos casos: desde consulta inicial hasta apertura de expediente</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Mapear flujo actual</h4>
+                                        <p>Cliente contacta → reunión → documentación → análisis → presupuesto → apertura</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Identificar puntos de IA</h4>
+                                        <p>Análisis → Gemini | Presupuesto → ChatGPT | Seguimiento → automatización</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Definir puntos de control humano</h4>
+                                        <p>Validación de análisis + aprobación de presupuesto + decisión de aceptar</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">5</div>
+                                    <div className="layer-step__content">
+                                        <h4>Implementar y testear</h4>
+                                        <p>Probar con 5 casos antes de escalar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> De 3 horas por caso nuevo a 1 hora, con mejor calidad y consistencia.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 7.7: Template de diseño */}
+                <section id="template-sistema" className="page__section">
+                    <h2 className="page__section-title">7.7. Template: Diseño de tu sistema de trabajo</h2>
+                    <article className="long-form-content">
+                        <div className="component-card">
+                            <div className="component-content">
+                                <p><strong>Usá esta estructura para diseñar tu primer sistema:</strong></p>
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>FICHA DE DISEÑO DE SISTEMA</strong><br /><br />
+
+                                    <strong>1. PROCESO A SISTEMATIZAR:</strong><br />
+                                    [Nombre del proceso]<br /><br />
+
+                                    <strong>2. SITUACIÓN ACTUAL:</strong><br />
+                                    - Tiempo promedio: [X horas]<br />
+                                    - Pasos manuales: [listar]<br />
+                                    - Puntos de error frecuente: [listar]<br /><br />
+
+                                    <strong>3. OBJETIVO DEL SISTEMA:</strong><br />
+                                    [Qué resultado querés lograr]<br /><br />
+
+                                    <strong>4. FLUJO PROPUESTO:</strong><br />
+                                    Paso 1 → [Quién/Qué lo hace] → Resultado<br />
+                                    Paso 2 → [Quién/Qué lo hace] → Resultado<br />
+                                    ...<br /><br />
+
+                                    <strong>5. PUNTOS DE IA:</strong><br />
+                                    - [Paso X]: [Herramienta] para [tarea]<br /><br />
+
+                                    <strong>6. PUNTOS DE CONTROL HUMANO:</strong><br />
+                                    - [Paso Y]: Validación de [qué]<br /><br />
+
+                                    <strong>7. MÉTRICAS DE ÉXITO:</strong><br />
+                                    - Tiempo objetivo: [X horas]<br />
+                                    - Calidad medida por: [criterio]<br /><br />
+
+                                    <strong>8. PLAN DE IMPLEMENTACIÓN:</strong><br />
+                                    Semana 1: [acciones]<br />
+                                    Semana 2: [acciones]
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <p className="highlight-warning">
+                            <strong>Consejo:</strong> Empezá con UN solo proceso. Una vez que funcione, escalá a otros.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">

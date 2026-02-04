@@ -112,6 +112,203 @@ function GeminiM4U2() {
                     </article>
                 </section>
 
+                {/* Sección 5.5: Prompts para Canvas */}
+                <section id="prompts-canvas" className="page__section">
+                    <h2 className="page__section-title">5.5. Prompts específicos para Gemini Canvas</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a generar visualizaciones estructuradas para casos legales:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📊 Mapa de obligaciones contractuales</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de visualización legal.<br /><br />
+
+                                    A partir de este contrato, generá un mapa visual que muestre:<br /><br />
+
+                                    1. Partes involucradas y sus roles<br />
+                                    2. Obligaciones de cada parte (agrupadas por tipo)<br />
+                                    3. Plazos críticos y fechas límite<br />
+                                    4. Contingencias y cláusulas de salida<br />
+                                    5. Garantías y respaldos otorgados<br /><br />
+
+                                    Formato: diagrama estructurado con flechas que muestren relaciones.<br />
+                                    Usá colores para distinguir obligaciones vs derechos.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>⏳ Línea de tiempo procesal</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de visualización procesal.<br /><br />
+
+                                    Creá una línea de tiempo visual para un proceso de [tipo de juicio] que incluya:<br /><br />
+
+                                    1. Etapas procesales en orden cronológico<br />
+                                    2. Plazos típicos de cada etapa<br />
+                                    3. Actos procesales clave del actor y del demandado<br />
+                                    4. Momentos de decisión judicial<br />
+                                    5. Oportunidades de recursos<br /><br />
+
+                                    Formato: línea horizontal con hitos, coloreada por etapa.<br />
+                                    Incluí duración estimada total del proceso.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🎯 Diagrama de escenarios de riesgo</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como analista de riesgo legal con capacidad visual.<br /><br />
+
+                                    Para este caso de [descripción], generá un diagrama de escenarios posibles:<br /><br />
+
+                                    1. Escenario favorable: condiciones y probabilidad estimada<br />
+                                    2. Escenario desfavorable: consecuencias y mitigantes<br />
+                                    3. Escenario intermedio: rangos de resultados posibles<br /><br />
+
+                                    Para cada escenario indicá:<br />
+                                    - Factores que lo favorecen<br />
+                                    - Factores que lo obstaculizan<br />
+                                    - Acciones que pueden modificar la probabilidad<br /><br />
+
+                                    Formato: árbol de decisión con porcentajes estimados.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>👥 Red de actores y relaciones</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de análisis de relaciones jurídicas.<br /><br />
+
+                                    A partir de este expediente, creá un diagrama de red que muestre:<br /><br />
+
+                                    1. Todos los actores mencionados (personas, empresas, instituciones)<br />
+                                    2. Tipo de relación entre ellos (contractual, laboral, societaria, familiar)<br />
+                                    3. Flujo de dinero o bienes si aplica<br />
+                                    4. Relaciones de poder o subordinación<br />
+                                    5. Conflictos o tensiones identificados<br /><br />
+
+                                    Formato: nodos conectados por líneas etiquetadas.<br />
+                                    Usá distintas formas para distinguir tipos de actores.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 5.6: Caso práctico Canvas */}
+                <section id="caso-practico-canvas" className="page__section">
+                    <h2 className="page__section-title">5.6. Caso práctico: Explicar un proceso complejo al cliente</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Problema:</strong> Cliente pregunta cómo funciona el proceso de ejecución hipotecaria.</p>
+                            <ul>
+                                <li>El abogado explica verbalmente → cliente se confunde</li>
+                                <li>Envía email largo → cliente no lo lee</li>
+                                <li>Cliente llama cada semana preguntando lo mismo</li>
+                            </ul>
+                        </div>
+
+                        <h3>Solución con Canvas</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de línea de tiempo procesal</h4>
+                                        <p>Generar diagrama del proceso de ejecución hipotecaria</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de escenarios</h4>
+                                        <p>Crear árbol de posibilidades y resultados</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Ajustar al caso específico</h4>
+                                        <p>Marcar "estamos aquí" y próximos pasos concretos</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Compartir producto visual</h4>
+                                        <p>PDF o imagen que el cliente puede consultar cuando quiera</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> El cliente entiende su situación, deja de llamar por dudas básicas, y percibe mayor profesionalismo.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 5.7: Templates visuales */}
+                <section id="templates-visuales" className="page__section">
+                    <h2 className="page__section-title">5.7. Templates de productos visuales reutilizables</h2>
+                    <article className="long-form-content">
+                        <h3>Biblioteca de visualizaciones por área</h3>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>⚖️ Derecho Laboral</h4>
+                                <ul>
+                                    <li>Línea de tiempo de despido</li>
+                                    <li>Cálculo visual de indemnización</li>
+                                    <li>Flujo de reclamo SECLO</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>🏠 Derecho Inmobiliario</h4>
+                                <ul>
+                                    <li>Proceso de escrituración</li>
+                                    <li>Diagrama de due diligence</li>
+                                    <li>Mapa de gravámenes</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>👨‍👩‍👧 Familia y Sucesiones</h4>
+                                <ul>
+                                    <li>Árbol genealógico con herederos</li>
+                                    <li>Flujo de divorcio</li>
+                                    <li>Distribución de bienes</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>🏢 Societario</h4>
+                                <ul>
+                                    <li>Estructura societaria</li>
+                                    <li>Flujo de decisiones corporativas</li>
+                                    <li>Mapa de vinculaciones</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Tip:</strong> Creá estos templates una vez y reutilizalos adaptándolos a cada caso. Así construís una biblioteca de activos visuales profesionales.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Sección 6: Documento vs Producto */}
                 <section id="producto-legal" className="page__section">
                     <h2 className="page__section-title">6. Diferencia entre documento y producto legal</h2>

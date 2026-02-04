@@ -1,6 +1,8 @@
 import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/split-layout.css'
+import '../../styles/study-page.css'
+import { Link } from 'react-router-dom'
 import MermaidDiagram from '../../components/Visualizations/MermaidDiagram'
 import ModelComparisonChart from '../../components/Visualizations/ModelComparisonChart'
 
@@ -51,12 +53,62 @@ function Foundations() {
             </header>
 
             <div className="page__content">
-                {/* Section 1: Core Concepts (No Visual yet) */}
+                {/* Section 1: Core Concepts */}
                 <section id="core-concepts" className="page__section">
                     <h2 className="page__section-title">Core Concepts</h2>
-                    <div className="page__section-content">
-                        <span className="page__section-placeholder">Content to be added</span>
-                    </div>
+                    <article className="long-form-content">
+                        <h3>¿Qué es un LLM (Large Language Model)?</h3>
+                        <p>
+                            Un LLM es un modelo de inteligencia artificial entrenado con cantidades masivas de texto para generar y comprender lenguaje natural. Funciona prediciendo la siguiente palabra más probable en una secuencia, lo que le permite generar texto coherente, responder preguntas, resumir documentos y más.
+                        </p>
+                        <p>
+                            <strong>Analogía jurídica:</strong> Imaginá un pasante que leyó millones de documentos legales de todas las jurisdicciones del mundo. Puede redactar, resumir y analizar con fluidez, pero no "sabe" derecho en el sentido de un jurista. Reconoce patrones lingüísticos, no verdades jurídicas.
+                        </p>
+
+                        <h3>Tokens: La unidad básica de procesamiento</h3>
+                        <p>
+                            Los modelos no procesan palabras, sino <strong>tokens</strong>—fragmentos de texto que pueden ser palabras completas, partes de palabras o caracteres. En español, una palabra promedio equivale a 1.3-1.5 tokens. Un contrato de 10 páginas puede tener entre 8.000 y 12.000 tokens.
+                        </p>
+                        <p>
+                            <strong>Por qué importa:</strong> Los modelos tienen límites de tokens por conversación (ventana de contexto). Si tu expediente excede ese límite, el modelo pierde información del principio—un problema crítico para análisis legal completo.
+                        </p>
+
+                        <h3>Prompts: El arte de la instrucción</h3>
+                        <p>
+                            Un <strong>prompt</strong> es la instrucción que le das al modelo. La calidad de la respuesta depende directamente de la calidad de tu prompt. Un prompt legal efectivo incluye:
+                        </p>
+                        <ul>
+                            <li><strong>Rol:</strong> "Actuás como abogado especialista en derecho laboral argentino"</li>
+                            <li><strong>Contexto:</strong> Los hechos relevantes del caso</li>
+                            <li><strong>Tarea específica:</strong> "Analizá si hay despido discriminatorio"</li>
+                            <li><strong>Formato de salida:</strong> "Respondé en formato de dictamen con citas"</li>
+                        </ul>
+
+                        <h3>Temperatura: Creatividad vs Precisión</h3>
+                        <p>
+                            La <strong>temperatura</strong> es un parámetro que controla cuán "creativo" o "determinista" es el modelo. Va de 0 a 1 (o más en algunos modelos):
+                        </p>
+                        <ul>
+                            <li><strong>Temperatura baja (0-0.3):</strong> Respuestas más predecibles y conservadoras. Ideal para análisis legal donde necesitás precisión.</li>
+                            <li><strong>Temperatura alta (0.7-1):</strong> Respuestas más variadas y creativas. Útil para brainstorming de estrategias.</li>
+                        </ul>
+                        <p>
+                            <strong>Para trabajo jurídico:</strong> Usá temperatura baja para redacción de contratos y análisis. Subila solo cuando necesités explorar alternativas argumentales.
+                        </p>
+
+                        <h3>Ventana de Contexto: La memoria de trabajo</h3>
+                        <p>
+                            La <strong>ventana de contexto</strong> es la cantidad máxima de tokens que el modelo puede "recordar" en una conversación. Es como la capacidad de la mesa de trabajo de un abogado—solo cabe cierta cantidad de papeles.
+                        </p>
+                        <ul>
+                            <li><strong>GPT-4:</strong> 128K tokens (~300 páginas)</li>
+                            <li><strong>Gemini 1.5 Pro:</strong> 2M tokens (~5.000 páginas)</li>
+                            <li><strong>Claude 3:</strong> 200K tokens (~500 páginas)</li>
+                        </ul>
+                        <p>
+                            <strong>Implicancia práctica:</strong> Para expedientes grandes, Gemini puede procesar todo junto; con GPT-4 necesitás fragmentar y usar técnicas de resumen progresivo.
+                        </p>
+                    </article>
                 </section>
 
                 {/* Section 2: Models vs Agents (Visual: Mermaid) */}
@@ -226,33 +278,159 @@ function Foundations() {
 
                 <section id="system-architectures" className="page__section">
                     <h2 className="page__section-title">System Architectures</h2>
-                    <div className="page__section-content">
-                        <span className="page__section-placeholder">Content to be added</span>
-                    </div>
+                    <article className="long-form-content">
+                        <h3>Arquitecturas de Sistemas de IA Legal</h3>
+                        <p>
+                            Un sistema de inteligencia legal no es simplemente "usar ChatGPT". Es una arquitectura diseñada con capas específicas que separan responsabilidades y garantizan calidad.
+                        </p>
+
+                        <h3>Arquitectura de 3 Capas</h3>
+                        <ul>
+                            <li><strong>Capa de Ingesta:</strong> Donde entran los documentos. Incluye OCR para documentos escaneados, extracción de texto de PDFs, y normalización de formatos.</li>
+                            <li><strong>Capa de Procesamiento:</strong> Donde trabaja el modelo. Incluye prompts especializados, validación de respuestas, y lógica de negocios legal.</li>
+                            <li><strong>Capa de Presentación:</strong> Donde el profesional interactúa. Interfaces claras, citación de fuentes, y herramientas de edición.</li>
+                        </ul>
+
+                        <h3>Patrones Comunes en Legal Tech</h3>
+                        <p><strong>1. Patrón de Pipeline Secuencial:</strong></p>
+                        <p>Documento → Extracción → Análisis → Validación → Salida formateada. Cada paso depende del anterior. Ideal para tareas predecibles como análisis de contratos estándar.</p>
+
+                        <p><strong>2. Patrón de Orquestador:</strong></p>
+                        <p>Un "cerebro" central decide qué modelo usar para cada subtarea. Envía resúmenes a un modelo, análisis profundo a otro, y combina resultados. Ideal para casos complejos.</p>
+
+                        <p><strong>3. Patrón de RAG (Retrieval-Augmented Generation):</strong></p>
+                        <p>Búsqueda en base documental + Generación con contexto. El modelo no "sabe" tu jurisprudencia, pero la busca y la usa. Esencial para trabajo con precedentes.</p>
+
+                        <h3>Consideraciones de Diseño</h3>
+                        <ul>
+                            <li><strong>Latencia:</strong> ¿Cuánto demora cada paso? En audiencias necesitás respuestas en segundos.</li>
+                            <li><strong>Costo:</strong> Cada llamada al modelo tiene costo. Un sistema mal diseñado puede costar 10x más.</li>
+                            <li><strong>Auditabilidad:</strong> ¿Podés rastrear de dónde vino cada conclusión? Crítico para responsabilidad profesional.</li>
+                            <li><strong>Escalabilidad:</strong> ¿Funciona con 10 casos? ¿Con 1.000?</li>
+                        </ul>
+                    </article>
                 </section>
 
                 <section id="validation-reasoning" className="page__section">
                     <h2 className="page__section-title">Validation & Reasoning Criteria</h2>
-                    <div className="page__section-content">
-                        <span className="page__section-placeholder">Content to be added</span>
-                    </div>
+                    <article className="long-form-content">
+                        <h3>La Validación No Es Opcional</h3>
+                        <p>
+                            En derecho, un error no es solo inconveniente—puede ser mala praxis. La validación de salidas de IA debe ser <strong>sistemática, no anecdótica</strong>.
+                        </p>
+
+                        <h3>Criterios de Validación para Trabajo Legal</h3>
+                        <ul>
+                            <li><strong>Verificabilidad fáctica:</strong> ¿Las citas existen? ¿Las fechas son correctas? ¿Los artículos citados dicen lo que el modelo afirma?</li>
+                            <li><strong>Coherencia lógica:</strong> ¿La conclusión se sigue de las premisas? ¿Hay saltos argumentales?</li>
+                            <li><strong>Jurisdicción correcta:</strong> ¿El modelo mezcló derecho argentino con español o mexicano?</li>
+                            <li><strong>Vigencia normativa:</strong> ¿La ley o jurisprudencia citada sigue vigente?</li>
+                            <li><strong>Completitud:</strong> ¿El análisis cubre todos los aspectos relevantes o omitió algo crítico?</li>
+                        </ul>
+
+                        <h3>Protocolos de Verificación</h3>
+                        <p><strong>Nivel 1 - Chequeo Rápido (5 minutos):</strong></p>
+                        <ul>
+                            <li>Verificar que las 3 primeras citas existan</li>
+                            <li>Confirmar jurisdicción correcta</li>
+                            <li>Leer conclusiones buscando contradicciones obvias</li>
+                        </ul>
+
+                        <p><strong>Nivel 2 - Revisión Estándar (30 minutos):</strong></p>
+                        <ul>
+                            <li>Verificar TODAS las citas legales</li>
+                            <li>Contrastar con fuentes primarias</li>
+                            <li>Evaluar la estructura argumentativa</li>
+                        </ul>
+
+                        <p><strong>Nivel 3 - Auditoría Completa (2+ horas):</strong></p>
+                        <ul>
+                            <li>Reconstrucción del razonamiento paso a paso</li>
+                            <li>Búsqueda de jurisprudencia contradictoria</li>
+                            <li>Revisión por segundo profesional</li>
+                        </ul>
+
+                        <h3>Cuándo Aplicar Cada Nivel</h3>
+                        <ul>
+                            <li><strong>Nivel 1:</strong> Borradores internos, notas de trabajo</li>
+                            <li><strong>Nivel 2:</strong> Documentos para clientes, dictámenes</li>
+                            <li><strong>Nivel 3:</strong> Presentaciones judiciales, documentos públicos</li>
+                        </ul>
+                    </article>
                 </section>
 
                 {/* Section with Sticky Insight */}
                 <section id="risks-errors" className="page__section section-grid">
                     <div className="section-grid__content">
                         <h2 className="page__section-title">Risks, Errors & Bad Practices</h2>
-                        <div className="page__section-content">
-                            <span className="page__section-placeholder">Content to be added</span>
-                        </div>
+                        <article className="long-form-content">
+                            <h3>Riesgos Críticos en IA Legal</h3>
+
+                            <h4>1. Alucinaciones Jurídicas</h4>
+                            <p>
+                                El modelo puede inventar fallos, artículos de ley, o doctrinas que suenan completamente plausibles pero no existen. Un fallo citado como "CSJN Fallos 340:1234" puede ser completamente ficticio.
+                            </p>
+                            <p><strong>Mitigación:</strong> SIEMPRE verificar citas en fuentes primarias. Nunca confiar en una cita sin chequearla.</p>
+
+                            <h4>2. Mezcla de Jurisdicciones</h4>
+                            <p>
+                                Entrenados con datos globales, los modelos mezclan frecuentemente conceptos de common law con derecho continental, o legislación de distintos países hispanoparlantes.
+                            </p>
+                            <p><strong>Mitigación:</strong> Especificar jurisdicción en CADA prompt. "Derecho argentino vigente" debe ser parte obligatoria del contexto.</p>
+
+                            <h4>3. Desactualización Normativa</h4>
+                            <p>
+                                Los modelos tienen fecha de corte de conocimiento. Una ley derogada o modificada puede seguir siendo citada como vigente.
+                            </p>
+                            <p><strong>Mitigación:</strong> Usar RAG con base normativa actualizada. No confiar en el conocimiento "interno" del modelo para vigencia.</p>
+
+                            <h4>4. Falsa Confianza del Operador</h4>
+                            <p>
+                                El mayor riesgo no es técnico sino humano: la tendencia a confiar excesivamente en respuestas elocuentes. Cuanto mejor "suena" una respuesta, más peligrosa puede ser si está equivocada.
+                            </p>
+                            <p><strong>Mitigación:</strong> Cultura de escepticismo sano. Tratar a la IA como un pasante muy capaz pero propenso a errores graves.</p>
+
+                            <h3>Malas Prácticas a Evitar</h3>
+                            <ul>
+                                <li><strong>Copy-paste sin revisión:</strong> Copiar directamente la salida del modelo a un documento judicial</li>
+                                <li><strong>Un solo modelo para todo:</strong> Usar ChatGPT para expedientes de 500 páginas cuando Gemini es más apropiado</li>
+                                <li><strong>Prompts vagos:</strong> "Analizá este contrato" sin especificar qué buscar</li>
+                                <li><strong>Ignorar el contexto:</strong> No dar los hechos del caso antes de pedir análisis</li>
+                                <li><strong>No documentar el proceso:</strong> Si algo sale mal, ¿podés demostrar que hiciste verificaciones razonables?</li>
+                            </ul>
+
+                            <h3>Responsabilidad Profesional</h3>
+                            <p>
+                                La IA no reemplaza la responsabilidad del abogado. El Código de Ética sigue aplicando: negligencia es negligencia, sea con libros o con algoritmos. El profesional firma, el profesional responde.
+                            </p>
+                        </article>
                     </div>
                     <div className="section-grid__visual">
                         <div className="visual-insight">
                             <h4>Insight Crítico</h4>
                             <p>La validación no es opcional. Un sistema sin bucles de verificación humana o algorítmica es simplemente un generador de alucinaciones a escala industrial.</p>
+                            <br />
+                            <h4>Regla de Oro</h4>
+                            <p>Si no podés explicar cómo llegaste a una conclusión sin mencionar "la IA me dijo", no estás listo para usarla profesionalmente.</p>
                         </div>
                     </div>
                 </section>
+
+                {/* Footer de navegación */}
+                <div className="unit-navigation">
+                    <div className="unit-nav-prev">
+                        {/* No hay unidad anterior */}
+                    </div>
+                    <div className="unit-status">
+                        <span className="status-badge status-badge--current">📖 Unidad Actual</span>
+                    </div>
+                    <div className="next-unit">
+                        <span className="next-label">Próxima unidad:</span>
+                        <Link to="/foundations-u2" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 2 – ChatGPT vs Gemini →
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

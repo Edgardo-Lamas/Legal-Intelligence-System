@@ -5,10 +5,7 @@ import './Navigation.css'
 const navItems = [
     { path: '/overview', label: 'Overview', icon: 'compass' },
     { path: '/course-map', label: '📍 Mapa del Curso', icon: 'compass' },
-    { path: '/foundations', label: 'Foundations', icon: 'book' },
-    { path: '/systems', label: 'Systems', icon: 'layers' },
-    { path: '/analysis-patterns', label: 'Analysis & Patterns', icon: 'search' },
-    { path: '/automation-agents', label: 'Automation & Agents', icon: 'cpu' },
+    { path: '/foundations', label: 'M1 · Fundamentos de IA', icon: 'book' },
     { path: '/prompt-engineering', label: 'M2 · Prompt Jurídico', icon: 'edit' },
     { path: '/solo-practice', label: 'M3 · Abogacía por Cuenta Propia', icon: 'briefcase' },
     { path: '/gemini', label: 'M4 · Gemini & Deep Research', icon: 'search' },

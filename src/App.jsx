@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import PageLayout from './components/PageLayout/PageLayout'
 import Overview from './pages/Overview/Overview'
 import Foundations from './pages/Foundations/Foundations'
+import FoundationsM1U2 from './pages/Foundations/FoundationsM1U2'
+import FoundationsM1U3 from './pages/Foundations/FoundationsM1U3'
 import Systems from './pages/Systems/Systems'
 import AnalysisPatterns from './pages/AnalysisPatterns/AnalysisPatterns'
 import AutomationAgents from './pages/AutomationAgents/AutomationAgents'
@@ -45,6 +47,8 @@ function App() {
         <Route path="/" element={<Navigate to="/overview" replace />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/foundations" element={<Foundations />} />
+        <Route path="/foundations-u2" element={<FoundationsM1U2 />} />
+        <Route path="/foundations-u3" element={<FoundationsM1U3 />} />
         <Route path="/systems" element={<Systems />} />
         <Route path="/analysis-patterns" element={<AnalysisPatterns />} />
         <Route path="/automation-agents" element={<AutomationAgents />} />

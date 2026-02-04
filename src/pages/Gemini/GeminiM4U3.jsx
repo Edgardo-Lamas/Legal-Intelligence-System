@@ -125,6 +125,221 @@ function GeminiM4U3() {
                     </article>
                 </section>
 
+                {/* Sección 5.5: Prompts para automatización */}
+                <section id="prompts-automatizacion" className="page__section">
+                    <h2 className="page__section-title">5.5. Prompts específicos para automatización jurídica</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a configurar sistemas de seguimiento y memoria:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📅 Monitoreo de vencimientos procesales</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como sistema de control de plazos procesales.<br /><br />
+
+                                    Para cada caso que te presente, necesito que:<br /><br />
+
+                                    1. Identifiques todos los plazos mencionados o implícitos<br />
+                                    2. Calcules fechas límite considerando días hábiles<br />
+                                    3. Alertes 5 días antes de cada vencimiento<br />
+                                    4. Priorices por consecuencia de incumplimiento<br />
+                                    5. Sugieras margen de seguridad recomendado<br /><br />
+
+                                    Formato: tabla con columnas [Acto, Plazo, Fecha límite, Días restantes, Prioridad].<br />
+                                    Marcá en rojo los que venzan en menos de 7 días.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>⚖️ Seguimiento de cambios normativos</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como monitor de legislación y jurisprudencia.<br /><br />
+
+                                    Áreas a monitorear:<br />
+                                    - [Área 1: ej. Derecho laboral, específicamente despidos]<br />
+                                    - [Área 2: ej. Contratos de locación, Ley 27.551]<br /><br />
+
+                                    Tu tarea periódica:<br />
+                                    1. Detectar nuevas normas publicadas<br />
+                                    2. Identificar fallos relevantes recientes<br />
+                                    3. Señalar cambios de criterio judicial<br />
+                                    4. Alertar sobre derogaciones o modificaciones<br /><br />
+
+                                    Formato de reporte:<br />
+                                    - Resumen ejecutivo (3 líneas máximo)<br />
+                                    - Tabla de novedades con fuente y fecha<br />
+                                    - Impacto potencial en casos activos
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🧠 Base de conocimiento del estudio</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como gestor de conocimiento institucional.<br /><br />
+
+                                    Necesito que mantengas registro de:<br /><br />
+
+                                    1. Criterios adoptados por este estudio en casos similares<br />
+                                    2. Argumentos que funcionaron y cuáles no<br />
+                                    3. Jurisprudencia favorable que usamos frecuentemente<br />
+                                    4. Plantillas y modelos reutilizables<br />
+                                    5. Lecciones aprendidas de casos anteriores<br /><br />
+
+                                    Cuando te consulte sobre un tema, primero verificá si tenemos antecedentes internos antes de responder desde conocimiento general.<br /><br />
+
+                                    Formato de registro: ficha con [Tema, Criterio, Fuente interna, Fecha, Resultado].
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📧 Resumen diario de actividad</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de síntesis diaria.<br /><br />
+
+                                    Al final de cada día, generá un resumen que incluya:<br /><br />
+
+                                    1. Tareas completadas hoy<br />
+                                    2. Tareas pendientes para mañana<br />
+                                    3. Vencimientos en los próximos 3 días<br />
+                                    4. Comunicaciones que requieren respuesta<br />
+                                    5. Notas o ideas relevantes registradas<br /><br />
+
+                                    Formato: briefing de 1 página, con bullets por sección.<br />
+                                    Priorizá lo que requiere acción inmediata.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 5.6: Caso práctico automatización */}
+                <section id="caso-practico-auto" className="page__section">
+                    <h2 className="page__section-title">5.6. Caso práctico: Sistema de seguimiento de causas</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Problema:</strong> Abogado con 30 causas activas</p>
+                            <ul>
+                                <li>Usa una planilla Excel desactualizada</li>
+                                <li>Revisa manualmente cada expediente semanal</li>
+                                <li>Ya tuvo 2 vencimientos por olvido este año</li>
+                                <li>Pierde 3 horas semanales solo en control</li>
+                            </ul>
+                        </div>
+
+                        <h3>Solución con Gemini automatizado</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Configurar base de causas</h4>
+                                        <p>Cargar info de cada causa: partes, juzgado, estado, última fecha</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Definir reglas de seguimiento</h4>
+                                        <p>Alertar 5 días antes de cada vencimiento, resumen semanal</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Prompt de actualización</h4>
+                                        <p>Cada vez que hay novedad, actualizar estado en conversación</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Revisar briefing semanal</h4>
+                                        <p>Gemini genera resumen con próximas acciones por causa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> Control de 30 causas en 30 minutos semanales. Cero vencimientos olvidados.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 5.7: Templates de memoria */}
+                <section id="templates-memoria" className="page__section">
+                    <h2 className="page__section-title">5.7. Template: Ficha de memoria institucional</h2>
+                    <article className="long-form-content">
+                        <div className="component-card">
+                            <div className="component-content">
+                                <p><strong>Usá esta estructura para cada entrada en tu base de conocimiento:</strong></p>
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>FICHA DE CONOCIMIENTO INSTITUCIONAL</strong><br /><br />
+
+                                    <strong>Tema:</strong> [Descripción breve]<br />
+                                    <strong>Área:</strong> [Laboral / Civil / Comercial / Familia / etc.]<br />
+                                    <strong>Fecha de registro:</strong> [DD/MM/AAAA]<br /><br />
+
+                                    <strong>CRITERIO ADOPTADO:</strong><br />
+                                    [Descripción del criterio o posición que adoptamos]<br /><br />
+
+                                    <strong>FUNDAMENTO:</strong><br />
+                                    - Normativa: [citar]<br />
+                                    - Jurisprudencia: [citar fallos]<br />
+                                    - Doctrina: [si aplica]<br /><br />
+
+                                    <strong>RESULTADO OBTENIDO:</strong><br />
+                                    [Favorable / Desfavorable / Parcial]<br />
+                                    [Descripción del resultado]<br /><br />
+
+                                    <strong>LECCIONES APRENDIDAS:</strong><br />
+                                    - [Qué funcionó]<br />
+                                    - [Qué mejorar]<br /><br />
+
+                                    <strong>PLANTILLA ASOCIADA:</strong> [link a documento si existe]<br />
+                                    <strong>CASO DE REFERENCIA:</strong> [expediente interno]
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <h3>Beneficios del sistema de memoria</h3>
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--good">
+                                <h4>✅ Con sistema</h4>
+                                <ul>
+                                    <li>Consistencia en criterios</li>
+                                    <li>No reinventar la rueda</li>
+                                    <li>Onboarding de nuevos abogados</li>
+                                    <li>Mejora continua documentada</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box comparison-box--bad">
+                                <h4>❌ Sin sistema</h4>
+                                <ul>
+                                    <li>Criterios inconsistentes</li>
+                                    <li>Repetir errores</li>
+                                    <li>Conocimiento en cabezas</li>
+                                    <li>Dependencia de la memoria</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="highlight-warning">
+                            <strong>Importante:</strong> La memoria debe auditarse periódicamente. Información desactualizada es peor que no tener información.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Sección 6: Automatizar vs Decidir */}
                 <section id="automatizar-decidir" className="page__section">
                     <h2 className="page__section-title">6. Diferencia entre automatizar tareas y automatizar decisiones</h2>

@@ -145,6 +145,176 @@ function PracticeM8U3() {
                     </article>
                 </section>
 
+                {/* Sección 6.5: Prompts de validación */}
+                <section id="prompts-validacion" className="page__section">
+                    <h2 className="page__section-title">6.5. Prompts para validación y control de calidad</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a validar los outputs de tu sistema:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>✅ Validación de análisis jurídico</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como revisor jurídico senior.<br /><br />
+
+                                    Análisis a revisar: [pegar el análisis generado por IA]<br />
+                                    Contexto del caso: [breve descripción]<br /><br />
+
+                                    Revisá el análisis verificando:<br />
+                                    1. ¿Las citas normativas son correctas y están vigentes?<br />
+                                    2. ¿La jurisprudencia citada es real y aplicable?<br />
+                                    3. ¿La argumentación es coherente y completa?<br />
+                                    4. ¿Hay omisiones importantes o puntos ciegos?<br />
+                                    5. ¿Las conclusiones derivan lógicamente de las premisas?<br /><br />
+
+                                    Formato: lista de observaciones con [OK/REVISAR/CRÍTICO] para cada punto.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📝 Validación de documento para cliente</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como editor de comunicaciones legales.<br /><br />
+
+                                    Documento a revisar: [pegar el texto para cliente]<br />
+                                    Perfil del destinatario: [cliente empresa / particular / técnico]<br /><br />
+
+                                    Revisá el texto verificando:<br />
+                                    1. ¿Es comprensible para el perfil del destinatario?<br />
+                                    2. ¿Hay tecnicismos innecesarios que confunden?<br />
+                                    3. ¿El tono es profesional pero accesible?<br />
+                                    4. ¿Hay ambigüedades que puedan generar malentendidos?<br />
+                                    5. ¿Las próximas acciones están claramente indicadas?<br /><br />
+
+                                    Formato: versión corregida + lista de cambios realizados.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🔍 Auditoría de sistema implementado</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como auditor de procesos legales asistidos por IA.<br /><br />
+
+                                    Sistema implementado: [describir el flujo]<br />
+                                    Período de uso: [X días/semanas]<br />
+                                    Resultados observados: [listar outputs generados]<br /><br />
+
+                                    Evaluá el sistema considerando:<br />
+                                    1. ¿Los outputs cumplen con el estándar de calidad esperado?<br />
+                                    2. ¿Los tiempos de proceso se redujeron según lo proyectado?<br />
+                                    3. ¿Los puntos de control humano funcionan correctamente?<br />
+                                    4. ¿Hay fallos recurrentes que requieran ajuste?<br />
+                                    5. ¿El sistema es sostenible en el tiempo?<br /><br />
+
+                                    Formato: informe con métricas + recomendaciones de mejora.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 6.6: Checklist de implementación */}
+                <section id="checklist-implementacion" className="page__section">
+                    <h2 className="page__section-title">6.6. Checklist de implementación progresiva</h2>
+                    <article className="long-form-content">
+                        <h3>Semana 1: Fundamentos</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <ul>
+                                <li>☐ Elegir UN proceso para sistematizar</li>
+                                <li>☐ Mapear el flujo actual (tiempo, pasos, puntos críticos)</li>
+                                <li>☐ Identificar dónde la IA puede agregar valor</li>
+                                <li>☐ Definir puntos de control humano obligatorios</li>
+                                <li>☐ Diseñar el flujo optimizado en papel</li>
+                            </ul>
+                        </div>
+
+                        <h3>Semana 2: Implementación básica</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <ul>
+                                <li>☐ Crear los prompts necesarios para cada paso</li>
+                                <li>☐ Probar el flujo con un caso real de bajo riesgo</li>
+                                <li>☐ Documentar los ajustes necesarios</li>
+                                <li>☐ Validar la calidad del output</li>
+                                <li>☐ Medir tiempo real vs. tiempo proyectado</li>
+                            </ul>
+                        </div>
+
+                        <h3>Semana 3: Refinamiento</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <ul>
+                                <li>☐ Aplicar el flujo a 3-5 casos reales</li>
+                                <li>☐ Ajustar prompts según resultados</li>
+                                <li>☐ Identificar casos límite que requieren manual</li>
+                                <li>☐ Documentar el sistema final</li>
+                                <li>☐ Definir métricas de seguimiento</li>
+                            </ul>
+                        </div>
+
+                        <h3>Semana 4: Consolidación</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <ul>
+                                <li>☐ Evaluar resultados del mes</li>
+                                <li>☐ Calcular ahorro real de tiempo</li>
+                                <li>☐ Identificar próximo proceso a sistematizar</li>
+                                <li>☐ Compartir aprendizajes (si trabajás en equipo)</li>
+                                <li>☐ Planificar iteración del sistema</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 6.7: Métricas de éxito */}
+                <section id="metricas" className="page__section">
+                    <h2 className="page__section-title">6.7. Cómo saber si tu sistema funciona</h2>
+                    <article className="long-form-content">
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>⏱️ Métricas de eficiencia</h4>
+                                <ul>
+                                    <li>Tiempo por proceso: antes vs. después</li>
+                                    <li>Cantidad de pasos manuales eliminados</li>
+                                    <li>Frecuencia de uso del sistema</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>✅ Métricas de calidad</h4>
+                                <ul>
+                                    <li>Tasa de correcciones post-validación</li>
+                                    <li>Consistencia de outputs</li>
+                                    <li>Satisfacción del cliente (si aplica)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>🎯 Métricas de adopción</h4>
+                                <ul>
+                                    <li>% de casos donde se usa el sistema</li>
+                                    <li>Tiempo hasta dominio del flujo</li>
+                                    <li>Resistencia al cambio (si hay equipo)</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box">
+                                <h4>⚠️ Métricas de riesgo</h4>
+                                <ul>
+                                    <li>Errores que llegaron al cliente</li>
+                                    <li>Fallos de validación detectados</li>
+                                    <li>Casos donde el sistema no funcionó</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Regla de oro:</strong> Si el sistema te hace trabajar mejor (no solo más rápido), está funcionando.
+                        </p>
+                    </article>
+                </section>
+
                 {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
