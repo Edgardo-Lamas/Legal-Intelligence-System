@@ -163,6 +163,300 @@ function SoloPracticeM3U3() {
                     </article>
                 </section>
 
+                {/* Sección 6.5: Prompts para contenido persuasivo */}
+                <section id="prompts-persuasivos" className="page__section">
+                    <h2 className="page__section-title">6.5. Prompts específicos por tipo de contenido</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te ayudan a transformar contenido técnico en comunicación persuasiva y clara:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📝 Transformar texto técnico en lenguaje claro</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como editor de contenido legal para público general.<br /><br />
+
+                                    Reescribí este texto jurídico en lenguaje claro y accesible:<br />
+                                    [pegar texto técnico]<br /><br />
+
+                                    Requisitos:<br />
+                                    - Mantener precisión legal<br />
+                                    - Eliminar jerga innecesaria<br />
+                                    - Usar ejemplos concretos<br />
+                                    - Máximo 150 palabras<br />
+                                    - Tono: profesional pero cercano<br /><br />
+
+                                    Objetivo: que un cliente sin formación legal lo entienda a la primera lectura.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>💼 Post de LinkedIn sobre tema legal</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como creador de contenido para abogados en LinkedIn.<br /><br />
+
+                                    Escribí un post sobre [tema legal específico].<br /><br />
+
+                                    Estructura:<br />
+                                    1. Gancho inicial (pregunta o situación común)<br />
+                                    2. Explicación clara del concepto<br />
+                                    3. Ejemplo práctico<br />
+                                    4. Llamado a la acción suave (ej: "¿Te pasó algo similar?")<br /><br />
+
+                                    Requisitos:<br />
+                                    - Máximo 200 palabras<br />
+                                    - Sin promesas de resultados<br />
+                                    - Tono: educativo, no vendedor<br />
+                                    - Incluir 2-3 emojis relevantes<br /><br />
+
+                                    Objetivo: generar engagement y posicionarme como experto.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🌐 Página "Sobre mí" del sitio web</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como copywriter especializado en sitios web de abogados.<br /><br />
+
+                                    Redactá la sección "Sobre mí" de mi sitio web.<br /><br />
+
+                                    Mi perfil:<br />
+                                    - Especialidad: [área legal]<br />
+                                    - Años de experiencia: [número]<br />
+                                    - Tipo de clientes: [perfil]<br />
+                                    - Lo que me diferencia: [característica única]<br />
+                                    - Valores profesionales: [ej: claridad, accesibilidad, resultados]<br /><br />
+
+                                    Estructura:<br />
+                                    1. Párrafo de conexión (por qué hago lo que hago)<br />
+                                    2. Experiencia y enfoque<br />
+                                    3. Cómo trabajo con mis clientes<br />
+                                    4. Llamado a acción<br /><br />
+
+                                    Tono: profesional, humano, confiable. Primera persona.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>💬 Responder consultas en redes sociales</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como abogado respondiendo consultas públicas en redes.<br /><br />
+
+                                    Alguien comentó en mi post:<br />
+                                    [copiar consulta]<br /><br />
+
+                                    Redactá una respuesta que:<br />
+                                    1. Sea útil pero NO resuelva todo el caso<br />
+                                    2. Demuestre conocimiento técnico<br />
+                                    3. Genere confianza<br />
+                                    4. Invite a agendar consulta formal<br /><br />
+
+                                    Máximo 100 palabras. Tono: profesional pero accesible.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 6.6: Ejemplos antes/después */}
+                <section id="ejemplos-transformacion" className="page__section">
+                    <h2 className="page__section-title">6.6. Ejemplos de transformación: Antes y Después</h2>
+                    <article className="long-form-content">
+                        <h3>Ejemplo 1: Descripción de servicios</h3>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--bad">
+                                <h4>❌ Versión genérica</h4>
+                                <blockquote style={{ fontSize: 'var(--font-size-base)', fontStyle: 'italic' }}>
+                                    "Ofrezco servicios legales de alta calidad en derecho laboral. Cuento con amplia experiencia y trayectoria comprobada. Atiendo casos de despidos, acoso laboral y reclamos salariales."
+                                </blockquote>
+                                <p><strong>Problema:</strong> Aburrido, genérico, no diferencia, no conecta emocionalmente.</p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>✅ Versión persuasiva</h4>
+                                <blockquote style={{ fontSize: 'var(--font-size-base)', fontStyle: 'italic' }}>
+                                    "Si te despidieron de forma injusta o no te pagan lo que te corresponde, te ayudo a recuperar tus derechos sin vueltas. Explico cada paso en lenguaje claro, sin sorpresas. Especializado en trabajadores que necesitan respuestas rápidas y concretas."
+                                </blockquote>
+                                <p><strong>Ventaja:</strong> Habla directamente al problema del cliente, promete claridad, define nicho específico.</p>
+                            </div>
+                        </div>
+
+                        <h3>Ejemplo 2: Post de LinkedIn</h3>
+
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--bad">
+                                <h4>❌ Post aburrido</h4>
+                                <blockquote style={{ fontSize: 'var(--font-size-base)', fontStyle: 'italic' }}>
+                                    "Hoy quiero hablar sobre la importancia del contrato de trabajo. Es un documento fundamental que regula la relación laboral entre empleador y empleado. Todos deberían tener uno."
+                                </blockquote>
+                                <p><strong>Problema:</strong> No genera interés, no aporta valor específico, no invita a interactuar.</p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>✅ Post con engagement</h4>
+                                <blockquote style={{ fontSize: 'var(--font-size-base)', fontStyle: 'italic' }}>
+                                    "¿Trabajás sin contrato firmado? 🚨<br /><br />
+
+                                    Muchos creen que \"estar en blanco\" es suficiente. Pero si no tenés el contrato firmado, pueden faltarte cláusulas clave:<br /><br />
+
+                                    ✅ Descripción exacta de tu puesto<br />
+                                    ✅ Horario y lugar de trabajo<br />
+                                    ✅ Condiciones de renovación<br /><br />
+
+                                    Consejo: pedí una copia. Si te la niegan, es una señal de alerta.<br /><br />
+
+                                    ¿Te pasó? Contame en los comentarios 👇"
+                                </blockquote>
+                                <p><strong>Ventaja:</strong> Gancho claro, información útil, formato escaneable, invita a comentar.</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 6.7: Caso práctico LinkedIn */}
+                <section id="caso-linkedin" className="page__section">
+                    <h2 className="page__section-title">6.7. Caso práctico: Crear un artículo de LinkedIn paso a paso</h2>
+                    <article className="long-form-content">
+                        <h3>Objetivo</h3>
+                        <p>Escribir un post de LinkedIn que genere engagement y posicione tu expertise en [tema legal].</p>
+
+                        <div className="layer-diagram">
+                            <div className="layer-step">
+                                <div className="layer-step__number">1</div>
+                                <div className="layer-step__content">
+                                    <h4>Definir tema y ángulo (5 min)</h4>
+                                    <p>Elegí un problema frecuente de tus clientes. Ejemplo: "Despido durante licencia médica"</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">2</div>
+                                <div className="layer-step__content">
+                                    <h4>Generar borrador con IA (3 min)</h4>
+                                    <p>Usá el prompt "Post de LinkedIn sobre tema legal" con tu tema específico</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">3</div>
+                                <div className="layer-step__content">
+                                    <h4>Revisar y personalizar (5 min)</h4>
+                                    <p>Ajustá el tono, agregá tu experiencia personal, verificá que no haya promesas de resultados</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">4</div>
+                                <div className="layer-step__content">
+                                    <h4>Optimizar formato (2 min)</h4>
+                                    <p>Espaciado, emojis, saltos de línea para facilitar lectura en móvil</p>
+                                </div>
+                            </div>
+                            <div className="layer-connector">↓</div>
+                            <div className="layer-step">
+                                <div className="layer-step__number">5</div>
+                                <div className="layer-step__content">
+                                    <h4>Publicar y responder (ongoing)</h4>
+                                    <p>Respondé todos los comentarios en las primeras 2 horas para maximizar alcance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Tiempo total:</strong> ~15 minutos para un post profesional que antes te llevaba 45 minutos.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 6.8: Biblioteca de plantillas */}
+                <section id="biblioteca-templates" className="page__section">
+                    <h2 className="page__section-title">6.8. Biblioteca de plantillas reutilizables</h2>
+                    <article className="long-form-content">
+                        <h3>Template 1: Post educativo</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>[GANCHO - Pregunta o situación común]</strong> 🎯<br /><br />
+
+                                    [Explicación breve del problema]<br /><br />
+
+                                    <strong>Lo que necesitás saber:</strong><br /><br />
+
+                                    ✅ [Punto clave 1]<br />
+                                    ✅ [Punto clave 2]<br />
+                                    ✅ [Punto clave 3]<br /><br />
+
+                                    <strong>Consejo práctico:</strong> [Acción concreta que pueden tomar]<br /><br />
+
+                                    ¿Te pasó algo similar? Contame en los comentarios 👇
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <h3>Template 2: Caso de estudio (anonimizado)</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>Caso real:</strong> [Descripción breve del problema del cliente] 📋<br /><br />
+
+                                    <strong>Situación inicial:</strong><br />
+                                    [Qué pasaba antes de tu intervención]<br /><br />
+
+                                    <strong>Estrategia:</strong><br />
+                                    [Qué enfoque usaste, sin revelar detalles confidenciales]<br /><br />
+
+                                    <strong>Resultado:</strong><br />
+                                    [Qué se logró, sin prometer que siempre pasa lo mismo]<br /><br />
+
+                                    <strong>Lección:</strong> [Qué pueden aprender otros de este caso]
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <h3>Template 3: FAQ para sitio web</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>Pregunta frecuente:</strong> [Pregunta textual del cliente]<br /><br />
+
+                                    <strong>Respuesta corta:</strong><br />
+                                    [Respuesta directa en 1-2 líneas]<br /><br />
+
+                                    <strong>Explicación:</strong><br />
+                                    [Contexto adicional, 2-3 párrafos]<br /><br />
+
+                                    <strong>Próximos pasos:</strong><br />
+                                    [Qué debería hacer el cliente si está en esta situación]<br /><br />
+
+                                    <strong>¿Necesitás ayuda con esto?</strong> [Link a consulta]
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <h3>Template 4: Email de seguimiento a consulta</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <p><strong>Usar este prompt para generar:</strong></p>
+                                <blockquote className="prompt-example">
+                                    Redactá un email de seguimiento para un cliente que consultó sobre [tema].<br /><br />
+
+                                    Incluir:<br />
+                                    - Agradecimiento por la consulta<br />
+                                    - Resumen de lo conversado<br />
+                                    - Próximos pasos sugeridos<br />
+                                    - Disponibilidad para agendar reunión<br /><br />
+
+                                    Tono: profesional, cálido, que genere confianza.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
                 {/* Sección 7: Ideas clave */}
                 <section id="ideas-clave" className="page__section">
                     <h2 className="page__section-title">7. Ideas clave para fijar</h2>
@@ -231,7 +525,9 @@ function SoloPracticeM3U3() {
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <span className="next-title">Unidad 4 – Marketing legal y posicionamiento</span>
+                        <Link to="/solo-practice-u4" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 4 – Marketing legal y posicionamiento →
+                        </Link>
                     </div>
                 </div>
             </div>

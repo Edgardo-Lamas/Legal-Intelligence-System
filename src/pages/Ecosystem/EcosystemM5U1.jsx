@@ -62,7 +62,7 @@ function EcosystemM5U1() {
 
                 {/* Sección 3: Automatización y Ética */}
                 <section id="automatizacion" className="page__section">
-                    <h2 className="page__section-title">3. Automatización, criterio y ética</h2>
+                    <h2 className="page__section-title">3. Automatización, criterio y ética</h2> 
                     <article className="long-form-content">
                         <p>
                             La automatización, en este contexto, no significa reemplazar al abogado ni “dejar que la IA trabaje sola”. Significa estandarizar procesos intelectuales repetitivos para liberar energía cognitiva en los puntos donde el criterio jurídico humano es irremplazable.

@@ -200,6 +200,220 @@ function SoloPracticeM3U1() {
                     </article>
                 </section>
 
+                {/* Sección 7.5: Prompts para organización operativa */}
+                <section id="prompts-organizacion" className="page__section">
+                    <h2 className="page__section-title">7.5. Prompts específicos para organización operativa</h2>
+                    <article className="long-form-content">
+                        <p>Estos prompts te permiten automatizar tareas administrativas clave sin perder control profesional:</p>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📋 Checklist de inicio de caso</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de organización para abogados.<br /><br />
+
+                                    Generá un checklist completo para iniciar un caso de [tipo de caso: ej. divorcio, reclamo laboral, etc.].<br /><br />
+
+                                    Incluí:<br />
+                                    1. Documentación que debe solicitar al cliente<br />
+                                    2. Pasos administrativos iniciales<br />
+                                    3. Plazos críticos a verificar<br />
+                                    4. Tareas de investigación preliminar<br />
+                                    5. Comunicaciones que debo enviar<br /><br />
+
+                                    Formato: lista ordenada por prioridad, con casillas de verificación.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>🎙️ Resumen de reunión con cliente</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente jurídico especializado en síntesis de reuniones.<br /><br />
+
+                                    A partir de esta transcripción de reunión con cliente:<br />
+                                    [pegar transcripción o notas]<br /><br />
+
+                                    Generá un resumen estructurado que incluya:<br />
+                                    1. Hechos relevantes mencionados<br />
+                                    2. Documentación que el cliente se comprometió a entregar<br />
+                                    3. Dudas o consultas planteadas<br />
+                                    4. Próximos pasos acordados<br />
+                                    5. Fecha de próximo contacto<br /><br />
+
+                                    Formato: profesional, listo para archivar en el expediente.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>✅ Seguimiento de tareas pendientes</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como sistema de gestión de tareas para abogados.<br /><br />
+
+                                    Tengo estas tareas pendientes:<br />
+                                    [listar tareas]<br /><br />
+
+                                    Organizalas por:<br />
+                                    1. Urgencia (plazos procesales, vencimientos)<br />
+                                    2. Importancia (impacto en el caso)<br />
+                                    3. Dependencias (qué debe hacerse antes que qué)<br /><br />
+
+                                    Sugerí un orden de ejecución óptimo y alertame sobre posibles conflictos de agenda.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div className="component-card">
+                            <div className="component-content">
+                                <h4>📅 Preparación de agenda semanal</h4>
+                                <blockquote className="prompt-example">
+                                    Actuás como asistente de planificación para abogados independientes.<br /><br />
+
+                                    Mis casos activos son:<br />
+                                    [listar casos con estado actual]<br /><br />
+
+                                    Generá una agenda semanal que incluya:<br />
+                                    1. Bloques de tiempo para trabajo profundo (redacción, análisis)<br />
+                                    2. Momentos para seguimiento de casos<br />
+                                    3. Tiempo para tareas administrativas<br />
+                                    4. Recordatorios de vencimientos<br /><br />
+
+                                    Considerá que trabajo mejor [mañana/tarde] y necesito [X] horas diarias de producción jurídica.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                {/* Sección 7.6: Ejemplo práctico completo */}
+                <section id="ejemplo-practico" className="page__section">
+                    <h2 className="page__section-title">7.6. Caso práctico: Organizar un expediente con IA</h2>
+                    <article className="long-form-content">
+                        <h3>Situación inicial (Antes)</h3>
+                        <div className="comparison-box comparison-box--bad">
+                            <p><strong>Problema:</strong> Nuevo cliente llega con consulta laboral. Tenés:</p>
+                            <ul>
+                                <li>Notas desordenadas de la reunión</li>
+                                <li>3 PDFs que te envió por email</li>
+                                <li>Mensajes de WhatsApp con más información</li>
+                                <li>No sabés por dónde empezar</li>
+                            </ul>
+                        </div>
+
+                        <h3>Flujo con IA (Después)</h3>
+                        <div className="comparison-box comparison-box--good">
+                            <div className="layer-diagram">
+                                <div className="layer-step">
+                                    <div className="layer-step__number">1</div>
+                                    <div className="layer-step__content">
+                                        <h4>Transcribir reunión</h4>
+                                        <p>Usás IA para convertir tu audio/notas en texto estructurado</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">2</div>
+                                    <div className="layer-step__content">
+                                        <h4>Generar resumen</h4>
+                                        <p>Prompt de "Resumen de reunión" → Documento ordenado con hechos y tareas</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">3</div>
+                                    <div className="layer-step__content">
+                                        <h4>Crear checklist</h4>
+                                        <p>Prompt de "Checklist de inicio" → Lista de documentación a solicitar</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">4</div>
+                                    <div className="layer-step__content">
+                                        <h4>Organizar documentos</h4>
+                                        <p>Renombrar PDFs con IA: "doc1.pdf" → "Recibo_sueldo_enero_2024.pdf"</p>
+                                    </div>
+                                </div>
+                                <div className="layer-connector">↓</div>
+                                <div className="layer-step">
+                                    <div className="layer-step__number">5</div>
+                                    <div className="layer-step__content">
+                                        <h4>Planificar próximos pasos</h4>
+                                        <p>Prompt de "Agenda semanal" → Bloques de tiempo asignados</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="highlight-success">
+                            <strong>Resultado:</strong> En 20 minutos pasaste de caos a sistema ordenado, sin perder ningún detalle importante.
+                        </p>
+                    </article>
+                </section>
+
+                {/* Sección 7.7: Templates reutilizables */}
+                <section id="templates" className="page__section">
+                    <h2 className="page__section-title">7.7. Templates reutilizables</h2>
+                    <article className="long-form-content">
+                        <h3>Template: Checklist de onboarding de nuevo cliente</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <p><strong>Copiar y adaptar para cada nuevo caso:</strong></p>
+                                <blockquote className="prompt-example" style={{ textAlign: 'left' }}>
+                                    <strong>CHECKLIST - NUEVO CLIENTE</strong><br /><br />
+
+                                    <strong>Cliente:</strong> [Nombre]<br />
+                                    <strong>Tipo de caso:</strong> [Área legal]<br />
+                                    <strong>Fecha de inicio:</strong> [DD/MM/AAAA]<br /><br />
+
+                                    <strong>DOCUMENTACIÓN A SOLICITAR:</strong><br />
+                                    ☐ DNI / Documento de identidad<br />
+                                    ☐ [Documento específico 1]<br />
+                                    ☐ [Documento específico 2]<br />
+                                    ☐ [Documento específico 3]<br /><br />
+
+                                    <strong>TAREAS ADMINISTRATIVAS:</strong><br />
+                                    ☐ Crear carpeta digital del caso<br />
+                                    ☐ Registrar en sistema de gestión<br />
+                                    ☐ Enviar email de bienvenida<br />
+                                    ☐ Agendar primera reunión de seguimiento<br /><br />
+
+                                    <strong>INVESTIGACIÓN PRELIMINAR:</strong><br />
+                                    ☐ Revisar jurisprudencia aplicable<br />
+                                    ☐ Verificar plazos procesales<br />
+                                    ☐ Identificar normativa relevante<br /><br />
+
+                                    <strong>COMUNICACIONES:</strong><br />
+                                    ☐ Confirmar recepción de documentos<br />
+                                    ☐ Informar próximos pasos<br />
+                                    ☐ Establecer canal de comunicación preferido
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <h3>Template: Email de actualización de estado</h3>
+                        <div className="component-card">
+                            <div className="component-content">
+                                <p><strong>Usar este prompt para generar emails profesionales:</strong></p>
+                                <blockquote className="prompt-example">
+                                    Redactá un email profesional para mi cliente [Nombre] actualizando el estado de su caso.<br /><br />
+
+                                    Información a incluir:<br />
+                                    - Avances desde último contacto: [describir]<br />
+                                    - Próximos pasos: [describir]<br />
+                                    - Documentación que necesito: [si aplica]<br />
+                                    - Fecha estimada de próxima actualización: [fecha]<br /><br />
+
+                                    Tono: profesional pero cercano, claro y tranquilizador.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
                 {/* Sección 8: Riesgos */}
                 <section id="riesgos" className="page__section">
                     <h2 className="page__section-title">8. Riesgos comunes en abogacía independiente con IA</h2>

@@ -34,10 +34,10 @@ const courseData = [
                 units: [
                     { id: 'u2.1', title: 'Ingeniería de Prompts Jurídicos', path: '/prompt-engineering', status: 'completed', topics: ['El prompt como acto de delegación cognitiva', 'Prompt común vs prompt jurídico', 'Componentes obligatorios de un prompt seguro', 'Ejemplos profesionales'] },
                     { id: 'u2.2', title: 'Control de contexto y documentos extensos', path: '/prompt-engineering-u2', status: 'completed', topics: ['Ventanas de contexto', 'Trabajo con expedientes largos', 'Segmentación y continuidad', 'Riesgos de pérdida de información'] },
-                    { id: 'u2.3', title: 'Filtrado de jurisprudencia y doctrina', path: null, topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
-                    { id: 'u2.4', title: 'Redacción jurídica asistida', path: null, topics: ['Demandas', 'Contratos', 'Dictámenes', 'Escritos procesales'] },
-                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: '/prompt-engineering-u3', status: 'completed', topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
-                    { id: 'u2.6', title: 'GPTs personalizados y librerías de prompts', path: null, topics: ['Qué son los GPTs personalizados', 'Casos de uso legales', 'Organización de prompts reutilizables'] },
+                    { id: 'u2.3', title: 'Filtrado de jurisprudencia y doctrina', path: '/prompt-engineering-u3', status: 'completed', topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
+                    { id: 'u2.4', title: 'Redacción jurídica asistida', path: '/prompt-engineering-u4', status: 'completed', topics: ['Demandas', 'Contratos', 'Dictámenes', 'Escritos procesales'] },
+                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: '/prompt-engineering-u5', status: 'completed', topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
+                    { id: 'u2.6', title: 'GPTs personalizados y librerías de prompts', path: '/prompt-engineering-u6', status: 'completed', topics: ['Qué son los GPTs personalizados', 'Casos de uso legales', 'Organización de prompts reutilizables'] },
                 ]
             }
         ]
@@ -55,7 +55,7 @@ const courseData = [
                     { id: 'u3.1', title: 'Abogacía por cuenta propia', path: '/solo-practice', status: 'completed', topics: ['Organización operativa', 'Automatización básica', 'Sistema mínimo viable'] },
                     { id: 'u3.2', title: 'Gestión contable y fiscal automatizada', path: '/solo-practice-u2', status: 'completed', topics: ['Flujos contables', 'Control y alertas', 'Trazabilidad'] },
                     { id: 'u3.3', title: 'Escritura persuasiva digital', path: '/solo-practice-u3', status: 'current', topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
-                    { id: 'u3.4', title: 'Marketing legal y posicionamiento', path: null, topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
+                    { id: 'u3.4', title: 'Marketing legal y posicionamiento', path: '/solo-practice-u4', status: 'completed', topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
                 ]
             }
         ]
