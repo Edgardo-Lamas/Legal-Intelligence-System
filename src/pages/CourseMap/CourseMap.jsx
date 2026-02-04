@@ -89,16 +89,20 @@ const courseData = [
                 title: 'Módulo 5 – Ecosistema avanzado y automatización',
                 units: [
                     { id: 'u5.1', title: 'Pensar la IA como ecosistema de trabajo jurídico', path: '/ecosystem', status: 'completed', topics: ['Arquitectura mental del abogado', 'Roles de la IA (investigación, redacción, revisión)', 'Automatización vs. Criterio humano'] },
-                    { id: 'u5.2', title: 'Automatización jurídica: qué y por qué', path: '/ecosystem-u2', status: 'current', topics: ['Riesgo decisional vs Repetitividad', 'Criterio del borrador imperfecto', 'Automatizar sin programar'] },
+                    { id: 'u5.2', title: 'Automatización jurídica: qué y por qué', path: '/ecosystem-u2', status: 'completed', topics: ['Riesgo decisional vs Repetitividad', 'Criterio del borrador imperfecto', 'Automatizar sin programar'] },
+                    { id: 'u5.3', title: 'Flujos de trabajo jurídicos con IA', path: '/ecosystem-u3', status: 'completed', topics: ['Diseño de flujos de trabajo', 'Control humano como estructura', 'Escalabilidad y gestión del contexto'] },
+                    { id: 'u5.4', title: 'Integración con documentos y sistemas externos', path: '/ecosystem-u4', status: 'completed', topics: ['Jerarquía de fuentes', 'Conexión con sistemas externos', 'Control del riesgo'] },
+                    { id: 'u5.5', title: 'Flujos automatizados y práctica escalable', path: '/ecosystem-u5', status: 'completed', topics: ['Automatización flexible vs rígida', 'Escalabilidad profesional', 'Trazabilidad y auditoría'] },
                 ]
             },
             {
                 id: 'm6',
                 title: 'Módulo 6 – Dominando el ecosistema de IA',
                 units: [
-                    { id: 'u6.1', title: 'NotebookLM para gestión documental', path: null, topics: ['Estudio', 'Organización de fuentes'] },
-                    { id: 'u6.2', title: 'Claude para redacción técnica', path: null, topics: ['Precisión y control'] },
-                    { id: 'u6.3', title: 'Búsquedas avanzadas', path: null, topics: ['Perplexity', 'Manus'] },
+                    { id: 'u6.1', title: 'Pensar la IA como ecosistema profesional', path: '/mastering', status: 'current', topics: ['Ecosistema vs herramienta aislada', 'Especialización funcional', 'Costo cognitivo'] },
+                    { id: 'u6.2', title: 'NotebookLM para gestión documental', path: null, topics: ['Estudio', 'Organización de fuentes'] },
+                    { id: 'u6.3', title: 'Claude para redacción técnica', path: null, topics: ['Precisión y control'] },
+                    { id: 'u6.4', title: 'Búsquedas avanzadas', path: null, topics: ['Perplexity', 'Manus'] },
                 ]
             }
         ]

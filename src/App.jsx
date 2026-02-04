@@ -18,6 +18,10 @@ import GeminiM4U2 from './pages/Gemini/GeminiM4U2'
 import GeminiM4U3 from './pages/Gemini/GeminiM4U3'
 import EcosystemM5U1 from './pages/Ecosystem/EcosystemM5U1'
 import EcosystemM5U2 from './pages/Ecosystem/EcosystemM5U2'
+import EcosystemM5U3 from './pages/Ecosystem/EcosystemM5U3'
+import EcosystemM5U4 from './pages/Ecosystem/EcosystemM5U4'
+import EcosystemM5U5 from './pages/Ecosystem/EcosystemM5U5'
+import MasteringM6U1 from './pages/Mastering/MasteringM6U1'
 import CourseMap from './pages/CourseMap/CourseMap'
 
 import ScrollToTop from './components/ScrollToTop'
@@ -44,6 +48,10 @@ function App() {
         <Route path="/gemini-u3" element={<GeminiM4U3 />} />
         <Route path="/ecosystem" element={<EcosystemM5U1 />} />
         <Route path="/ecosystem-u2" element={<EcosystemM5U2 />} />
+        <Route path="/ecosystem-u3" element={<EcosystemM5U3 />} />
+        <Route path="/ecosystem-u4" element={<EcosystemM5U4 />} />
+        <Route path="/ecosystem-u5" element={<EcosystemM5U5 />} />
+        <Route path="/mastering" element={<MasteringM6U1 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />

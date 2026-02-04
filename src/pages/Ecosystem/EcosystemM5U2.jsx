@@ -121,9 +121,9 @@ function EcosystemM5U2() {
                     </div>
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
-                        <span className="next-title" style={{ color: '#aaa' }}>
-                            Próximamente
-                        </span>
+                        <Link to="/ecosystem-u3" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            Unidad 3 – Flujos de trabajo jurídicos →
+                        </Link>
                     </div>
                 </div>
             </div>
