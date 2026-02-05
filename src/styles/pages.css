@@ -74,3 +74,43 @@
     font-size: var(--font-size-sm);
     font-style: italic;
 }
+
+/* Hero Section for Overview */
+.hero-section {
+    background-color: var(--color-bg-nav);
+    color: white;
+    padding: var(--space-8) var(--space-6);
+    margin: calc(var(--space-10) * -1) calc(var(--space-12) * -1) var(--space-10) calc(var(--space-12) * -1); /* Negative margins to stretch full width */
+    text-align: center;
+    border-bottom: 4px solid var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: white; /* Explicitly white against dark bg */
+    margin: 0 0 var(--space-2) 0;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-nav); /* Lighter grey for subtitle */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin: calc(var(--space-16) * -1) calc(var(--space-6) * -1) var(--space-8) calc(var(--space-6) * -1);
+        padding: var(--space-10) var(--space-4) var(--space-8);
+        border-radius: 0 0 16px 16px; /* Smooth corners on mobile */
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+}

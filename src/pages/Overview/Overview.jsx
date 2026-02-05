@@ -4,12 +4,10 @@ import CourseMapCard from '../../components/CourseMapCard/CourseMapCard'
 function Overview() {
     return (
         <div className="page">
-            <header className="page__header">
-                <h1 className="page__title">IA para Abogados</h1>
-                <p className="page__description">
-                    Guía práctica para dominar la inteligencia artificial en el ejercicio profesional del derecho
-                </p>
-            </header>
+            <div className="hero-section">
+                <h1 className="hero-title">Legal Intelligence Systems</h1>
+                <p className="hero-subtitle">IA para abogados</p>
+            </div>
 
             <div className="page__content">
                 <section className="page__section">
