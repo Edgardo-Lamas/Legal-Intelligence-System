@@ -1,4 +1,5 @@
 import Navigation from '../Navigation/Navigation'
+import LegalConsult from '../LegalConsult/LegalConsult'
 import './PageLayout.css'
 
 function PageLayout({ children }) {
@@ -10,6 +11,7 @@ function PageLayout({ children }) {
                     {children}
                 </div>
             </main>
+            <LegalConsult />
         </div>
     )
 }
