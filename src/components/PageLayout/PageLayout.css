@@ -6,19 +6,24 @@
 .page-layout__content {
     flex: 1;
     margin-left: var(--nav-width);
-    padding: var(--space-10) var(--space-12);
+    padding: var(--sp-10) var(--sp-12);
     max-width: 100%;
     overflow-x: hidden;
 }
 
 .page-layout__inner {
-    max-width: 900px;
+    max-width: 940px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .page-layout__content {
         margin-left: 0;
-        padding: var(--space-16) var(--space-6) var(--space-8);
+        padding: var(--sp-16) var(--sp-5) var(--sp-8);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-layout__content {
+        padding: var(--sp-16) var(--sp-4) var(--sp-8);
     }
 }

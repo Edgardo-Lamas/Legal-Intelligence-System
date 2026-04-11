@@ -1,0 +1,174 @@
+/* ─────────────────────────────────────────────
+   ModuleGrid — 8 module cards with SVG images
+   ───────────────────────────────────────────── */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-5);
+  margin-top: var(--sp-8);
+}
+
+/* ── Card ── */
+.module-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    transform 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out),
+    border-color 220ms ease;
+  position: relative;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.10),
+    0 0 0 1px var(--mod-color, var(--gold)) inset;
+  border-color: var(--mod-color, var(--gold));
+}
+
+/* ── Image header ── */
+.module-card__image {
+  position: relative;
+  height: 120px;
+  background: var(--mod-bg, linear-gradient(135deg, #0d1117 0%, #1a2234 100%));
+  overflow: hidden;
+}
+
+.module-card__image svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Subtle noise texture overlay */
+.module-card__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(0,0,0,0.35) 100%
+  );
+  pointer-events: none;
+}
+
+/* Module number badge */
+.module-card__num {
+  position: absolute;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--mod-color, var(--gold));
+  background: rgba(0,0,0,0.55);
+  border: 1px solid var(--mod-color, var(--gold));
+  border-radius: 4px;
+  padding: 2px 6px;
+  letter-spacing: 0.05em;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+/* Completion badge */
+.module-card__complete-badge {
+  position: absolute;
+  top: var(--sp-3);
+  right: var(--sp-3);
+  width: 22px;
+  height: 22px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #0c1018;
+  z-index: 2;
+}
+
+/* ── Body ── */
+.module-card__body {
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.module-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--sp-2) 0;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.module-card__desc {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 auto 0;
+  text-align: left;
+  hyphens: none;
+  padding-bottom: var(--sp-4);
+}
+
+/* ── Footer with progress ── */
+.module-card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.module-card__progress {
+  flex: 1;
+  height: 4px;
+  background: var(--border-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.module-card__progress-fill {
+  height: 100%;
+  background: var(--mod-color, var(--gold));
+  border-radius: 2px;
+  transition: width 0.6s var(--ease-out);
+}
+
+.module-card__units {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .module-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+  }
+}
+
+@media (max-width: 420px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,6 +1,6 @@
 import '../../styles/pages.css'
-import CourseMapCard from '../../components/CourseMapCard/CourseMapCard'
 import PageSEO from '../../components/PageSEO/PageSEO'
+import ModuleGrid from '../../components/ModuleGrid/ModuleGrid'
 
 function Overview() {
     return (
@@ -10,32 +10,50 @@ function Overview() {
                 description="Sistema de formación en inteligencia artificial aplicada al derecho. 8 módulos para abogados argentinos: desde los fundamentos de la IA hasta la implementación real de sistemas automatizados en tu estudio."
                 path="/overview"
             />
+
+            {/* Hero */}
             <div className="hero-section">
-                <h1 className="hero-title">Legal Intelligence Systems</h1>
-                <p className="hero-subtitle">IA para abogados</p>
+                <span className="hero-eyebrow">Sistema de Formación Profesional</span>
+                <h1 className="hero-title">
+                    Legal<br />
+                    <em>Intelligence</em>
+                </h1>
+                <p className="hero-subtitle">
+                    Inteligencia artificial aplicada al ejercicio del derecho
+                </p>
+                <div className="hero-stats">
+                    <div className="hero-stat">
+                        <span className="hero-stat__num">8</span>
+                        <span className="hero-stat__label">Módulos</span>
+                    </div>
+                    <div className="hero-stat">
+                        <span className="hero-stat__num">29</span>
+                        <span className="hero-stat__label">Unidades</span>
+                    </div>
+                    <div className="hero-stat">
+                        <span className="hero-stat__num">100%</span>
+                        <span className="hero-stat__label">Completado</span>
+                    </div>
+                </div>
             </div>
 
             <div className="page__content">
-                <section className="page__section">
-                    <CourseMapCard />
-                </section>
-
-                <section className="page__section">
-                    <h2 className="page__section-title">Bienvenido al Sistema</h2>
-                    <article className="long-form-content" style={{ maxWidth: '65ch' }}>
+                {/* Intro */}
+                <section className="page__section" style={{ marginTop: 0 }}>
+                    <article className="long-form-content">
                         <p>
-                            Este sitio es tu espacio de formación integral en <strong>inteligencia artificial aplicada al derecho</strong>.
-                            Aquí vas a aprender no solo a usar herramientas, sino a <strong>pensar sistemáticamente</strong> sobre cómo
-                            integrar la IA en tu práctica profesional.
-                        </p>
-                        <p>
-                            El recorrido está organizado en <strong>7 bloques temáticos</strong> que te llevarán desde los fundamentos
-                            conceptuales hasta la implementación real de sistemas automatizados en tu despacho.
-                        </p>
-                        <p>
-                            Usá el <strong>Mapa del Curso</strong> para orientarte y saber siempre dónde estás parado.
+                            Este espacio es tu sistema de formación integral en <strong>inteligencia artificial
+                            aplicada al derecho</strong>. Aprendés no solo a usar herramientas, sino a
+                            <strong> pensar sistemáticamente</strong> sobre cómo integrar la IA en tu
+                            práctica profesional con criterio y responsabilidad.
                         </p>
                     </article>
+                </section>
+
+                {/* Module grid */}
+                <section className="page__section">
+                    <h2 className="page__section-title">Programa de Formación</h2>
+                    <ModuleGrid />
                 </section>
             </div>
         </div>
