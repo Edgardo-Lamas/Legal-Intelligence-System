@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function GeminiM4U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="Gemini en la Práctica Legal · M4 U1"
+                description="Por qué Gemini no es otro ChatGPT: cuándo es estratégicamente superior en tareas jurídicas y cómo integrarlo en tu sistema de trabajo."
+                path="/gemini"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 4 · Unidad 1</span>
                 <h1 className="page__title">Gemini: Otra inteligencia, nuevas funciones para la práctica legal</h1>

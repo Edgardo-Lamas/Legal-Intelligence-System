@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function MasteringM6U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="ChatGPT para Análisis Jurídico · M6 U2"
+                description="Configuración y uso de ChatGPT para analizar contratos, normativa y situaciones jurídicas complejas. ChatGPT vs Claude: cuándo usar cada uno."
+                path="/mastering-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 6 · Unidad 2</span>
                 <h1 className="page__title">ChatGPT para análisis jurídico</h1>

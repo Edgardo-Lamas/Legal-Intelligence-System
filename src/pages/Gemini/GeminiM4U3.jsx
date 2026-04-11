@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function GeminiM4U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Gemini: Automatización y Memoria Jurídica · M4 U3"
+                description="Del uso reactivo al proactivo: cómo programar tareas automáticas y gestionar memoria jurídica con Gemini."
+                path="/gemini-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 4 · Unidad 3</span>
                 <h1 className="page__title">Gemini: Programación de tareas automáticas y gestión de memoria jurídica</h1>

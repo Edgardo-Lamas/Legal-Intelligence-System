@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function EcosystemM5U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="IA como Ecosistema de Trabajo Jurídico · M5 U1"
+                description="De la herramienta aislada a la arquitectura profesional. Cómo pensar la IA como un ecosistema integrado de trabajo jurídico."
+                path="/ecosystem"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 5 · Unidad 1</span>
                 <h1 className="page__title">Pensar la IA como ecosistema de trabajo jurídico</h1>

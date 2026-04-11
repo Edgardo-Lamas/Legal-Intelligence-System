@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function MasteringM6U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="Claude Projects para Gestión de Casos · M6 U1"
+                description="Configurá y usá Claude Projects como asistente jurídico especializado con memoria persistente para el manejo integral de expedientes."
+                path="/mastering"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 6 · Unidad 1</span>
                 <h1 className="page__title">Claude Projects para gestión de casos</h1>

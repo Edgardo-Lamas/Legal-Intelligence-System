@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PromptEngineeringM2U4() {
     return (
         <div className="page">
+            <PageSEO
+                title="Redacción Jurídica Asistida · M2 U4"
+                description="Cómo usar ChatGPT para redactar demandas, contratos, dictámenes y escritos procesales manteniendo control profesional."
+                path="/prompt-engineering-u4"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 2 · Unidad 4</span>
                 <h1 className="page__title">Redacción jurídica asistida</h1>

@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PracticeM8U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="Del Concepto al Sistema · M8 U1"
+                description="El punto de inflexión del programa: cómo pasar de usar herramientas de IA aisladas a diseñar sistemas de trabajo coherentes para la práctica jurídica."
+                path="/practice"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 8 · Unidad 1</span>
                 <h1 className="page__title">Del concepto al sistema</h1>

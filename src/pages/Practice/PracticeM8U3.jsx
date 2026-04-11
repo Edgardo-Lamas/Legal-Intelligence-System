@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PracticeM8U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Implementación y Validación del Sistema · M8 U3"
+                description="Cómo llevar los diseños de flujos a la realidad y validarlos para que sean confiables, sostenibles y responsables."
+                path="/practice-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 8 · Unidad 3</span>
                 <h1 className="page__title">Implementación práctica y validación del sistema</h1>

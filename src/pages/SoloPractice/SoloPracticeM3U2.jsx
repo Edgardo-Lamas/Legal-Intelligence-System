@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function SoloPracticeM3U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="Gestión Contable y Fiscal Automatizada · M3 U2"
+                description="Automatizá el orden administrativo de tu estudio jurídico sin perder control. Herramientas de IA para gestión contable y fiscal."
+                path="/solo-practice-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 3 · Unidad 2</span>
                 <h1 className="page__title">Gestión Contable y Fiscal Automatizada</h1>

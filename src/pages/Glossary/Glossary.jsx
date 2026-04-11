@@ -1,10 +1,16 @@
 import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function Glossary() {
     return (
         <div className="page">
+            <PageSEO
+                title="Glosario de IA para Abogados"
+                description="Definiciones de términos técnicos de inteligencia artificial traducidos al contexto jurídico. Conceptos esenciales para abogados argentinos."
+                path="/glossary"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Recurso de Referencia</span>
                 <h1 className="page__title">Glosario de IA para Abogados</h1>

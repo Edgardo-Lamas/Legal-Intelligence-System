@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function EcosystemM5U5() {
     return (
         <div className="page">
+            <PageSEO
+                title="Práctica Jurídica Escalable con IA · M5 U5"
+                description="Cómo transformar tu ecosistema de IA en un sistema de trabajo continuo, sostenible y escalable para tu estudio."
+                path="/ecosystem-u5"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 5 · Unidad 5</span>
                 <h1 className="page__title">Flujos automatizados y práctica jurídica escalable</h1>

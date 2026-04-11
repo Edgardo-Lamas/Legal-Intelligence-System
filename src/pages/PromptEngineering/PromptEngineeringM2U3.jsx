@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PromptEngineeringM2U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Filtrado de Jurisprudencia y Doctrina · M2 U3"
+                description="Usá ChatGPT para extraer criterios relevantes, comparar fallos y detectar líneas jurisprudenciales de forma eficiente."
+                path="/prompt-engineering-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 2 · Unidad 3</span>
                 <h1 className="page__title">Filtrado de jurisprudencia y doctrina</h1>

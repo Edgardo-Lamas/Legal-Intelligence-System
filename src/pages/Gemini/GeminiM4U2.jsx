@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function GeminiM4U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="Gemini Canvas: Visualización Legal · M4 U2"
+                description="Transformá información legal compleja en estructuras comprensibles y navegables con Gemini Canvas."
+                path="/gemini-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 4 · Unidad 2</span>
                 <h1 className="page__title">Gemini Canvas: Visualización, estructura y productos legales inteligentes</h1>

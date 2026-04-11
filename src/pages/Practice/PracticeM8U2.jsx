@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PracticeM8U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="Diseño de Flujos de Trabajo con IA · M8 U2"
+                description="Cómo pasar de una idea general de uso de IA a una estructura operativa sostenible en tu estudio jurídico."
+                path="/practice-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 8 · Unidad 2</span>
                 <h1 className="page__title">Diseño de flujos de trabajo con IA</h1>

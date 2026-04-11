@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function EcosystemM5U4() {
     return (
         <div className="page">
+            <PageSEO
+                title="IA Integrada con Documentos y Sistemas Externos · M5 U4"
+                description="Cómo conectar la IA con tu información real: documentos, fuentes y sistemas externos para multiplicar el valor profesional."
+                path="/ecosystem-u4"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 5 · Unidad 4</span>
                 <h1 className="page__title">Integración de IA con documentos, fuentes y sistemas externos</h1>

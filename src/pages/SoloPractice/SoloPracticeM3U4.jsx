@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function SoloPracticeM3U4() {
     return (
         <div className="page">
+            <PageSEO
+                title="Marketing Legal y Posicionamiento Digital · M3 U4"
+                description="Estrategia digital para abogados independientes: cómo construir autoridad y visibilidad profesional asistida por IA."
+                path="/solo-practice-u4"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 3 · Unidad 4</span>
                 <h1 className="page__title">Marketing Legal y Posicionamiento</h1>

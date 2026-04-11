@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function MasteringM6U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Perplexity y Manus para Investigación Legal · M6 U3"
+                description="Herramientas de IA con acceso a internet para buscar jurisprudencia, normativa actualizada y verificar información en tiempo real."
+                path="/mastering-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 6 · Unidad 3</span>
                 <h1 className="page__title">Perplexity y Manus para investigación jurídica</h1>

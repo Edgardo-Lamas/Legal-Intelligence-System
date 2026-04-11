@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function CommunicationM7U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="IA para Comunicación Legal · M7 U1"
+                description="Cómo integrar la IA en la comunicación profesional del abogado sin degradar su rol, su ética ni su credibilidad institucional."
+                path="/communication"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 7 · Unidad 1</span>
                 <h1 className="page__title">IA para comunicación legal</h1>

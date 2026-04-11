@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function SoloPracticeM3U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Escritura Persuasiva Digital · M3 U3"
+                description="Comunicación jurídica estratégica en entornos digitales. Cómo escribir con intención y claridad usando IA como colaborador."
+                path="/solo-practice-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 3 · Unidad 3</span>
                 <h1 className="page__title">Escritura Persuasiva Digital</h1>

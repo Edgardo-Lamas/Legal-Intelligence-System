@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PromptEngineeringM2U5() {
     return (
         <div className="page">
+            <PageSEO
+                title="Preparación de Juicio e Interrogatorios · M2 U5"
+                description="Razonamiento profundo y simulación estratégica con IA para preparar juicios, anticipar argumentos y diseñar interrogatorios."
+                path="/prompt-engineering-u5"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 2 · Unidad 5</span>
                 <h1 className="page__title">Preparación de Juicio e Interrogatorios</h1>

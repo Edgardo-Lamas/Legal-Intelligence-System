@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PromptEngineeringM2U6() {
     return (
         <div className="page">
+            <PageSEO
+                title="GPTs Personalizados y Librerías de Prompts · M2 U6"
+                description="Cómo crear asistentes jurídicos especializados y organizar tus prompts para reutilizarlos como sistema profesional."
+                path="/prompt-engineering-u6"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 2 · Unidad 6</span>
                 <h1 className="page__title">GPTs personalizados y librerías de prompts</h1>

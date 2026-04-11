@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/pages.css'
 import '../../styles/course-map.css'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 const courseData = [
     {
@@ -183,6 +184,11 @@ function CourseMap() {
 
     return (
         <div className="page">
+            <PageSEO
+                title="Mapa del Curso"
+                description="Recorrido completo del programa de formación: 8 módulos y sus unidades de IA aplicada al derecho para abogados argentinos."
+                path="/course-map"
+            />
             <header className="page__header">
                 <span className="page__module-tag">📍 Guía de Navegación</span>
                 <h1 className="page__title">Mapa del Curso</h1>

@@ -5,43 +5,87 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO base -->
-    <title>Legal Intelligence System — IA Aplicada al Análisis Jurídico</title>
-    <meta name="description" content="Sistema de conocimiento personal para el análisis jurídico con inteligencia artificial. 8 módulos de formación en IA para abogados: fundamentos, prompt engineering, automatización y práctica legal." />
+    <!-- SEO base — cada página sobreescribe title, description y canonical via PageSEO.jsx -->
+    <title>Legal Intelligence System — IA Aplicada al Derecho para Abogados Argentinos</title>
+    <meta name="description" content="Formación integral en inteligencia artificial aplicada al ejercicio profesional del derecho. 8 módulos para abogados argentinos: fundamentos de IA, prompt engineering jurídico, Gemini, automatización de estudio y comunicación legal." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://edgardolamas.github.io/Legal-Intelligence-System/" />
+    <meta name="author" content="Legal Intelligence System" />
+    <meta name="language" content="es-AR" />
+    <link rel="canonical" href="https://edgardo-lamas.github.io/Legal-Intelligence-System/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Legal Intelligence System" />
-    <meta property="og:title" content="Legal Intelligence System — IA Aplicada al Análisis Jurídico" />
-    <meta property="og:description" content="8 módulos de formación en IA para abogados: fundamentos, prompt engineering, automatización y práctica legal." />
-    <meta property="og:url" content="https://edgardolamas.github.io/Legal-Intelligence-System/" />
+    <meta property="og:title" content="Legal Intelligence System — IA Aplicada al Derecho para Abogados Argentinos" />
+    <meta property="og:description" content="8 módulos de formación en IA para abogados argentinos: prompt engineering jurídico, Gemini, automatización de estudio y comunicación legal profesional." />
+    <meta property="og:url" content="https://edgardo-lamas.github.io/Legal-Intelligence-System/" />
     <meta property="og:locale" content="es_AR" />
+    <meta property="og:image" content="https://edgardo-lamas.github.io/Legal-Intelligence-System/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Legal Intelligence System — Formación en IA para Abogados" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Legal Intelligence System" />
-    <meta name="twitter:description" content="Sistema de formación en IA aplicada al derecho." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Legal Intelligence System — IA para Abogados Argentinos" />
+    <meta name="twitter:description" content="8 módulos de formación en inteligencia artificial aplicada al derecho. Prompt engineering, Gemini, automatización y comunicación legal." />
+    <meta name="twitter:image" content="https://edgardo-lamas.github.io/Legal-Intelligence-System/og-image.png" />
 
-    <!-- JSON-LD: Course -->
+    <!-- JSON-LD: Course + EducationalOrganization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Legal Intelligence System",
-      "description": "Sistema de conocimiento personal para el análisis jurídico con inteligencia artificial. 8 módulos de formación en IA para abogados.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Legal Intelligence System"
-      },
-      "inLanguage": "es",
-      "numberOfCredits": 8,
-      "educationalLevel": "Professional",
-      "about": {
-        "@type": "Thing",
-        "name": "Inteligencia Artificial aplicada al Derecho"
-      }
+      "@graph": [
+        {
+          "@type": "Course",
+          "@id": "https://edgardo-lamas.github.io/Legal-Intelligence-System/#course",
+          "name": "Legal Intelligence System",
+          "description": "Formación integral en inteligencia artificial aplicada al ejercicio profesional del derecho. 8 módulos para abogados argentinos que quieren integrar la IA en su práctica profesional de forma estratégica y ética.",
+          "url": "https://edgardo-lamas.github.io/Legal-Intelligence-System/",
+          "inLanguage": "es-AR",
+          "educationalLevel": "Professional",
+          "numberOfCredits": 8,
+          "about": {
+            "@type": "Thing",
+            "name": "Inteligencia Artificial aplicada al Derecho"
+          },
+          "teaches": [
+            "Fundamentos de IA generativa para abogados",
+            "Ingeniería de prompts jurídicos",
+            "Uso de Gemini en la práctica legal",
+            "Automatización del estudio jurídico",
+            "Comunicación legal asistida por IA"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Abogados",
+            "geographicArea": "Argentina"
+          },
+          "provider": {
+            "@id": "https://edgardo-lamas.github.io/Legal-Intelligence-System/#organization"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT8H",
+            "inLanguage": "es-AR"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://edgardo-lamas.github.io/Legal-Intelligence-System/#organization",
+          "name": "Legal Intelligence System",
+          "url": "https://edgardo-lamas.github.io/Legal-Intelligence-System/",
+          "description": "Sistema de formación en inteligencia artificial aplicada al ejercicio del derecho para abogados argentinos.",
+          "inLanguage": "es-AR",
+          "knowsAbout": [
+            "Inteligencia Artificial",
+            "Derecho",
+            "Tecnología Legal",
+            "LegalTech Argentina"
+          ]
+        }
+      ]
     }
     </script>
   </head>

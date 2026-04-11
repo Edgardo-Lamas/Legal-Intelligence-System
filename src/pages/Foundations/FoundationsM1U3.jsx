@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function FoundationsM1U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="RAG Aplicado al Derecho · M1 U3"
+                description="Cómo usar Retrieval-Augmented Generation con jurisprudencia, doctrina y normativa. Ventajas frente a los prompts simples."
+                path="/foundations-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 1 · Unidad 3</span>
                 <h1 className="page__title">RAG aplicado al derecho</h1>

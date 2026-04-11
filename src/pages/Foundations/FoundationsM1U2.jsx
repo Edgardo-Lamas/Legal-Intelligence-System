@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function FoundationsM1U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="ChatGPT vs Gemini en el Derecho · M1 U2"
+                description="Comparativa práctica de los modelos de lenguaje más usados en la práctica jurídica: cuándo usar ChatGPT y cuándo usar Gemini."
+                path="/foundations-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 1 · Unidad 2</span>
                 <h1 className="page__title">ChatGPT vs Gemini en el ámbito legal</h1>

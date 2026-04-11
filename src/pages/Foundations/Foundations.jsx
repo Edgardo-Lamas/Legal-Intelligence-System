@@ -5,6 +5,7 @@ import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
 import MermaidDiagram from '../../components/Visualizations/MermaidDiagram'
 import ModelComparisonChart from '../../components/Visualizations/ModelComparisonChart'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 const modelFlowChart = `
 graph TD
@@ -45,6 +46,11 @@ const sections = [
 function Foundations() {
     return (
         <div className="page">
+            <PageSEO
+                title="IA Generativa y Agentes de IA · M1 U1"
+                description="Qué es la IA generativa, cómo funcionan los agentes de IA y cuál es la diferencia práctica para el ejercicio profesional del derecho."
+                path="/foundations"
+            />
             <header className="page__header">
                 <h1 className="page__title">Foundations</h1>
                 <p className="page__description">

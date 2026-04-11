@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function MasteringM6U4() {
     return (
         <div className="page">
+            <PageSEO
+                title="Gemini Deep Research para Doctrina Jurídica · M6 U4"
+                description="Cómo usar la investigación profunda de Gemini para analizar doctrina, sintetizar múltiples fuentes y producir informes fundamentados."
+                path="/mastering-u4"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 6 · Unidad 4</span>
                 <h1 className="page__title">Gemini Deep Research para investigación doctrinal</h1>

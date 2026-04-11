@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function EcosystemM5U3() {
     return (
         <div className="page">
+            <PageSEO
+                title="Flujos de Trabajo Jurídicos con IA · M5 U3"
+                description="Cómo diseñar secuencias de trabajo asistido por IA para multiplicar resultados sin perder criterio en la práctica legal."
+                path="/ecosystem-u3"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 5 · Unidad 3</span>
                 <h1 className="page__title">Flujos de trabajo jurídicos con IA: diseño, control y escalabilidad</h1>

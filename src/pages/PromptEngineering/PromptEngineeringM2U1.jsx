@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function PromptEngineeringM2U1() {
     return (
         <div className="page">
+            <PageSEO
+                title="Ingeniería de Prompts Jurídicos · M2 U1"
+                description="La base del sistema. Diseñá prompts controlados, predecibles y reutilizables para tareas legales con IA. Nivel profesional."
+                path="/prompt-engineering"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 2 · Unidad 1</span>
                 <h1 className="page__title">Ingeniería de Prompts Jurídicos</h1>

@@ -2,10 +2,16 @@ import '../../styles/pages.css'
 import '../../styles/content.css'
 import '../../styles/study-page.css'
 import { Link } from 'react-router-dom'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function EcosystemM5U2() {
     return (
         <div className="page">
+            <PageSEO
+                title="Automatización Jurídica: Qué y Cómo Delegar · M5 U2"
+                description="Criterios para delegar tareas operativas del estudio jurídico sin perder el control estratégico ni el criterio profesional."
+                path="/ecosystem-u2"
+            />
             <header className="page__header">
                 <span className="page__module-tag">Módulo 5 · Unidad 2</span>
                 <h1 className="page__title">Automatización jurídica: qué automatizar, qué no y por qué</h1>

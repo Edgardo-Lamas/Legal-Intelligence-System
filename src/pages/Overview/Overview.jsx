@@ -1,9 +1,15 @@
 import '../../styles/pages.css'
 import CourseMapCard from '../../components/CourseMapCard/CourseMapCard'
+import PageSEO from '../../components/PageSEO/PageSEO'
 
 function Overview() {
     return (
         <div className="page">
+            <PageSEO
+                title="Inicio — IA para Abogados Argentinos"
+                description="Sistema de formación en inteligencia artificial aplicada al derecho. 8 módulos para abogados argentinos: desde los fundamentos de la IA hasta la implementación real de sistemas automatizados en tu estudio."
+                path="/overview"
+            />
             <div className="hero-section">
                 <h1 className="hero-title">Legal Intelligence Systems</h1>
                 <p className="hero-subtitle">IA para abogados</p>
