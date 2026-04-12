@@ -8,170 +8,218 @@ function EcosystemM5U3() {
     return (
         <div className="page">
             <PageSEO
-                title="Flujos de Trabajo Jurídicos con IA · M5 U3"
-                description="Cómo diseñar secuencias de trabajo asistido por IA para multiplicar resultados sin perder criterio en la práctica legal."
+                title="NotebookLM: tu base de jurisprudencia con IA · M6 U3"
+                description="Cómo usar NotebookLM de Google para construir una base de conocimiento jurídico propia, consultable con IA. Jurisprudencia local, doctrina del estudio, expedientes de referencia."
                 path="/ecosystem-u3"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 5 · Unidad 3</span>
-                <h1 className="page__title">Flujos de trabajo jurídicos con IA: diseño, control y escalabilidad</h1>
+                <span className="page__module-tag">Módulo 6 · Unidad 3</span>
+                <h1 className="page__title">NotebookLM: tu base de jurisprudencia con IA</h1>
                 <p className="page__description">
-                    Cómo organizar secuencias de trabajo asistido para multiplicar resultados sin perder criterio profesional.
+                    La primera herramienta que te deja construir una IA que responde exclusivamente
+                    con tus documentos — sin programar y sin pagar una fortuna.
                 </p>
             </header>
 
             <div className="page__content">
-                {/* Intro */}
-                <section className="page__section">
-                    <article className="long-form-content">
-                        <p>
-                            Luego de comprender qué tareas conviene automatizar y cuáles deben permanecer bajo control humano, el siguiente paso natural es aprender a <strong>diseñar flujos de trabajo jurídicos asistidos por IA</strong>. Un flujo de trabajo no es una herramienta ni un prompt aislado, sino una secuencia organizada de acciones, donde cada etapa cumple una función clara dentro del proceso profesional.
-                        </p>
-                        <p>
-                            En el ejercicio jurídico tradicional, muchos flujos existen de manera implícita. El abogado recibe información, la analiza, redacta un borrador, lo ajusta, lo revisa desde el punto de vista legal y finalmente lo presenta o comunica. El problema es que estos pasos suelen realizarse de forma desordenada, repetitiva y dependiente exclusivamente de la memoria o la experiencia individual. La IA permite hacer explícitos esos flujos, ordenarlos y volverlos más eficientes sin perder control profesional.
-                        </p>
-                    </article>
-                </section>
 
-                {/* Sección 1: Definición del objetivo */}
-                <section id="objetivo" className="page__section">
-                    <h2 className="page__section-title">1. Empezar por el objetivo</h2>
+                <section id="que-es" className="page__section">
+                    <h2 className="page__section-title">1. Qué es NotebookLM y por qué importa</h2>
                     <article className="long-form-content">
                         <p>
-                            Un flujo de trabajo jurídico con IA bien diseñado comienza siempre por la <strong>definición del objetivo</strong>. No se trata de "usar IA", sino de resolver un problema concreto:
+                            NotebookLM es una herramienta de Google que te permite cargar tus propios
+                            documentos y hacer preguntas sobre ellos con IA. A diferencia de ChatGPT
+                            o Claude, que responden con su conocimiento general, NotebookLM responde
+                            <strong> exclusivamente con lo que vos le cargaste</strong>.
                         </p>
-                        <ul className="application-list">
-                            <li>Redactar un escrito judicial.</li>
-                            <li>Preparar una consulta para un cliente.</li>
-                            <li>Analizar documentación extensa.</li>
-                            <li>Adaptar un texto a distintos destinatarios.</li>
-                            <li>Generar variantes argumentativas.</li>
-                        </ul>
+                        <p>
+                            Para el abogado, eso cambia todo. Podés cargar 50 fallos de las Cámaras
+                            de Apelaciones de tu jurisdicción, un manual de procedimiento, tus propios
+                            modelos de escritos, y la doctrina relevante de tu área. Y preguntarle
+                            sobre ese corpus específico, con citas exactas de los documentos que cargaste.
+                        </p>
                         <blockquote className="concept-quote">
-                            Cuando el objetivo es claro, la IA puede intervenir de forma precisa en cada etapa del proceso.
+                            NotebookLM no sabe nada de lo que no le diste. Y eso es exactamente
+                            lo que lo hace útil para trabajo jurídico serio.
                         </blockquote>
                     </article>
                 </section>
 
-                {/* Sección 2: Separación de funciones */}
-                <section id="funciones" className="page__section">
-                    <h2 className="page__section-title">2. Separación de funciones</h2>
+                <section id="casos-uso" className="page__section">
+                    <h2 className="page__section-title">2. Casos de uso para abogados</h2>
                     <article className="long-form-content">
+
+                        <h3>Base de jurisprudencia local</h3>
                         <p>
-                            En un flujo sano, la IA no cumple todos los roles al mismo tiempo. En una etapa puede actuar como <strong>asistente de análisis</strong>, en otra como <strong>generador de borradores</strong> y en otra como <strong>herramienta de revisión formal</strong>.
+                            Cargás los fallos más relevantes de tu jurisdicción y área de práctica.
+                            Cuando necesitás investigar si alguno de esos tribunales ya se pronunció
+                            sobre un punto específico, se lo preguntás a NotebookLM y te da la cita
+                            exacta del fallo, con extracto del texto.
+                        </p>
+                        <p>
+                            Ideal para: Cámaras de Apelaciones de tu provincia, fallos de la SCBA
+                            en tu área, CSJN en los temas que trabajás frecuentemente.
+                        </p>
+
+                        <h3>Doctrina de la casa</h3>
+                        <p>
+                            Cargás los modelos de escritos del estudio, las estrategias que funcionaron
+                            en causas anteriores, los criterios propios que desarrollaron con el tiempo.
+                            NotebookLM se convierte en la memoria del estudio: cualquier abogado del equipo
+                            puede preguntarle "¿cómo plantea el estudio el agravio por falta de fundamentación?"
+                            y obtener los precedentes propios con cita exacta.
+                        </p>
+
+                        <h3>Análisis de expediente complejo</h3>
+                        <p>
+                            Cargás el expediente (o los documentos clave de la causa) y hacés preguntas
+                            sobre él: "¿Qué prueba documental ofreció la actora?", "¿En qué fecha se
+                            notificó la resolución de fs. 45?", "¿Hay contradicción entre lo que declaró
+                            el testigo A y el testigo B?". NotebookLM responde con cita de página.
+                        </p>
+
+                        <h3>Preparación de audiencias</h3>
+                        <p>
+                            Cargás el expediente, los fallos relevantes, y la doctrina que vas a citar.
+                            Preguntás: "¿Cuál es el argumento más sólido para rebatir la prescripción
+                            planteada por la contraria, basándote solo en los documentos que tenés?"
+                        </p>
+                    </article>
+                </section>
+
+                <section id="como-usar" className="page__section">
+                    <h2 className="page__section-title">3. Cómo configurar tu NotebookLM jurídico</h2>
+                    <article className="long-form-content">
+
+                        <h3>Paso 1: Crear un notebook por área de práctica</h3>
+                        <p>
+                            No un solo notebook para todo — uno por área. Ejemplos:
+                        </p>
+                        <ul className="application-list">
+                            <li>"Derecho laboral PBA" — fallos SCBA, Cámaras laborales de la provincia</li>
+                            <li>"Derecho penal CPP PBA" — fallos, doctrina sobre la Ley 11.922</li>
+                            <li>"Modelos de escritos del estudio" — templates propios verificados</li>
+                            <li>"Causa García c/ Empresa S.A." — documentos de la causa en proceso</li>
+                        </ul>
+
+                        <h3>Paso 2: Qué cargar y en qué formato</h3>
+                        <p>
+                            NotebookLM acepta: PDF, Google Docs, Google Slides, texto plano, URLs
+                            de páginas web, audios (transcribe automáticamente). Límite por notebook:
+                            hasta 50 fuentes, hasta 25 MB por fuente.
                         </p>
                         <div className="highlight-warning">
-                            Esta separación evita errores comunes, como pedirle a un solo prompt que analice, decida y redacte simultáneamente, lo que suele producir textos confusos o jurídicamente débiles.
+                            <strong>Privacidad:</strong> Los documentos que cargás en NotebookLM
+                            se procesan en los servidores de Google. Para expedientes con datos
+                            identificados de clientes, aplicá la anonimización de M8 U3 antes de cargarlos,
+                            o usá el plan Workspace Enterprise con las garantías correspondientes.
                         </div>
-                        <p>
-                            Diseñar un flujo implica asignar a cada etapa una función específica, controlando qué se le pide a la IA en cada momento.
-                        </p>
-                    </article>
-                </section>
 
-                {/* Sección 3: Control humano */}
-                <section id="control" className="page__section">
-                    <h2 className="page__section-title">3. El control humano como estructura</h2>
-                    <article className="long-form-content">
-                        <p>
-                            El control humano es un <strong>elemento estructural del flujo</strong>, no un agregado final. El abogado debe intervenir en los puntos críticos:
-                        </p>
-                        <ul className="application-list">
-                            <li>Definición del enfoque jurídico.</li>
-                            <li>Validación de criterios normativos.</li>
-                            <li>Evaluación de riesgos.</li>
-                            <li>Decisión final.</li>
-                        </ul>
-                        <p>
-                            La IA acompaña, propone y acelera, pero no cierra el proceso por sí sola.
-                        </p>
-                        <div className="highlight-success">
-                            Un flujo bien diseñado siempre deja claro dónde termina la asistencia y dónde comienza la responsabilidad profesional.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 4: Escalabilidad */}
-                <section id="escalabilidad" className="page__section">
-                    <h2 className="page__section-title">4. Escalabilidad sin estandarización del razonamiento</h2>
-                    <article className="long-form-content">
-                        <p>
-                            A medida que el abogado repite estos flujos, aparece un beneficio clave: la <strong>escalabilidad</strong>. Un mismo esquema puede reutilizarse con distintos casos, clientes o materias, ajustando solo ciertos parámetros.
-                        </p>
+                        <h3>Paso 3: Las preguntas que funcionan y las que no</h3>
                         <div className="comparison-grid">
                             <div className="comparison-box comparison-box--good">
-                                <h4>✅ Lo que se estandariza</h4>
-                                <p>La estructura del trabajo: orden de etapas, roles de la IA, puntos de validación humana.</p>
+                                <h4>✅ Funciona bien</h4>
+                                <ul>
+                                    <li>"¿Cuál es la posición de la Cámara X sobre [punto]?"</li>
+                                    <li>"Buscá todos los fallos donde se menciona [concepto]"</li>
+                                    <li>"¿Hay contradicción entre el fallo de 2020 y el de 2023?"</li>
+                                    <li>"Resumí los hechos del expediente en el documento Y"</li>
+                                    <li>"¿Qué prueba fue rechazada y por qué razón?"</li>
+                                </ul>
                             </div>
-                            <div className="comparison-box">
-                                <h4>🎯 Lo que permanece contextual</h4>
-                                <p>El contenido, el razonamiento jurídico y las decisiones estratégicas de cada caso.</p>
+                            <div className="comparison-box comparison-box--bad">
+                                <h4>✗ No funciona bien</h4>
+                                <ul>
+                                    <li>Preguntas sobre jurisprudencia que no cargaste</li>
+                                    <li>Opiniones sobre estrategia jurídica</li>
+                                    <li>Predicciones sobre el resultado de un caso</li>
+                                    <li>Preguntas sobre hechos que no están en los documentos</li>
+                                </ul>
                             </div>
                         </div>
-                        <p>
-                            Esta distinción es fundamental: <strong>estandarizar la estructura no significa estandarizar el criterio</strong>. El proceso se vuelve más ordenado, previsible y eficiente, mientras el análisis sigue siendo único para cada situación.
-                        </p>
                     </article>
                 </section>
 
-                {/* Sección 5: Gestión del contexto */}
-                <section id="contexto" className="page__section">
-                    <h2 className="page__section-title">5. Gestión consciente del contexto</h2>
+                <section id="workflow" className="page__section">
+                    <h2 className="page__section-title">4. NotebookLM en el flujo de trabajo</h2>
                     <article className="long-form-content">
                         <p>
-                            La IA no "recuerda" como una persona, sino que trabaja con la información que se le proporciona en cada interacción. Por eso, un flujo bien diseñado define:
+                            NotebookLM no reemplaza a Claude ni a Gemini — los complementa. La integración
+                            para una causa compleja:
                         </p>
-                        <ul className="application-list">
-                            <li>Qué información se introduce en cada etapa.</li>
-                            <li>Cómo se resume lo anterior.</li>
-                            <li>Cómo se evita la pérdida de elementos relevantes.</li>
-                        </ul>
-                        <blockquote className="concept-quote">
-                            Esta gestión consciente del contexto marca la diferencia entre un uso superficial de la IA y un uso profesional.
-                        </blockquote>
-                    </article>
-                </section>
-
-                {/* Sección 6: Impacto estratégico */}
-                <section id="estrategia" className="page__section">
-                    <h2 className="page__section-title">6. Impacto estratégico: tiempo y calidad</h2>
-                    <article className="long-form-content">
-                        <p>
-                            Desde una perspectiva estratégica, los flujos de trabajo permiten al abogado <strong>desacoplar tiempo y calidad</strong>. Tareas que antes requerían largas horas de concentración pueden resolverse en menos tiempo, manteniendo o incluso mejorando el nivel del resultado final.
-                        </p>
-                        <p>
-                            Esto impacta directamente en:
-                        </p>
-                        <ul className="application-list">
-                            <li>La organización del estudio.</li>
-                            <li>La atención al cliente.</li>
-                            <li>La posibilidad de asumir mayor volumen de trabajo sin sacrificar criterio jurídico.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                {/* Sección 7: Conclusión */}
-                <section id="conclusion" className="page__section">
-                    <h2 className="page__section-title">7. Diseño consciente del ecosistema</h2>
-                    <article className="long-form-content">
-                        <p>
-                            Esta unidad cierra una idea fundamental del módulo: la IA no se integra al Derecho como una herramienta aislada, sino como parte de un <strong>sistema de trabajo diseñado conscientemente</strong>.
-                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Gemini Deep Research</strong> investiga el marco jurídico general.
+                                Genera un informe con doctrina y jurisprudencia relevante.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Vos verificás</strong> las fuentes del informe de Gemini.
+                                Las que son válidas las descargás como PDF.
+                            </div>
+                            <div className="flow-step">
+                                <strong>NotebookLM</strong> recibe esos PDFs verificados + los documentos
+                                del expediente. Se convierte en la base de conocimiento específica del caso.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Claude</strong> recibe el resumen de NotebookLM + las preguntas
+                                específicas del caso y produce el análisis estratégico y el borrador del escrito.
+                            </div>
+                        </div>
                         <div className="highlight-success">
-                            El abogado que entiende y diseña sus propios flujos no depende de modas tecnológicas ni de soluciones cerradas; construye un ecosistema flexible, adaptable y alineado con su forma de ejercer la profesión.
+                            <strong>El resultado:</strong> Un escrito redactado con Claude que cita
+                            jurisprudencia verificada que vos cargaste en NotebookLM.
+                            Cero alucinaciones en las fuentes porque las fuentes las elegiste y verificaste vos.
                         </div>
-                        <p>
-                            En la siguiente unidad, este enfoque se lleva un paso más allá, incorporando la integración entre IA, documentos y sistemas externos, para consolidar un ecosistema jurídico verdaderamente avanzado.
-                        </p>
                     </article>
                 </section>
 
-                {/* Footer de navegación */}
+                <section id="audio" className="page__section">
+                    <h2 className="page__section-title">5. Audio Overview: el podcast del expediente</h2>
+                    <article className="long-form-content">
+                        <p>
+                            NotebookLM tiene una función que parece un juguete pero tiene usos reales:
+                            genera automáticamente un podcast de dos voces que debate los temas de tus
+                            documentos. Para el abogado, algunos usos no obvios:
+                        </p>
+                        <ul className="application-list">
+                            <li>
+                                <strong>Preparación de audiencias mientras manejás:</strong> Cargás el
+                                expediente y generás el Audio Overview. Escuchás el resumen del caso
+                                en el auto, antes de la audiencia.
+                            </li>
+                            <li>
+                                <strong>Briefing rápido para el cliente:</strong> Generás el audio sobre
+                                el estado de la causa y se lo mandás como resumen accesible.
+                            </li>
+                            <li>
+                                <strong>Revisión de doctrina sin leer:</strong> Cargás un artículo de
+                                100 páginas y el audio te da los puntos clave en 10 minutos.
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="checklist" className="page__section">
+                    <h2 className="page__section-title">6. Checklist de esta unidad</h2>
+                    <article className="long-form-content">
+                        <div className="checklist-box">
+                            <ul className="checklist">
+                                <li>☐ Creé al menos un notebook con documentos jurídicos reales de mi área</li>
+                                <li>☐ Probé hacer preguntas sobre los documentos cargados y verifiqué las citas</li>
+                                <li>☐ Entiendo qué tipo de preguntas funcionan y cuáles no</li>
+                                <li>☐ Apliqué la anonimización antes de cargar documentos con datos de clientes</li>
+                                <li>☐ Entiendo cómo NotebookLM se integra en el flujo con Claude y Gemini</li>
+                                <li>☐ Probé el Audio Overview con al menos un documento</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
                         <Link to="/ecosystem-u2" className="unit-nav-link">
                             <span className="unit-nav-label">← Unidad anterior</span>
-                            <span className="unit-nav-title">M5 U2: Automatización y criterio</span>
+                            <span className="unit-nav-title">M6 U2: n8n y Make — automatización sin código</span>
                         </Link>
                     </div>
                     <div className="unit-status">
@@ -180,7 +228,7 @@ function EcosystemM5U3() {
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
                         <Link to="/ecosystem-u4" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            Unidad 4 – Integración con documentos y sistemas →
+                            U4 – Perplexity: búsqueda jurídica verificable →
                         </Link>
                     </div>
                 </div>

@@ -8,118 +8,249 @@ function EcosystemM5U2() {
     return (
         <div className="page">
             <PageSEO
-                title="Automatización Jurídica: Qué y Cómo Delegar · M5 U2"
-                description="Criterios para delegar tareas operativas del estudio jurídico sin perder el control estratégico ni el criterio profesional."
+                title="n8n y Make: automatización sin código para el estudio jurídico · M6 U2"
+                description="Cómo construir flujos de trabajo automáticos sin programar usando n8n o Make. Automatización de seguimiento de causas, alertas procesales, generación de documentos y más."
                 path="/ecosystem-u2"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 5 · Unidad 2</span>
-                <h1 className="page__title">Automatización jurídica: qué automatizar, qué no y por qué</h1>
+                <span className="page__module-tag">Módulo 6 · Unidad 2</span>
+                <h1 className="page__title">n8n y Make: automatización sin código</h1>
                 <p className="page__description">
-                    Criterios para delegar tareas operativas sin perder el control estratégico.
+                    La diferencia entre ejecutar manualmente el mismo proceso cada semana
+                    y que ese proceso se ejecute solo, sin que vos lo inicies.
                 </p>
             </header>
 
             <div className="page__content">
-                {/* Intro */}
-                <section className="page__section">
-                    <article className="long-form-content">
-                        <p>
-                            Una vez que el abogado comprende la IA como un ecosistema de trabajo y no como una herramienta aislada, surge una pregunta central: <strong>qué tareas conviene automatizar y cuáles deben permanecer estrictamente bajo control humano</strong>.
-                        </p>
-                        <p>
-                            Esta distinción es clave, porque una automatización mal planteada no solo no ahorra tiempo, sino que puede degradar la calidad profesional y aumentar riesgos éticos y jurídicos.
-                        </p>
-                    </article>
-                </section>
 
-                {/* Sección 1: Ordenar procesos */}
-                <section id="ordenar" className="page__section">
-                    <h2 className="page__section-title">1. Ordenar procesos, no delegar decisiones</h2>
+                <section id="que-es" className="page__section">
+                    <h2 className="page__section-title">1. Qué es la automatización sin código</h2>
                     <article className="long-form-content">
                         <p>
-                            La automatización jurídica no consiste en delegar decisiones, sino en ordenar procesos. En el ejercicio real del Derecho, muchas tareas se repiten con variaciones mínimas: estructuras de escritos, recopilación de información, adaptación de lenguaje, resúmenes o borradores iniciales. Estas actividades consumen tiempo cognitivo sin aportar valor estratégico.
+                            n8n y Make son plataformas de automatización visual: conectan aplicaciones
+                            entre sí mediante flujos de trabajo llamados "workflows". Un workflow define
+                            una cadena de pasos — disparado por un evento, ejecutado según una lógica,
+                            terminado en una acción.
                         </p>
                         <p>
-                            Automatizar correctamente implica identificar tareas de <strong>bajo riesgo decisional y alta repetitividad</strong>, donde el error es fácilmente detectable. En estos casos, la IA actúa como acelerador, no como sustituto.
-                        </p>
-                    </article>
-                </section>
-
-                {/* Sección 2: Qué NO automatizar */}
-                <section id="que-no" className="page__section">
-                    <h2 className="page__section-title">2. Qué NO se debe automatizar</h2>
-                    <article className="long-form-content">
-                        <p>
-                            Existen zonas del trabajo jurídico que no deben automatizarse de forma directa porque requieren un <strong>criterio jurídico situado</strong> que ningún sistema puede replicar hoy de forma confiable:
-                        </p>
-                        <ul className="application-list">
-                            <li>El análisis estratégico y la teoría del caso.</li>
-                            <li>La ponderación de riesgos y beneficios.</li>
-                            <li>La interpretación normativa en contextos ambiguos.</li>
-                            <li>La negociación y la toma de decisiones procesales.</li>
-                        </ul>
-                        <div className="highlight-warning">
-                            Intentar automatizar estos núcleos suele llevar a errores graves o a una falsa sensación de seguridad.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 3: Criterio práctico */}
-                <section id="criterio" className="page__section">
-                    <h2 className="page__section-title">3. El criterio del "borrador imperfecto"</h2>
-                    <article className="long-form-content">
-                        <p>
-                            Un criterio práctico para decidir qué automatizar es preguntarse si la tarea admite un <strong>borrador imperfecto</strong>.
-                        </p>
-                        <div className="comparison-grid">
-                            <div className="comparison-box comparison-box--good">
-                                <h4>✅ Automatizable</h4>
-                                <p>El resultado puede partir de un primer esquema que luego será revisado, corregido y ajustado por el abogado.</p>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>🛑 No automatizable</h4>
-                                <p>La tarea exige precisión absoluta desde el primer momento, o implica consecuencias inmediatas e irreversibles.</p>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 4: Automatizar sin programar */}
-                <section id="sin-programar" className="page__section">
-                    <h2 className="page__section-title">4. Automatizar no significa programar</h2>
-                    <article className="long-form-content">
-                        <p>
-                            En muchos casos, la automatización se logra mediante <strong>estructuras de prompts bien diseñados</strong>, plantillas inteligentes o flujos conversacionales recurrentes.
-                        </p>
-                        <p>
-                            El abogado que aprende a formular instrucciones claras y reutilizables está, en los hechos, creando sistemas de automatización livianos, adaptables y bajo su control directo. Automatizar es una decisión profesional, no técnica: se hace porque mejora la calidad del servicio y libera tiempo para tareas de mayor valor.
-                        </p>
-                    </article>
-                </section>
-
-                {/* Sección 5: Proceso gradual */}
-                <section id="gradual" className="page__section">
-                    <h2 className="page__section-title">5. Un proceso gradual</h2>
-                    <article className="long-form-content">
-                        <p>
-                            El abogado no pasa de cero a un sistema complejo de un día para el otro. Se comienza por pequeñas automatizaciones controladas, se evalúan resultados y luego se avanza.
-                        </p>
-                        <p>
-                            Esta unidad prepara el terreno para lo que sigue: la transición desde automatizaciones simples hacia flujos de trabajo más complejos, donde la IA se integra con documentos y rutinas profesionales.
+                            Para el abogado, el caso de uso más directo: conectar Google Sheets (donde
+                            tenés el estado de tus causas) con la API de Claude (que analiza ese estado)
+                            y Gmail o WhatsApp (donde recibís el resultado). Sin tocar una línea de código.
+                            Sin abrir ninguna aplicación manualmente. Se ejecuta solo, cuando vos
+                            programaste que se ejecute.
                         </p>
                         <blockquote className="concept-quote">
-                            Automatizar no es resignar control, sino diseñar mejor el trabajo jurídico.
+                            Automatizar no es programar. Es definir la lógica de un proceso una vez
+                            y dejar que la máquina lo repita indefinidamente.
                         </blockquote>
                     </article>
                 </section>
 
-                {/* Footer de navegación */}
+                <section id="comparacion" className="page__section">
+                    <h2 className="page__section-title">2. n8n vs Make: ¿cuál elegir?</h2>
+                    <article className="long-form-content">
+                        <div className="comparison-grid">
+                            <div className="comparison-box">
+                                <h4>n8n</h4>
+                                <ul>
+                                    <li>Open source — podés self-hostear gratis</li>
+                                    <li>Cloud: ~$20 USD/mes para uso básico</li>
+                                    <li>Más flexible — permite nodos de código cuando es necesario</li>
+                                    <li>Mejor para usuarios con algo más de criterio técnico</li>
+                                    <li>Integración nativa con Claude API, OpenAI, Gemini</li>
+                                    <li>Comunidad activa, plantillas disponibles</li>
+                                </ul>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>Make (ex-Integromat)</h4>
+                                <ul>
+                                    <li>100% visual — interfaz de burbujas y conectores</li>
+                                    <li>Gratis hasta 1.000 operaciones/mes</li>
+                                    <li>Plan básico: ~$10–15 USD/mes</li>
+                                    <li>Más fácil de empezar — menor curva de aprendizaje</li>
+                                    <li>Gran biblioteca de integraciones pre-construidas</li>
+                                    <li>Ideal para el primer workflow</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>
+                            <strong>Recomendación:</strong> Si es tu primer contacto con automatización,
+                            empezá con Make. Si querés más control y estás dispuesto a invertir una hora
+                            más de configuración inicial, n8n es más potente a largo plazo.
+                        </p>
+                    </article>
+                </section>
+
+                <section id="workflow-causas" className="page__section">
+                    <h2 className="page__section-title">3. Workflow 1: seguimiento semanal de causas</h2>
+                    <article className="long-form-content">
+                        <p>
+                            El workflow más útil para abogados. Ya diseñaste el proceso en M7 U4 —
+                            ahora lo automatizás:
+                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Trigger: Lunes 8:00 AM (Schedule)</strong><br />
+                                n8n/Make se activa automáticamente cada lunes a las 8. Vos no hacés nada.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 1: Leer Google Sheets (Google Sheets node)</strong><br />
+                                Lee el registro de causas: una fila por causa, columnas para estado,
+                                plazos, fecha de última actuación, prioridad.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 2: Llamar a Claude API (HTTP Request node)</strong><br />
+                                Envía el contenido de la hoja más el prompt de seguimiento.
+                                Claude analiza vencimientos, detecta urgencias, genera el resumen semanal.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 3: Enviar resultado (Gmail / WhatsApp node)</strong><br />
+                                El resumen semanal llega a tu inbox o WhatsApp antes de que empieces
+                                la semana. Formato limpio, prioridades claras, alertas destacadas.
+                            </div>
+                        </div>
+                        <p>
+                            Tiempo de configuración inicial: 2–3 horas la primera vez.
+                            Tiempo que ahorra cada semana: 1–2 horas de seguimiento manual.
+                            Break-even: primera semana de uso.
+                        </p>
+                    </article>
+                </section>
+
+                <section id="workflow-cliente" className="page__section">
+                    <h2 className="page__section-title">4. Workflow 2: respuesta automática a consultas de clientes</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Para estudios que reciben volumen de consultas similares (estado de la causa,
+                            documentos necesarios, próximos pasos):
+                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Trigger: Email entrante con asunto "[Consulta]"</strong><br />
+                                Gmail detecta correos con ese tag. También puede ser formulario de
+                                contacto en el sitio web, o mensaje de WhatsApp con palabra clave.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 1: Clasificar la consulta (Claude API)</strong><br />
+                                Claude lee el mensaje y lo clasifica: consulta de estado, solicitud de
+                                turno, consulta legal general, urgencia procesal. Cada categoría
+                                dispara un camino diferente.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 2A: Consulta de estado → respuesta automática</strong><br />
+                                Si el cliente pregunta por el estado de su causa, Claude busca en
+                                la hoja de causas y genera una respuesta personalizada. Se envía
+                                al cliente sin que vos intervengas.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 2B: Consulta legal → alerta a vos</strong><br />
+                                Si es una consulta que requiere criterio jurídico real, te manda
+                                un resumen de la consulta con los datos del cliente para que respondas
+                                cuando tengas tiempo. No la responde sola.
+                            </div>
+                        </div>
+                        <div className="highlight-warning">
+                            <strong>Límite importante:</strong> El workflow no reemplaza al abogado en
+                            las consultas que requieren criterio jurídico. El criterio de clasificación
+                            define explícitamente qué puede responder automáticamente y qué te escala.
+                            Si tenés dudas sobre ese límite, errá siempre del lado de la escalada.
+                        </div>
+                    </article>
+                </section>
+
+                <section id="workflow-documentos" className="page__section">
+                    <h2 className="page__section-title">5. Workflow 3: generación automática de documentos estándar</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Para documentos muy repetitivos con estructura fija (notas de pedido de informes,
+                            poderes simples, cartas documento):
+                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Trigger: Formulario de Google (nuevo registro)</strong><br />
+                                Completás un formulario simple: tipo de documento, datos de las partes,
+                                datos del juzgado, detalles específicos.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 1: Claude genera el borrador (Claude API)</strong><br />
+                                Claude recibe los datos del formulario y el template del documento.
+                                Genera el borrador completo con los datos completados correctamente.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 2: Crear documento en Google Docs</strong><br />
+                                El borrador se crea automáticamente en Google Docs, en la carpeta
+                                de la causa correspondiente, con el nombre correcto.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Paso 3: Notificarte que está listo</strong><br />
+                                Te manda el link al documento por email o Slack. Vos lo revisás,
+                                ajustás si hace falta, y lo usás. Tiempo de generación: 2–3 minutos
+                                vs. 30–45 minutos de redacción manual.
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="empezar" className="page__section">
+                    <h2 className="page__section-title">6. Cómo empezar esta semana</h2>
+                    <article className="long-form-content">
+                        <div className="risk-list">
+                            <div className="risk-item">
+                                <span className="risk-icon">1</span>
+                                <span>
+                                    <strong>Crear cuenta gratuita en Make o n8n cloud.</strong> Make es más fácil para
+                                    empezar. No necesitás tarjeta de crédito para el plan gratuito.
+                                </span>
+                            </div>
+                            <div className="risk-item">
+                                <span className="risk-icon">2</span>
+                                <span>
+                                    <strong>Obtener tu API key de Claude.</strong> En console.anthropic.com,
+                                    creás un proyecto y generás una API key. El costo de la API para uso
+                                    personal es muy bajo — menos de $5 USD/mes para el seguimiento de causas.
+                                </span>
+                            </div>
+                            <div className="risk-item">
+                                <span className="risk-icon">3</span>
+                                <span>
+                                    <strong>Construir el workflow de seguimiento de causas.</strong>
+                                    Es el más directo: Sheets → Claude API → Gmail. 3 nodos, 2–3 horas
+                                    de configuración, valor inmediato desde la primera ejecución.
+                                </span>
+                            </div>
+                            <div className="risk-item">
+                                <span className="risk-icon">4</span>
+                                <span>
+                                    <strong>Probarlo manualmente antes de activar el trigger automático.</strong>
+                                    Ejecutá el workflow a mano 2–3 veces, verificá que el output de Claude
+                                    es correcto, y recién entonces activá el schedule automático.
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="checklist" className="page__section">
+                    <h2 className="page__section-title">7. Checklist de esta unidad</h2>
+                    <article className="long-form-content">
+                        <div className="checklist-box">
+                            <ul className="checklist">
+                                <li>☐ Entiendo la diferencia entre n8n y Make y elegí con cuál empezar</li>
+                                <li>☐ Creé mi cuenta y exploré la interfaz de la plataforma elegida</li>
+                                <li>☐ Tengo mi API key de Claude lista</li>
+                                <li>☐ Construí y probé el workflow de seguimiento semanal</li>
+                                <li>☐ El workflow corre automáticamente y llega el resumen a mi inbox</li>
+                                <li>☐ Identifiqué qué otro proceso repetitivo de mi estudio puedo automatizar</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
                         <Link to="/ecosystem" className="unit-nav-link">
                             <span className="unit-nav-label">← Unidad anterior</span>
-                            <span className="unit-nav-title">M5 U1: Pensar la IA como ecosistema</span>
+                            <span className="unit-nav-title">M6 U1: El ecosistema IA del abogado 2025</span>
                         </Link>
                     </div>
                     <div className="unit-status">
@@ -128,7 +259,7 @@ function EcosystemM5U2() {
                     <div className="next-unit">
                         <span className="next-label">Próxima unidad:</span>
                         <Link to="/ecosystem-u3" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            Unidad 3 – Flujos de trabajo jurídicos →
+                            U3 – NotebookLM: tu base de jurisprudencia con IA →
                         </Link>
                     </div>
                 </div>
