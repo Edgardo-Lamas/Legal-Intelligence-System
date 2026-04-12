@@ -89,13 +89,17 @@ const modules = [
   },
   {
     num: '07',
-    path: '/communication',
-    label: 'Comunicación Legal',
-    accentColor: '#3a7a8a',
+    path: '/agents',
+    label: 'Agentes IA para el Estudio Jurídico',
+    accentColor: '#2a6a5a',
     units: [
-      { path: '/communication', label: 'IA para Comunicación' },
+      { path: '/agents',    label: 'Qué es un agente IA' },
+      { path: '/agents-u2', label: 'Agente de investigación jurídica' },
+      { path: '/agents-u3', label: 'Agente de redacción' },
+      { path: '/agents-u4', label: 'Agente de seguimiento de causas' },
+      { path: '/agents-u5', label: 'Orquestación multi-agente' },
     ],
-    completed: 1,
+    completed: 5,
   },
   {
     num: '08',

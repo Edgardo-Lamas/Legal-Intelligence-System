@@ -45,6 +45,11 @@ import PrivacyM8U2 from './pages/Privacy/PrivacyM8U2'
 import PrivacyM8U3 from './pages/Privacy/PrivacyM8U3'
 import PrivacyM8U4 from './pages/Privacy/PrivacyM8U4'
 import PrivacyM8U5 from './pages/Privacy/PrivacyM8U5'
+import AgentsM7U1 from './pages/Agents/AgentsM7U1'
+import AgentsM7U2 from './pages/Agents/AgentsM7U2'
+import AgentsM7U3 from './pages/Agents/AgentsM7U3'
+import AgentsM7U4 from './pages/Agents/AgentsM7U4'
+import AgentsM7U5 from './pages/Agents/AgentsM7U5'
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -96,6 +101,11 @@ function App() {
         <Route path="/privacy-u3" element={<PrivacyM8U3 />} />
         <Route path="/privacy-u4" element={<PrivacyM8U4 />} />
         <Route path="/privacy-u5" element={<PrivacyM8U5 />} />
+        <Route path="/agents" element={<AgentsM7U1 />} />
+        <Route path="/agents-u2" element={<AgentsM7U2 />} />
+        <Route path="/agents-u3" element={<AgentsM7U3 />} />
+        <Route path="/agents-u4" element={<AgentsM7U4 />} />
+        <Route path="/agents-u5" element={<AgentsM7U5 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />
