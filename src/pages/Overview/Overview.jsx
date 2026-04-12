@@ -7,7 +7,7 @@ function Overview() {
         <div className="page">
             <PageSEO
                 title="Inicio — IA para Abogados Argentinos"
-                description="Sistema de formación en inteligencia artificial aplicada al derecho. 8 módulos para abogados argentinos: desde los fundamentos de la IA hasta la implementación real de sistemas automatizados en tu estudio."
+                description="Sistema de formación en inteligencia artificial aplicada al derecho. 10 módulos para abogados argentinos: desde los fundamentos de la IA hasta la implementación real de sistemas automatizados en tu estudio."
                 path="/overview"
             />
 
@@ -23,11 +23,11 @@ function Overview() {
                 </p>
                 <div className="hero-stats">
                     <div className="hero-stat">
-                        <span className="hero-stat__num">8</span>
+                        <span className="hero-stat__num">10</span>
                         <span className="hero-stat__label">Módulos</span>
                     </div>
                     <div className="hero-stat">
-                        <span className="hero-stat__num">29</span>
+                        <span className="hero-stat__num">51</span>
                         <span className="hero-stat__label">Unidades</span>
                     </div>
                     <div className="hero-stat">
