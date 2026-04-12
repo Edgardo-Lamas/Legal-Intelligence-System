@@ -57,22 +57,9 @@ const modules = [
       { path: '/gemini',    label: 'Gemini en la Práctica Legal' },
       { path: '/gemini-u2', label: 'Canvas: Visualización' },
       { path: '/gemini-u3', label: 'Automatización y Memoria' },
+      { path: '/gemini-u4', label: 'Gemini + Google Workspace' },
     ],
-    completed: 3,
-  },
-  {
-    num: '06',
-    path: '/ecosystem',
-    label: 'Ecosistema y Automatización Real',
-    accentColor: '#7a4a8a',
-    units: [
-      { path: '/ecosystem',    label: 'El ecosistema IA del abogado 2025' },
-      { path: '/ecosystem-u2', label: 'n8n y Make: automatización sin código' },
-      { path: '/ecosystem-u3', label: 'NotebookLM: base de jurisprudencia' },
-      { path: '/ecosystem-u4', label: 'Perplexity: búsqueda verificable' },
-      { path: '/ecosystem-u5', label: 'Harvey, CoCounsel y legaltech IA' },
-    ],
-    completed: 5,
+    completed: 4,
   },
   {
     num: '05',
@@ -85,6 +72,20 @@ const modules = [
       { path: '/mastering-u3', label: 'Artifacts' },
       { path: '/mastering-u4', label: 'Claude API' },
       { path: '/mastering-u5', label: 'MCP servers' },
+    ],
+    completed: 5,
+  },
+  {
+    num: '06',
+    path: '/ecosystem',
+    label: 'Ecosistema y Automatización Real',
+    accentColor: '#7a4a8a',
+    units: [
+      { path: '/ecosystem',    label: 'El ecosistema IA del abogado 2025' },
+      { path: '/ecosystem-u2', label: 'n8n y Make: automatización sin código' },
+      { path: '/ecosystem-u3', label: 'NotebookLM: base de jurisprudencia' },
+      { path: '/ecosystem-u4', label: 'Perplexity: búsqueda verificable' },
+      { path: '/ecosystem-u5', label: 'Harvey, CoCounsel y legaltech IA' },
     ],
     completed: 5,
   },
@@ -104,18 +105,6 @@ const modules = [
   },
   {
     num: '08',
-    path: '/practice',
-    label: 'De la Teoría a la Práctica',
-    accentColor: '#4a7a4a',
-    units: [
-      { path: '/practice',    label: 'Del Concepto al Sistema' },
-      { path: '/practice-u2', label: 'Diseño de Flujos' },
-      { path: '/practice-u3', label: 'Implementación y Validación' },
-    ],
-    completed: 3,
-  },
-  {
-    num: '09',
     path: '/privacy',
     label: 'Privacidad, Ética y Secreto Profesional',
     accentColor: '#6a3a6a',
@@ -125,6 +114,34 @@ const modules = [
       { path: '/privacy-u3', label: 'Cómo usar IA con info sensible' },
       { path: '/privacy-u4', label: 'Enterprise y modelos locales' },
       { path: '/privacy-u5', label: 'Ética profesional en la era LLM' },
+    ],
+    completed: 5,
+  },
+  {
+    num: '09',
+    path: '/communication',
+    label: 'Comunicación y Posicionamiento',
+    accentColor: '#6a5a2a',
+    units: [
+      { path: '/communication',    label: 'Comunicación con clientes' },
+      { path: '/communication-u2', label: 'LinkedIn jurídico' },
+      { path: '/communication-u3', label: 'Blog y SEO jurídico' },
+      { path: '/communication-u4', label: 'Newsletter legal' },
+      { path: '/communication-u5', label: 'Video y voz con IA' },
+    ],
+    completed: 5,
+  },
+  {
+    num: '10',
+    path: '/practice',
+    label: 'Tu sistema propio: construí y escalá',
+    accentColor: '#4a7a4a',
+    units: [
+      { path: '/practice',    label: 'Del concepto al sistema' },
+      { path: '/practice-u2', label: 'Diseño de flujos' },
+      { path: '/practice-u3', label: 'Implementación y validación' },
+      { path: '/practice-u4', label: 'Plan de 90 días' },
+      { path: '/practice-u5', label: 'Escalá: de usuario a arquitecto' },
     ],
     completed: 5,
   },
@@ -399,7 +416,7 @@ function Navigation() {
 
         {/* Footer */}
         <div className="nav-footer">
-          <span className="nav-footer__total">8 módulos · 29 unidades</span>
+          <span className="nav-footer__total">10 módulos · 51 unidades</span>
         </div>
       </nav>
 

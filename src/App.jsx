@@ -26,6 +26,7 @@ import SoloPracticeM3U5 from './pages/SoloPractice/SoloPracticeM3U5'
 import GeminiM4U1 from './pages/Gemini/GeminiM4U1'
 import GeminiM4U2 from './pages/Gemini/GeminiM4U2'
 import GeminiM4U3 from './pages/Gemini/GeminiM4U3'
+import GeminiM4U4 from './pages/Gemini/GeminiM4U4'
 import EcosystemM5U1 from './pages/Ecosystem/EcosystemM5U1'
 import EcosystemM5U2 from './pages/Ecosystem/EcosystemM5U2'
 import EcosystemM5U3 from './pages/Ecosystem/EcosystemM5U3'
@@ -37,9 +38,15 @@ import MasteringM6U3 from './pages/Mastering/MasteringM6U3'
 import MasteringM6U4 from './pages/Mastering/MasteringM6U4'
 import MasteringM6U5 from './pages/Mastering/MasteringM6U5'
 import CommunicationM7U1 from './pages/Communication/CommunicationM7U1'
+import CommunicationM9U2 from './pages/Communication/CommunicationM9U2'
+import CommunicationM9U3 from './pages/Communication/CommunicationM9U3'
+import CommunicationM9U4 from './pages/Communication/CommunicationM9U4'
+import CommunicationM9U5 from './pages/Communication/CommunicationM9U5'
 import PracticeM8U1 from './pages/Practice/PracticeM8U1'
 import PracticeM8U2 from './pages/Practice/PracticeM8U2'
 import PracticeM8U3 from './pages/Practice/PracticeM8U3'
+import PracticeM8U4 from './pages/Practice/PracticeM8U4'
+import PracticeM8U5 from './pages/Practice/PracticeM8U5'
 import CourseMap from './pages/CourseMap/CourseMap'
 import PrivacyM8U1 from './pages/Privacy/PrivacyM8U1'
 import PrivacyM8U2 from './pages/Privacy/PrivacyM8U2'
@@ -84,6 +91,7 @@ function App() {
         <Route path="/gemini" element={<GeminiM4U1 />} />
         <Route path="/gemini-u2" element={<GeminiM4U2 />} />
         <Route path="/gemini-u3" element={<GeminiM4U3 />} />
+        <Route path="/gemini-u4" element={<GeminiM4U4 />} />
         <Route path="/ecosystem" element={<EcosystemM5U1 />} />
         <Route path="/ecosystem-u2" element={<EcosystemM5U2 />} />
         <Route path="/ecosystem-u3" element={<EcosystemM5U3 />} />
@@ -95,9 +103,15 @@ function App() {
         <Route path="/mastering-u4" element={<MasteringM6U4 />} />
         <Route path="/mastering-u5" element={<MasteringM6U5 />} />
         <Route path="/communication" element={<CommunicationM7U1 />} />
+        <Route path="/communication-u2" element={<CommunicationM9U2 />} />
+        <Route path="/communication-u3" element={<CommunicationM9U3 />} />
+        <Route path="/communication-u4" element={<CommunicationM9U4 />} />
+        <Route path="/communication-u5" element={<CommunicationM9U5 />} />
         <Route path="/practice" element={<PracticeM8U1 />} />
         <Route path="/practice-u2" element={<PracticeM8U2 />} />
         <Route path="/practice-u3" element={<PracticeM8U3 />} />
+        <Route path="/practice-u4" element={<PracticeM8U4 />} />
+        <Route path="/practice-u5" element={<PracticeM8U5 />} />
         <Route path="/privacy" element={<PrivacyM8U1 />} />
         <Route path="/privacy-u2" element={<PrivacyM8U2 />} />
         <Route path="/privacy-u3" element={<PrivacyM8U3 />} />

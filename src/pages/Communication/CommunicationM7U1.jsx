@@ -8,400 +8,239 @@ function CommunicationM7U1() {
     return (
         <div className="page">
             <PageSEO
-                title="IA para Comunicación Legal · M7 U1"
-                description="Cómo integrar la IA en la comunicación profesional del abogado sin degradar su rol, su ética ni su credibilidad institucional."
+                title="IA para comunicación con clientes: claridad sin perder rigor · M9 U1"
+                description="Cómo usar IA para comunicar situaciones procesales complejas en lenguaje accesible para clientes, sin perder rigor jurídico ni generar falsas expectativas."
                 path="/communication"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 7 · Unidad 1</span>
-                <h1 className="page__title">IA para comunicación legal</h1>
+                <span className="page__module-tag">Módulo 9 · Unidad 1</span>
+                <h1 className="page__title">IA para comunicación con clientes</h1>
                 <p className="page__description">
-                    Cómo integrar la IA en la comunicación profesional sin degradar tu rol, tu ética ni tu credibilidad.
+                    La brecha entre el lenguaje jurídico y lo que entiende el cliente es uno de los
+                    mayores generadores de ansiedad en la relación profesional. La IA la cierra.
                 </p>
             </header>
 
             <div className="page__content">
-                {/* Intro - Propósito */}
-                <section className="page__section">
+
+                <section id="problema" className="page__section">
+                    <h2 className="page__section-title">1. El problema real de la comunicación con clientes</h2>
                     <article className="long-form-content">
                         <p>
-                            Este módulo tiene como objetivo comprender cómo la inteligencia artificial puede integrarse en la <strong>comunicación profesional del abogado</strong> sin degradar su rol, su ética ni su credibilidad.
+                            El cliente que pregunta "¿ganamos o perdimos?" después de una sentencia
+                            de 40 páginas no está siendo impaciente — está desorientado. No sabe
+                            qué significa una condena parcial, qué son los recursos, ni cuánto tiempo
+                            tiene para tomar decisiones.
                         </p>
                         <p>
-                            No se trata de aprender a "publicar más", sino de <strong>comunicar mejor</strong>, con intención estratégica, claridad conceptual y coherencia institucional.
+                            El abogado sabe todo eso. Pero traducirlo a lenguaje accesible, con el
+                            tono correcto, sin generar falsas expectativas ni alarma innecesaria,
+                            consume tiempo y energía mental que muchas veces no sobra.
                         </p>
                         <blockquote className="concept-quote">
-                            La comunicación legal no es marketing genérico. Es una forma especializada de construir confianza, autoridad y reputación en un entorno donde el lenguaje tiene consecuencias jurídicas, éticas y sociales.
+                            La IA no reemplaza tu criterio jurídico. Traduce ese criterio al lenguaje
+                            que el cliente puede procesar. Eso también es trabajo profesional.
                         </blockquote>
                     </article>
                 </section>
 
-                {/* Sección 1: Activo estratégico */}
-                <section id="activo" className="page__section">
-                    <h2 className="page__section-title">1. La comunicación legal como activo estratégico</h2>
+                <section id="tipos" className="page__section">
+                    <h2 className="page__section-title">2. Tipos de comunicación donde la IA agrega valor</h2>
                     <article className="long-form-content">
-                        <p>
-                            En el ejercicio moderno de la abogacía, la comunicación dejó de ser un elemento accesorio. Hoy constituye un <strong>activo estratégico</strong> que atraviesa múltiples dimensiones:
-                        </p>
-                        <ul className="application-list">
-                            <li>La relación con clientes</li>
-                            <li>El posicionamiento profesional</li>
-                            <li>La visibilidad pública</li>
-                            <li>La docencia y producción académica</li>
-                            <li>La interacción con instituciones</li>
-                        </ul>
-                        <div className="highlight-warning">
-                            Un mismo contenido jurídico no se expresa igual ante un colega, un juez, un cliente o la sociedad en general. La IA solo puede respetar esas diferencias si el profesional sabe indicarlas con precisión.
+                        <div className="comparison-grid">
+                            <div className="comparison-box comparison-box--good">
+                                <h4>Actualizaciones procesales</h4>
+                                <p>Explicar qué pasó en una audiencia, resolución o notificación.
+                                El cliente necesita entender el hecho y su implicancia práctica.</p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>Solicitudes de documentación</h4>
+                                <p>Pedir documentos con claridad: qué documento exactamente,
+                                para qué se usa, cuándo es urgente y cómo entregarlo.</p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>Explicación de opciones</h4>
+                                <p>Presentar alternativas (aceptar oferta / continuar / apelar) con
+                                sus consecuencias en términos que el cliente pueda evaluar.</p>
+                            </div>
+                            <div className="comparison-box comparison-box--good">
+                                <h4>Recordatorios y vencimientos</h4>
+                                <p>Alertar sobre plazos con el nivel justo de urgencia — sin alarmar
+                                si no es urgente, sin minimizar si sí lo es.</p>
+                            </div>
                         </div>
                     </article>
                 </section>
 
-                {/* Sección 2: Redacción jurídica y divulgativa */}
-                <section id="redaccion" className="page__section">
-                    <h2 className="page__section-title">2. IA aplicada a la redacción jurídica y divulgativa</h2>
+                <section id="prompts" className="page__section">
+                    <h2 className="page__section-title">3. Prompts para comunicación con clientes</h2>
                     <article className="long-form-content">
-                        <p>
-                            Uno de los aportes más visibles de la IA es la asistencia en la redacción de:
-                        </p>
-                        <ul className="application-list">
-                            <li>Textos de divulgación jurídica</li>
-                            <li>Artículos de opinión</li>
-                            <li>Publicaciones institucionales</li>
-                            <li>Contenidos educativos</li>
-                            <li>Materiales informativos</li>
-                        </ul>
-                        <p>La IA permite:</p>
-                        <div className="comparison-grid">
-                            <div className="comparison-box comparison-box--good">
-                                <h4>📝 Clarificar</h4>
-                                <p>Textos complejos sin perder rigor técnico.</p>
+
+                        <h3>Actualización procesal después de una audiencia</h3>
+                        <div className="full-prompt-example">
+                            <p>
+                                "Actuás como abogado comunicando a un cliente sin formación jurídica
+                                lo que pasó en la audiencia de hoy. El cliente está ansioso y necesita
+                                entender qué significa para su caso.
+                            </p>
+                            <p>
+                                Lo que ocurrió: [describir brevemente — resolución, declaraciones,
+                                próximos pasos, fechas].
+                            </p>
+                            <p>
+                                Redactá un mensaje (para WhatsApp o email) que: (1) explique qué
+                                pasó en términos simples, (2) indique si es una buena o mala noticia
+                                y en qué medida, (3) describa qué viene ahora y qué necesitamos del
+                                cliente, (4) cierre con el plazo más relevante.
+                            </p>
+                            <p>
+                                Tono: profesional, claro, tranquilizador pero realista. Sin tecnicismos.
+                                Sin prometer resultados. Máximo 200 palabras."
+                            </p>
+                        </div>
+
+                        <h3>Explicar una sentencia compleja</h3>
+                        <div className="full-prompt-example">
+                            <p>
+                                "Tengo una sentencia que condena parcialmente a la contraparte.
+                                El cliente espera saber si 'ganamos o perdimos'. La realidad es matizada.
+                            </p>
+                            <p>
+                                Resultado: [describir qué se concedió, qué se rechazó, montos si aplica].
+                                Perspectiva: [si hay recursos posibles, cuál es tu recomendación].
+                            </p>
+                            <p>
+                                Redactá una explicación que: (1) empiece con lo más positivo sin
+                                distorsionar la realidad, (2) explique lo que no se obtuvo y por qué,
+                                (3) describa las opciones disponibles y cuál recomendás, (4) indique
+                                el plazo para tomar la decisión.
+                            </p>
+                            <p>
+                                No uses términos jurídicos sin explicarlos. El cliente no sabe qué
+                                es 'recurrir en apelación' — explicalo como si fuera la primera vez."
+                            </p>
+                        </div>
+
+                        <h3>Solicitud de documentación urgente</h3>
+                        <div className="full-prompt-example">
+                            <p>
+                                "Necesito pedirle al cliente que me mande [documentos específicos]
+                                antes del [fecha]. Es importante porque [razón procesal].
+                            </p>
+                            <p>
+                                Redactá el mensaje evitando: (1) sonar alarmante si no es urgente,
+                                (2) minimizar si sí lo es, (3) dar por supuesto que sabe qué es el
+                                documento. Incluí una descripción de exactamente qué documento necesito
+                                (nombre, de qué organismo, de qué año si aplica) y cómo puede conseguirlo
+                                si no lo tiene."
+                            </p>
+                        </div>
+
+                        <h3>Presentación de opciones estratégicas</h3>
+                        <div className="full-prompt-example">
+                            <p>
+                                "El cliente tiene que decidir entre tres opciones: [opción A], [opción B],
+                                [opción C]. Mi recomendación es [opción X] por [razones].
+                            </p>
+                            <p>
+                                Redactá una explicación de las opciones que: (1) describa cada una
+                                en términos concretos (qué implica, cuánto dura, qué cuesta, qué
+                                probabilidad de éxito tiene), (2) sea objetiva con las tres antes
+                                de revelar mi recomendación, (3) explique por qué recomiendo la
+                                que recomiendo sin presionar, (4) indique qué decide el cliente
+                                y en qué plazo."
+                            </p>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="limites" className="page__section">
+                    <h2 className="page__section-title">4. Lo que la IA no puede hacer por vos</h2>
+                    <article className="long-form-content">
+                        <div className="risk-list">
+                            <div className="risk-item">
+                                <span className="risk-icon">⚠️</span>
+                                <span>
+                                    <strong>Conocer el historial del cliente.</strong> La IA genera
+                                    texto genérico. Vos le das el contexto específico — la relación,
+                                    el tono que usa ese cliente, si está tranquilo o al límite.
+                                </span>
                             </div>
-                            <div className="comparison-box comparison-box--good">
-                                <h4>🔄 Reorganizar</h4>
-                                <p>Argumentos para mejorar la estructura lógica.</p>
+                            <div className="risk-item">
+                                <span className="risk-icon">⚠️</span>
+                                <span>
+                                    <strong>Evaluar el impacto emocional.</strong> Una mala noticia
+                                    necesita tono distinto según el cliente. La IA hace el primer
+                                    borrador, vos ajustás el tono final.
+                                </span>
                             </div>
-                            <div className="comparison-box comparison-box--good">
-                                <h4>🎯 Ajustar</h4>
-                                <p>El nivel de tecnicismo según el público.</p>
+                            <div className="risk-item">
+                                <span className="risk-icon">⚠️</span>
+                                <span>
+                                    <strong>Asumir responsabilidad.</strong> Todo lo que sale con tu
+                                    nombre es tuyo. La revisión final es obligatoria — no opcional.
+                                </span>
                             </div>
-                            <div className="comparison-box comparison-box--good">
-                                <h4>🔗 Mantener</h4>
-                                <p>Coherencia estilística en comunicaciones recurrentes.</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="flujo" className="page__section">
+                    <h2 className="page__section-title">5. El flujo en la práctica</h2>
+                    <article className="long-form-content">
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Tomás nota rápida</strong> después de la audiencia o resolución:
+                                qué pasó, qué viene, qué necesitás del cliente. No necesita formato.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Le pasás el resumen a Claude</strong> con el prompt de
+                                comunicación. Claude genera el borrador en segundos.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Revisás en 2 minutos:</strong> ajustás el tono si es necesario,
+                                añadís algo personal, verificás que el plazo esté correcto.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Enviás.</strong> El cliente recibe actualización profesional
+                                el mismo día — no al día siguiente cuando encontraste tiempo.
                             </div>
                         </div>
                         <div className="highlight-success">
-                            El criterio jurídico sigue siendo irremplazable. El abogado no delega la comunicación: la dirige.
+                            <strong>El efecto compuesto:</strong> Un cliente que recibe actualizaciones
+                            claras y oportunas no llama a preguntar. Eso libera horas por semana.
                         </div>
                     </article>
                 </section>
 
-                {/* Sección 3: Posicionamiento y autoridad */}
-                <section id="posicionamiento" className="page__section">
-                    <h2 className="page__section-title">3. Posicionamiento profesional y construcción de autoridad</h2>
+                <section id="checklist" className="page__section">
+                    <h2 className="page__section-title">6. Checklist de esta unidad</h2>
                     <article className="long-form-content">
-                        <p>
-                            La comunicación legal asistida por IA cumple un rol central en la <strong>construcción de autoridad profesional</strong>. No se trata de autopromoción vacía, sino de generar una presencia coherente que refleje especialización, solvencia conceptual y compromiso con la calidad.
-                        </p>
-                        <p>La IA puede colaborar en:</p>
-                        <ul className="application-list">
-                            <li>Planificación de contenidos</li>
-                            <li>Consistencia del mensaje</li>
-                            <li>Adaptación de una misma idea a distintos formatos</li>
-                        </ul>
-                        <blockquote className="concept-quote">
-                            Un abogado bien posicionado no es el que más publica, sino el que comunica con sentido, continuidad y profundidad.
-                        </blockquote>
-                    </article>
-                </section>
-
-                {/* Sección 4: Ética y límites */}
-                <section id="etica" className="page__section">
-                    <h2 className="page__section-title">4. Ética, responsabilidad y límites</h2>
-                    <article className="long-form-content">
-                        <p>
-                            El uso de IA en la comunicación legal plantea <strong>desafíos éticos específicos</strong>. La automatización no exime de responsabilidad profesional.
-                        </p>
-                        <p>Es indispensable preservar:</p>
-                        <div className="comparison-grid">
-                            <div className="comparison-box">
-                                <h4>✅ Veracidad</h4>
-                                <p>La información debe ser correcta y verificable.</p>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>🔒 Confidencialidad</h4>
-                                <p>Proteger datos sensibles de clientes y casos.</p>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>⚖️ Claridad</h4>
-                                <p>Distinguir contenido informativo de asesoramiento.</p>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>📜 Deontología</h4>
-                                <p>Respetar las normas éticas de la profesión.</p>
-                            </div>
-                        </div>
-                        <div className="highlight-warning">
-                            La IA no debe inducir a confusión ni a simplificaciones peligrosas. Su uso responsable exige revisión humana, criterio jurídico y conciencia del impacto social de la palabra legal.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 5: Estrategia coherente */}
-                <section id="estrategia" className="page__section">
-                    <h2 className="page__section-title">5. Integración en una estrategia comunicacional coherente</h2>
-                    <article className="long-form-content">
-                        <p>
-                            La verdadera ventaja competitiva no surge del uso aislado de herramientas, sino de su <strong>integración en una estrategia comunicacional coherente</strong>.
-                        </p>
-                        <p>
-                            La IA puede formar parte de un sistema que articule:
-                        </p>
-                        <ul className="application-list">
-                            <li>Identidad profesional</li>
-                            <li>Objetivos institucionales</li>
-                            <li>Canales de comunicación</li>
-                        </ul>
-                        <div className="highlight-success">
-                            La comunicación legal moderna es un sistema, no una acción puntual, y la IA funciona como un componente más dentro de ese ecosistema.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 5.5: Prompts de comunicación */}
-                <section id="prompts-comunicacion" className="page__section">
-                    <h2 className="page__section-title">5.5. Prompts específicos para comunicación legal</h2>
-                    <article className="long-form-content">
-                        <p>Estos prompts te ayudan a comunicar mejor sin perder rigor jurídico:</p>
-
-                        <div className="component-card">
-                            <div className="component-content">
-                                <h4>📧 Carta a cliente explicando situación procesal</h4>
-                                <blockquote className="prompt-example">
-                                    Actuás como abogado comunicando resultados a un cliente sin formación jurídica.<br /><br />
-
-                                    Situación procesal: [describir estado del caso]<br />
-                                    Audiencia/Resolución reciente: [describir qué ocurrió]<br />
-                                    Próximos pasos: [listar]<br /><br />
-
-                                    Redactá una comunicación que:<br />
-                                    1. Explique qué pasó en términos comprensibles<br />
-                                    2. Evite tecnicismos innecesarios pero mantenga precisión<br />
-                                    3. Transmita control profesional<br />
-                                    4. Indique claramente qué necesitás del cliente (si algo)<br />
-                                    5. Cierre con los plazos relevantes<br /><br />
-
-                                    Tono: profesional, claro, tranquilizador pero realista.
-                                </blockquote>
-                            </div>
-                        </div>
-
-                        <div className="component-card">
-                            <div className="component-content">
-                                <h4>📝 Artículo de divulgación jurídica</h4>
-                                <blockquote className="prompt-example">
-                                    Actuás como abogado especialista escribiendo para público general.<br /><br />
-
-                                    Tema: [describir tema jurídico]<br />
-                                    Público objetivo: [empresarios / público general / colegas]<br />
-                                    Extensión: [500-800 palabras]<br /><br />
-
-                                    El artículo debe:<br />
-                                    1. Comenzar con un gancho que conecte con problemas reales<br />
-                                    2. Explicar el marco legal de forma accesible<br />
-                                    3. Dar ejemplos prácticos<br />
-                                    4. Incluir advertencias sobre riesgos comunes<br />
-                                    5. Cerrar con recomendación práctica<br /><br />
-
-                                    Evitá: promesas de resultados, publicidad encubierta, simplificaciones que induzcan a error.
-                                </blockquote>
-                            </div>
-                        </div>
-
-                        <div className="component-card">
-                            <div className="component-content">
-                                <h4>📱 Contenido para redes profesionales</h4>
-                                <blockquote className="prompt-example">
-                                    Actuás como estratega de contenido legal para LinkedIn/redes profesionales.<br /><br />
-
-                                    Tema central: [describir]<br />
-                                    Objetivo: [posicionamiento como especialista / educación / captación]<br /><br />
-
-                                    Generá 3 variantes de publicación:<br />
-                                    1. Post corto (150 palabras) con insight valioso<br />
-                                    2. Post narrativo (300 palabras) con caso ilustrativo<br />
-                                    3. Carrusel de 5 puntos con tips prácticos<br /><br />
-
-                                    Cada variante debe:<br />
-                                    - Demostrar expertise sin autopromoción directa<br />
-                                    - Aportar valor educativo real<br />
-                                    - Incluir llamado a la reflexión (no CTA comercial)<br />
-                                    - Mantener tono profesional pero accesible
-                                </blockquote>
-                            </div>
-                        </div>
-
-                        <div className="component-card">
-                            <div className="component-content">
-                                <h4>🎓 Material educativo para clientes</h4>
-                                <blockquote className="prompt-example">
-                                    Actuás como abogado creando material educativo para clientes recurrentes.<br /><br />
-
-                                    Tema: [describir tema que genere consultas frecuentes]<br />
-                                    Formato: [guía PDF / FAQ / checklist]<br /><br />
-
-                                    El material debe:<br />
-                                    1. Responder las preguntas más frecuentes sobre el tema<br />
-                                    2. Usar lenguaje claro sin perder precisión legal<br />
-                                    3. Incluir ejemplos de situaciones comunes<br />
-                                    4. Señalar cuándo SÍ es necesario consultar al abogado<br />
-                                    5. Evitar crear falsa seguridad o autoconsulta riesgosa<br /><br />
-
-                                    Estructura: secciones breves con títulos descriptivos.
-                                </blockquote>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 5.6: Caso práctico comunicación */}
-                <section id="caso-practico-com" className="page__section">
-                    <h2 className="page__section-title">5.6. Caso práctico: De la resolución al cliente</h2>
-                    <article className="long-form-content">
-                        <h3>Situación inicial</h3>
-                        <div className="comparison-box comparison-box--bad">
-                            <p><strong>Problema:</strong> Recibís una sentencia de 40 páginas con fallo parcialmente favorable.</p>
-                            <ul>
-                                <li>El cliente llama preguntando "¿ganamos o perdimos?"</li>
-                                <li>La respuesta es matizada y técnica</li>
-                                <li>Riesgo de generar falsas expectativas o decepción innecesaria</li>
+                        <div className="checklist-box">
+                            <ul className="checklist">
+                                <li>☐ Identifiqué las 3 comunicaciones con clientes que más tiempo me consumen</li>
+                                <li>☐ Probé el prompt de actualización procesal con un caso real</li>
+                                <li>☐ Creé un template propio para el tipo de comunicación más frecuente</li>
+                                <li>☐ Establecí el hábito de tomar nota rápida después de cada novedad procesal</li>
                             </ul>
                         </div>
-
-                        <h3>Flujo con IA</h3>
-                        <div className="comparison-box comparison-box--good">
-                            <div className="layer-diagram">
-                                <div className="layer-step">
-                                    <div className="layer-step__number">1</div>
-                                    <div className="layer-step__content">
-                                        <h4>Cargar sentencia en Gemini</h4>
-                                        <p>Deep Research para análisis exhaustivo</p>
-                                    </div>
-                                </div>
-                                <div className="layer-connector">↓</div>
-                                <div className="layer-step">
-                                    <div className="layer-step__number">2</div>
-                                    <div className="layer-step__content">
-                                        <h4>Prompt de síntesis para abogado</h4>
-                                        <p>Resumen técnico: qué se obtuvo, qué no, recursos posibles</p>
-                                    </div>
-                                </div>
-                                <div className="layer-connector">↓</div>
-                                <div className="layer-step">
-                                    <div className="layer-step__number">3</div>
-                                    <div className="layer-step__content">
-                                        <h4>Prompt de comunicación a cliente</h4>
-                                        <p>Versión clara sin tecnicismos + próximos pasos</p>
-                                    </div>
-                                </div>
-                                <div className="layer-connector">↓</div>
-                                <div className="layer-step">
-                                    <div className="layer-step__number">4</div>
-                                    <div className="layer-step__content">
-                                        <h4>Revisión y ajuste humano</h4>
-                                        <p>Validar tono, agregar contexto personal, enviar</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p className="highlight-success">
-                            <strong>Resultado:</strong> El cliente recibe comunicación profesional en horas (no días), entiende su situación, y percibe acompañamiento efectivo.
-                        </p>
                     </article>
                 </section>
 
-                {/* Sección 5.7: Templates de comunicación */}
-                <section id="templates-comunicacion" className="page__section">
-                    <h2 className="page__section-title">5.7. Templates de comunicación profesional</h2>
-                    <article className="long-form-content">
-                        <h3>Biblioteca de formatos reutilizables</h3>
-
-                        <div className="comparison-grid">
-                            <div className="comparison-box">
-                                <h4>📧 Comunicaciones a clientes</h4>
-                                <ul>
-                                    <li>Actualización de estado procesal</li>
-                                    <li>Explicación de resolución judicial</li>
-                                    <li>Solicitud de documentación</li>
-                                    <li>Recordatorio de vencimientos</li>
-                                </ul>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>📝 Contenido de posicionamiento</h4>
-                                <ul>
-                                    <li>Artículo de opinión (800 palabras)</li>
-                                    <li>Post de LinkedIn (150-300 palabras)</li>
-                                    <li>Newsletter mensual</li>
-                                    <li>Comentario de jurisprudencia</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="comparison-grid">
-                            <div className="comparison-box">
-                                <h4>🎓 Material educativo</h4>
-                                <ul>
-                                    <li>FAQ sobre área de práctica</li>
-                                    <li>Guía paso a paso para clientes</li>
-                                    <li>Checklist de documentación</li>
-                                    <li>Glosario para no-abogados</li>
-                                </ul>
-                            </div>
-                            <div className="comparison-box">
-                                <h4>🏢 Comunicación institucional</h4>
-                                <ul>
-                                    <li>Presentación del estudio</li>
-                                    <li>Propuesta de servicios</li>
-                                    <li>Informe de gestión para empresas</li>
-                                    <li>Biografías profesionales</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <p className="highlight-warning">
-                            <strong>Regla de oro:</strong> La IA redacta, vos firmás. Todo lo que sale con tu nombre debe pasar por tu validación final.
-                        </p>
-                    </article>
-                </section>
-
-                {/* Sección 6: Cierre conceptual */}
-                <section id="cierre" className="page__section">
-                    <h2 className="page__section-title">6. Cierre conceptual: el dominio del lenguaje</h2>
-                    <article className="long-form-content">
-                        <p>
-                            La comunicación jurídica sigue siendo, en esencia, un <strong>acto humano</strong>. La inteligencia artificial no reemplaza la intención, el criterio ni la responsabilidad del abogado, pero puede potenciar su capacidad de comunicar con claridad, alcance y consistencia.
-                        </p>
-                        <blockquote className="concept-quote">
-                            En un entorno profesional cada vez más competitivo, quien sabe utilizar la IA para expresar ideas jurídicas con precisión y sentido estratégico obtiene una ventaja real, basada no en la automatización, sino en el dominio del lenguaje.
-                        </blockquote>
-                    </article>
-                </section>
-
-                {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
-                        <Link to="/mastering-u3" className="unit-nav-link">
+                        <Link to="/privacy-u5" className="unit-nav-link">
                             <span className="unit-nav-label">← Módulo anterior</span>
-                            <span className="unit-nav-title">M6 U3: Redacción técnica y análisis avanzado</span>
+                            <span className="unit-nav-title">M8 U5: Ética profesional en la era LLM</span>
                         </Link>
                     </div>
                     <div className="unit-status">
                         <span className="status-badge status-badge--current">📖 Unidad Actual</span>
                     </div>
                     <div className="next-unit">
-                        <span className="next-label">Próximo módulo:</span>
-                        <Link to="/practice" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            Módulo 8 – De la teoría a la práctica →
+                        <span className="next-label">Próxima unidad:</span>
+                        <Link to="/communication-u2" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            U2 – LinkedIn jurídico: estrategia de contenido con IA →
                         </Link>
                     </div>
                 </div>
