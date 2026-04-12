@@ -13,8 +13,10 @@ const modules = [
       { path: '/foundations',    label: 'IA Generativa y Agentes' },
       { path: '/foundations-u2', label: 'ChatGPT vs Gemini' },
       { path: '/foundations-u3', label: 'RAG aplicado al derecho' },
+      { path: '/foundations-u4', label: 'Claude: el tercer modelo' },
+      { path: '/foundations-u5', label: 'La tríada en práctica' },
     ],
-    completed: 3,
+    completed: 5,
   },
   {
     num: '02',
@@ -28,8 +30,9 @@ const modules = [
       { path: '/prompt-engineering-u4', label: 'Redacción Asistida' },
       { path: '/prompt-engineering-u5', label: 'Juicio e Interrogatorios' },
       { path: '/prompt-engineering-u6', label: 'GPTs y Librerías' },
+      { path: '/prompt-engineering-u7', label: 'Razonamiento Extendido' },
     ],
-    completed: 6,
+    completed: 7,
   },
   {
     num: '03',
@@ -41,8 +44,9 @@ const modules = [
       { path: '/solo-practice-u2', label: 'Contabilidad y Fiscal' },
       { path: '/solo-practice-u3', label: 'Escritura Persuasiva' },
       { path: '/solo-practice-u4', label: 'Marketing Legal' },
+      { path: '/solo-practice-u5', label: 'Modelo de Negocio con IA' },
     ],
-    completed: 4,
+    completed: 5,
   },
   {
     num: '04',

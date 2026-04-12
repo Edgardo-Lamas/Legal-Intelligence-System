@@ -4,6 +4,8 @@ import Overview from './pages/Overview/Overview'
 import Foundations from './pages/Foundations/Foundations'
 import FoundationsM1U2 from './pages/Foundations/FoundationsM1U2'
 import FoundationsM1U3 from './pages/Foundations/FoundationsM1U3'
+import FoundationsM1U4 from './pages/Foundations/FoundationsM1U4'
+import FoundationsM1U5 from './pages/Foundations/FoundationsM1U5'
 import Systems from './pages/Systems/Systems'
 import AnalysisPatterns from './pages/AnalysisPatterns/AnalysisPatterns'
 import AutomationAgents from './pages/AutomationAgents/AutomationAgents'
@@ -15,10 +17,12 @@ import PromptEngineeringM2U3 from './pages/PromptEngineering/PromptEngineeringM2
 import PromptEngineeringM2U4 from './pages/PromptEngineering/PromptEngineeringM2U4'
 import PromptEngineeringM2U5 from './pages/PromptEngineering/PromptEngineeringM2U5'
 import PromptEngineeringM2U6 from './pages/PromptEngineering/PromptEngineeringM2U6'
+import PromptEngineeringM2U7 from './pages/PromptEngineering/PromptEngineeringM2U7'
 import SoloPracticeM3U1 from './pages/SoloPractice/SoloPracticeM3U1'
 import SoloPracticeM3U2 from './pages/SoloPractice/SoloPracticeM3U2'
 import SoloPracticeM3U3 from './pages/SoloPractice/SoloPracticeM3U3'
 import SoloPracticeM3U4 from './pages/SoloPractice/SoloPracticeM3U4'
+import SoloPracticeM3U5 from './pages/SoloPractice/SoloPracticeM3U5'
 import GeminiM4U1 from './pages/Gemini/GeminiM4U1'
 import GeminiM4U2 from './pages/Gemini/GeminiM4U2'
 import GeminiM4U3 from './pages/Gemini/GeminiM4U3'
@@ -49,6 +53,8 @@ function App() {
         <Route path="/foundations" element={<Foundations />} />
         <Route path="/foundations-u2" element={<FoundationsM1U2 />} />
         <Route path="/foundations-u3" element={<FoundationsM1U3 />} />
+        <Route path="/foundations-u4" element={<FoundationsM1U4 />} />
+        <Route path="/foundations-u5" element={<FoundationsM1U5 />} />
         <Route path="/systems" element={<Systems />} />
         <Route path="/analysis-patterns" element={<AnalysisPatterns />} />
         <Route path="/automation-agents" element={<AutomationAgents />} />
@@ -58,10 +64,12 @@ function App() {
         <Route path="/prompt-engineering-u4" element={<PromptEngineeringM2U4 />} />
         <Route path="/prompt-engineering-u5" element={<PromptEngineeringM2U5 />} />
         <Route path="/prompt-engineering-u6" element={<PromptEngineeringM2U6 />} />
+        <Route path="/prompt-engineering-u7" element={<PromptEngineeringM2U7 />} />
         <Route path="/solo-practice" element={<SoloPracticeM3U1 />} />
         <Route path="/solo-practice-u2" element={<SoloPracticeM3U2 />} />
         <Route path="/solo-practice-u3" element={<SoloPracticeM3U3 />} />
         <Route path="/solo-practice-u4" element={<SoloPracticeM3U4 />} />
+        <Route path="/solo-practice-u5" element={<SoloPracticeM3U5 />} />
         <Route path="/gemini" element={<GeminiM4U1 />} />
         <Route path="/gemini-u2" element={<GeminiM4U2 />} />
         <Route path="/gemini-u3" element={<GeminiM4U3 />} />

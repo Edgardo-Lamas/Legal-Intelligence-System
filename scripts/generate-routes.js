@@ -4,7 +4,7 @@
  * eliminando los 404 en rutas directas sin necesidad de SSR.
  */
 
-import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, mkdirSync, writeFileSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -18,6 +18,8 @@ const routes = [
   '/foundations',
   '/foundations-u2',
   '/foundations-u3',
+  '/foundations-u4',
+  '/foundations-u5',
   '/systems',
   '/analysis-patterns',
   '/automation-agents',
@@ -27,10 +29,12 @@ const routes = [
   '/prompt-engineering-u4',
   '/prompt-engineering-u5',
   '/prompt-engineering-u6',
+  '/prompt-engineering-u7',
   '/solo-practice',
   '/solo-practice-u2',
   '/solo-practice-u3',
   '/solo-practice-u4',
+  '/solo-practice-u5',
   '/gemini',
   '/gemini-u2',
   '/gemini-u3',
