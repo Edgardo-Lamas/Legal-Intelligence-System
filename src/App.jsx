@@ -40,6 +40,11 @@ import PracticeM8U1 from './pages/Practice/PracticeM8U1'
 import PracticeM8U2 from './pages/Practice/PracticeM8U2'
 import PracticeM8U3 from './pages/Practice/PracticeM8U3'
 import CourseMap from './pages/CourseMap/CourseMap'
+import PrivacyM8U1 from './pages/Privacy/PrivacyM8U1'
+import PrivacyM8U2 from './pages/Privacy/PrivacyM8U2'
+import PrivacyM8U3 from './pages/Privacy/PrivacyM8U3'
+import PrivacyM8U4 from './pages/Privacy/PrivacyM8U4'
+import PrivacyM8U5 from './pages/Privacy/PrivacyM8U5'
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -86,6 +91,11 @@ function App() {
         <Route path="/practice" element={<PracticeM8U1 />} />
         <Route path="/practice-u2" element={<PracticeM8U2 />} />
         <Route path="/practice-u3" element={<PracticeM8U3 />} />
+        <Route path="/privacy" element={<PrivacyM8U1 />} />
+        <Route path="/privacy-u2" element={<PrivacyM8U2 />} />
+        <Route path="/privacy-u3" element={<PrivacyM8U3 />} />
+        <Route path="/privacy-u4" element={<PrivacyM8U4 />} />
+        <Route path="/privacy-u5" element={<PrivacyM8U5 />} />
         <Route path="/course-map" element={<CourseMap />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/notes" element={<Notes />} />

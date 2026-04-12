@@ -109,6 +109,20 @@ const modules = [
     ],
     completed: 3,
   },
+  {
+    num: '09',
+    path: '/privacy',
+    label: 'Privacidad, Ética y Secreto Profesional',
+    accentColor: '#6a3a6a',
+    units: [
+      { path: '/privacy',    label: '¿ChatGPT entrena con mis datos?' },
+      { path: '/privacy-u2', label: 'Secreto profesional y IA' },
+      { path: '/privacy-u3', label: 'Cómo usar IA con info sensible' },
+      { path: '/privacy-u4', label: 'Enterprise y modelos locales' },
+      { path: '/privacy-u5', label: 'Ética profesional en la era LLM' },
+    ],
+    completed: 5,
+  },
 ]
 
 /* ── Dark mode hook ── */
