@@ -5,289 +5,226 @@ import '../../styles/course-map.css'
 import PageSEO from '../../components/PageSEO/PageSEO'
 
 const courseData = [
-    {
-        id: 1,
-        emoji: '🧱',
-        title: 'Fundamentos y Estrategia con Modelos de Lenguaje',
-        color: '#4a7c94',
-        modules: [
-            {
-                id: 'm1',
-                title: 'Módulo 1 – La Importancia de la IA para Abogados',
-                units: [
-                    { id: 'u1.1', title: 'IA generativa y agentes de IA', path: '/foundations', status: 'completed', topics: ['Qué es IA generativa y qué no', 'Qué son agentes de IA', 'Diferencias prácticas para el ejercicio profesional'] },
-                    { id: 'u1.2', title: 'ChatGPT vs Gemini en el ámbito legal', path: '/foundations-u2', status: 'completed', topics: ['Fortalezas y debilidades de cada modelo', 'Casos de uso recomendados', 'Cuándo usar uno u otro'] },
-                    { id: 'u1.3', title: 'RAG aplicado al derecho', path: '/foundations-u3', status: 'completed', topics: ['Qué es RAG (Retrieval-Augmented Generation)', 'Uso con jurisprudencia, doctrina y normativa', 'Ventajas frente a prompts simples'] },
-                    { id: 'u1.4', title: 'Glosario esencial de IA para abogados', path: '/glossary', status: 'completed', topics: ['Términos clave explicados en lenguaje jurídico', 'Conceptos mínimos para no quedar afuera'] },
-                ]
-            }
-        ]
-    },
-    {
-        id: 2,
-        emoji: '🧱',
-        title: 'ChatGPT como colaborador jurídico',
-        color: '#e8c078',
-        modules: [
-            {
-                id: 'm2',
-                title: 'Módulo 2 – ChatGPT: El mejor colaborador que vas a tener',
-                units: [
-                    { id: 'u2.1', title: 'Ingeniería de Prompts Jurídicos', path: '/prompt-engineering', status: 'completed', topics: ['El prompt como acto de delegación cognitiva', 'Prompt común vs prompt jurídico', 'Componentes obligatorios de un prompt seguro', 'Ejemplos profesionales'] },
-                    { id: 'u2.2', title: 'Control de contexto y documentos extensos', path: '/prompt-engineering-u2', status: 'completed', topics: ['Ventanas de contexto', 'Trabajo con expedientes largos', 'Segmentación y continuidad', 'Riesgos de pérdida de información'] },
-                    { id: 'u2.3', title: 'Filtrado de jurisprudencia y doctrina', path: '/prompt-engineering-u3', status: 'completed', topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
-                    { id: 'u2.4', title: 'Redacción jurídica asistida', path: '/prompt-engineering-u4', status: 'completed', topics: ['Demandas', 'Contratos', 'Dictámenes', 'Escritos procesales'] },
-                    { id: 'u2.5', title: 'Preparación para juicios y razonamiento profundo', path: '/prompt-engineering-u5', status: 'completed', topics: ['Interrogatorios', 'Estrategias procesales', 'Uso de razonamiento estructurado (DeepThink)'] },
-                    { id: 'u2.6', title: 'GPTs personalizados y librerías de prompts', path: '/prompt-engineering-u6', status: 'completed', topics: ['Qué son los GPTs personalizados', 'Casos de uso legales', 'Organización de prompts reutilizables'] },
-                ]
-            }
-        ]
-    },
-    {
-        id: 3,
-        emoji: '🧱',
-        title: 'Abogacía por cuenta propia',
-        color: '#94644a',
-        modules: [
-            {
-                id: 'm3',
-                title: 'Módulo 3 – Gestión, marca y práctica profesional',
-                units: [
-                    { id: 'u3.1', title: 'Abogacía por cuenta propia', path: '/solo-practice', status: 'completed', topics: ['Organización operativa', 'Automatización básica', 'Sistema mínimo viable'] },
-                    { id: 'u3.2', title: 'Gestión contable y fiscal automatizada', path: '/solo-practice-u2', status: 'completed', topics: ['Flujos contables', 'Control y alertas', 'Trazabilidad'] },
-                    { id: 'u3.3', title: 'Escritura persuasiva digital', path: '/solo-practice-u3', status: 'current', topics: ['Contenido jurídico para web y redes', 'Lenguaje claro sin perder rigor'] },
-                    { id: 'u3.4', title: 'Marketing legal y posicionamiento', path: '/solo-practice-u4', status: 'completed', topics: ['Análisis de competencia', 'Marca personal', 'Propuesta de valor'] },
-                ]
-            }
-        ]
-    },
-    {
-        id: 4,
-        emoji: '🧱',
-        title: 'Gemini y herramientas visuales',
-        color: '#4a9478',
-        modules: [
-            {
-                id: 'm4',
-                title: 'Módulo 4 – Gemini: otra inteligencia, nuevas funciones',
-                units: [
-                    { id: 'u4.1', title: 'Deep Research aplicado a casos legales', path: '/gemini', status: 'completed', topics: ['Investigación jurídica asistida', 'Preparación estratégica de casos'] },
-                    { id: 'u4.2', title: 'Gemini Canvas: Visualización y estructura', path: '/gemini-u2', status: 'completed', topics: ['Mapas conceptuales', 'Estructuración cognitiva', 'Productos legales inteligentes'] },
-                    { id: 'u4.3', title: 'Tareas automáticas y memoria jurídica', path: '/gemini-u3', status: 'current', topics: ['Uso proactivo de IA', 'Programación de alertas', 'Gestión de conocimiento'] },
-                ]
-            },
-
-        ]
-    },
-    {
-        id: 5,
-        emoji: '🧱',
-        title: 'Ecosistema avanzado y automatización',
-        color: '#7c4a94',
-        modules: [
-            {
-                id: 'm5',
-                title: 'Módulo 5 – Ecosistema avanzado y automatización',
-                units: [
-                    { id: 'u5.1', title: 'Pensar la IA como ecosistema de trabajo jurídico', path: '/ecosystem', status: 'completed', topics: ['Arquitectura mental del abogado', 'Roles de la IA (investigación, redacción, revisión)', 'Automatización vs. Criterio humano'] },
-                    { id: 'u5.2', title: 'Automatización jurídica: qué y por qué', path: '/ecosystem-u2', status: 'completed', topics: ['Riesgo decisional vs Repetitividad', 'Criterio del borrador imperfecto', 'Automatizar sin programar'] },
-                    { id: 'u5.3', title: 'Flujos de trabajo jurídicos con IA', path: '/ecosystem-u3', status: 'completed', topics: ['Diseño de flujos de trabajo', 'Control humano como estructura', 'Escalabilidad y gestión del contexto'] },
-                    { id: 'u5.4', title: 'Integración con documentos y sistemas externos', path: '/ecosystem-u4', status: 'completed', topics: ['Jerarquía de fuentes', 'Conexión con sistemas externos', 'Control del riesgo'] },
-                    { id: 'u5.5', title: 'Flujos automatizados y práctica escalable', path: '/ecosystem-u5', status: 'completed', topics: ['Automatización flexible vs rígida', 'Escalabilidad profesional', 'Trazabilidad y auditoría'] },
-                ]
-            },
-            {
-                id: 'm6',
-                title: 'Módulo 6 – Dominio de herramientas específicas',
-                units: [
-                    { id: 'u6.1', title: 'Claude Projects para gestión de casos', path: '/mastering', status: 'completed', topics: ['Configuración', 'Prompts reales', 'Caso práctico', 'Checklist'] },
-                    { id: 'u6.2', title: 'ChatGPT para análisis jurídico', path: '/mastering-u2', status: 'completed', topics: ['Custom GPTs', 'Análisis de contratos', 'Prompts normativos'] },
-                    { id: 'u6.3', title: 'Perplexity/Manus para investigación', path: '/mastering-u3', status: 'completed', topics: ['Búsqueda jurisprudencial', 'Verificación de fuentes'] },
-                    { id: 'u6.4', title: 'Gemini Deep Research para doctrina', path: '/mastering-u4', status: 'current', topics: ['Investigación doctrinal', 'Síntesis de fuentes'] },
-                ]
-            }
-        ]
-    },
-    {
-        id: 6,
-        emoji: '📢',
-        title: 'Comunicación Legal',
-        color: '#944a6e',
-        modules: [
-            {
-                id: 'm7',
-                title: 'Módulo 7 – IA para comunicación legal',
-                units: [
-                    { id: 'u7.1', title: 'IA para comunicación legal', path: '/communication', status: 'completed', topics: ['Comunicación estratégica', 'Posicionamiento profesional', 'Ética comunicacional'] },
-                ]
-            }
-        ]
-    },
-    {
-        id: 7,
-        emoji: '🔧',
-        title: 'De la Teoría a la Práctica',
-        color: '#4a5c94',
-        modules: [
-            {
-                id: 'm8',
-                title: 'Módulo 8 – De la teoría a la práctica',
-                units: [
-                    { id: 'u8.1', title: 'Del concepto al sistema', path: '/practice', status: 'completed', topics: ['Pensamiento sistémico', 'Preguntas estratégicas', 'Arquitecto de sistemas'] },
-                    { id: 'u8.2', title: 'Diseño de flujos de trabajo con IA', path: '/practice-u2', status: 'completed', topics: ['Secuencias ordenadas', 'Modularidad', 'Impacto organizacional'] },
-                    { id: 'u8.3', title: 'Implementación práctica y validación', path: '/practice-u3', status: 'current', topics: ['Enfoque progresivo', 'Criterios de control', 'Documentación'] },
-                ]
-            },
-            {
-                id: 'm9',
-                title: 'Módulo 9 – Creación de agentes de IA',
-                units: [
-                    { id: 'u9.1', title: 'Automatización con Make / n8n', path: null, topics: ['Correos', 'Transcripciones'] },
-                ]
-            },
-            {
-                id: 'm10',
-                title: 'Módulo 10 – MCPs y conexiones externas',
-                units: [
-                    { id: 'u10.1', title: 'Integraciones prácticas', path: null, topics: ['WhatsApp', 'Trello', 'WordPress'] },
-                ]
-            }
-        ]
-    }
+  {
+    num: '01',
+    path: '/foundations',
+    label: 'Fundamentos de IA',
+    color: '#4a7c94',
+    units: [
+      { title: 'IA generativa y agentes', path: '/foundations', topics: ['Qué es IA generativa y qué no', 'Diferencia entre LLM y agente', 'Por qué cambia el ejercicio del derecho'] },
+      { title: 'ChatGPT vs Gemini en el ámbito legal', path: '/foundations-u2', topics: ['Fortalezas y debilidades de cada modelo', 'Casos de uso recomendados para cada uno', 'Cuándo usar uno u otro'] },
+      { title: 'RAG aplicado al derecho', path: '/foundations-u3', topics: ['Qué es RAG y cómo funciona', 'Uso con jurisprudencia, doctrina y normativa', 'Ventajas frente a prompts simples'] },
+      { title: 'Claude: el tercer modelo', path: '/foundations-u4', topics: ['Qué distingue a Claude de los otros modelos', 'Fortalezas en análisis jurídico', 'Alcance Legal como ejemplo real'] },
+      { title: 'La tríada en práctica', path: '/foundations-u5', topics: ['Tabla de decisión por tipo de tarea', 'Cuándo usar Claude, Gemini o ChatGPT', 'Sistema de complementación'] },
+    ],
+  },
+  {
+    num: '02',
+    path: '/prompt-engineering',
+    label: 'Prompt Jurídico',
+    color: '#5a8a5a',
+    units: [
+      { title: 'El prompt como mandato jurídico', path: '/prompt-engineering', topics: ['Estructura del prompt efectivo', 'Componentes obligatorios de un prompt seguro', 'Prompt común vs. prompt jurídico'] },
+      { title: 'Control de contexto y documentos largos', path: '/prompt-engineering-u2', topics: ['Ventanas de contexto', 'Trabajo con expedientes extensos', 'Segmentación y continuidad'] },
+      { title: 'Filtrado de jurisprudencia y doctrina', path: '/prompt-engineering-u3', topics: ['Extracción de criterios relevantes', 'Comparación de fallos', 'Detección de líneas jurisprudenciales'] },
+      { title: 'Redacción jurídica asistida', path: '/prompt-engineering-u4', topics: ['Demandas y escritos procesales', 'Contratos y dictámenes', 'Metodología de revisión'] },
+      { title: 'Preparación de juicio e interrogatorios', path: '/prompt-engineering-u5', topics: ['Estrategia procesal con IA', 'Generación de preguntas de interrogatorio', 'Análisis de contrapartes'] },
+      { title: 'GPTs personalizados y librerías de prompts', path: '/prompt-engineering-u6', topics: ['Qué son los Custom GPTs', 'Cómo organizar prompts reutilizables', 'Biblioteca de prompts por área de práctica'] },
+      { title: 'Razonamiento extendido', path: '/prompt-engineering-u7', topics: ['Cuándo usar o1, o3 o Extended Thinking', 'Diferencias entre modos de razonamiento', 'Casos jurídicos donde aplica'] },
+    ],
+  },
+  {
+    num: '03',
+    path: '/solo-practice',
+    label: 'Abogacía por Cuenta Propia',
+    color: '#8a6a3a',
+    units: [
+      { title: 'Gestión del estudio con IA', path: '/solo-practice', topics: ['Sistema mínimo viable de organización', 'Automatización de tareas administrativas', 'Control de vencimientos y agenda'] },
+      { title: 'Contabilidad y gestión fiscal asistida', path: '/solo-practice-u2', topics: ['Flujos contables automatizados', 'Seguimiento de honorarios', 'Documentación fiscal'] },
+      { title: 'Escritura persuasiva digital', path: '/solo-practice-u3', topics: ['Contenido jurídico para web', 'Lenguaje claro sin perder rigor', 'Adaptación de tono por audiencia'] },
+      { title: 'Marketing legal y posicionamiento', path: '/solo-practice-u4', topics: ['Marca personal del abogado', 'Propuesta de valor diferenciada', 'Análisis de competencia con IA'] },
+      { title: 'Modelo de negocio con IA', path: '/solo-practice-u5', topics: ['Cobrar por resultado, no por hora', 'Servicios basados en sistemas IA', 'Escalabilidad sin más horas'] },
+    ],
+  },
+  {
+    num: '04',
+    path: '/gemini',
+    label: 'Gemini & Deep Research',
+    color: '#5a5a94',
+    units: [
+      { title: 'Gemini 2.5 Pro en la práctica legal', path: '/gemini', topics: ['Contexto de 2 millones de tokens', 'Deep Research aplicado a casos', 'Cuándo usar Gemini vs. Claude'] },
+      { title: 'Canvas: visualización de estructuras jurídicas', path: '/gemini-u2', topics: ['Mapas conceptuales de causas', 'Visualización de argumentos', 'Artefactos interactivos'] },
+      { title: 'Automatización y memoria jurídica', path: '/gemini-u3', topics: ['Tareas programadas con Gemini', 'Gestión de conocimiento persistente', 'Alertas y seguimiento proactivo'] },
+      { title: 'Gemini + Google Workspace', path: '/gemini-u4', topics: ['Gemini en Docs para revisar escritos', 'Actas automáticas en Meet', 'Resumen de hilos en Gmail'] },
+    ],
+  },
+  {
+    num: '05',
+    path: '/mastering',
+    label: 'Claude: de Projects a agentes',
+    color: '#8a4a3a',
+    units: [
+      { title: 'Claude Projects: configuración avanzada', path: '/mastering', topics: ['Custom Instructions por caso', 'Gestión de Knowledge (hasta 50 archivos)', 'Un Project por caso, sin excepciones'] },
+      { title: 'Extended Thinking: análisis jurídico profundo', path: '/mastering-u2', topics: ['Cuándo activar el razonamiento extendido', '4 casos de uso jurídico con prompts', 'Cómo leer el proceso de razonamiento'] },
+      { title: 'Artifacts: visualizaciones y documentos interactivos', path: '/mastering-u3', topics: ['Documentos Markdown, tablas HTML, timelines', 'Calculadoras y dashboards React', 'Flujo de iteración sobre documentos'] },
+      { title: 'Claude API: tu primer asistente sin programar', path: '/mastering-u4', topics: ['API vs. claude.ai: la distinción clave', '3 caminos sin código (n8n, Poe, Bolt.new)', 'System prompt para asistente jurídico'] },
+      { title: 'MCP servers: Claude conectado a tus fuentes', path: '/mastering-u5', topics: ['Qué es el Model Context Protocol', 'Alcance Legal Penal como caso de estudio', 'Qué fuentes vale conectar vía MCP'] },
+    ],
+  },
+  {
+    num: '06',
+    path: '/ecosystem',
+    label: 'Ecosistema y Automatización Real',
+    color: '#7a4a8a',
+    units: [
+      { title: 'El ecosistema IA del abogado argentino 2025', path: '/ecosystem', topics: ['4 categorías de herramientas', 'Stack de ~$80-100 USD/mes', 'Cómo integrar el ecosistema en 5 pasos'] },
+      { title: 'n8n y Make: automatización sin código', path: '/ecosystem-u2', topics: ['n8n vs. Make: cuándo usar cada uno', '3 flujos reales para el estudio jurídico', 'Primer flujo en menos de 1 semana'] },
+      { title: 'NotebookLM: base de jurisprudencia con IA', path: '/ecosystem-u3', topics: ['Carga de fallos y normativa como fuentes', 'Preguntas que funcionan y que no', 'Audio Overview para escuchar el caso'] },
+      { title: 'Perplexity: búsqueda jurídica verificable', path: '/ecosystem-u4', topics: ['Diferencia con Google y con ChatGPT', 'Prompts efectivos para búsqueda jurídica', 'Posición en el flujo de investigación'] },
+      { title: 'Harvey, CoCounsel y el mercado de IA jurídica', path: '/ecosystem-u5', topics: ['Panorama legaltech 2025', 'Estado de adopción en Argentina', '4 criterios para evaluar herramientas'] },
+    ],
+  },
+  {
+    num: '07',
+    path: '/agents',
+    label: 'Agentes IA para el Estudio Jurídico',
+    color: '#2a6a5a',
+    units: [
+      { title: 'Qué es un agente IA', path: '/agents', topics: ['Diferencia entre chat y agente', 'Ciclo percepción-razonamiento-acción', 'Cuándo tiene sentido un agente'] },
+      { title: 'Agente de investigación jurídica', path: '/agents-u2', topics: ['De la consulta al informe completo', 'Fuentes verificables vs. conocimiento del modelo', 'Prompt de orquestación'] },
+      { title: 'Agente de redacción', path: '/agents-u3', topics: ['Del brief al primer borrador', 'Iteración guiada por el abogado', 'Control de calidad en cada paso'] },
+      { title: 'Agente de seguimiento de causas', path: '/agents-u4', topics: ['Monitoreo de vencimientos procesales', 'Alertas automáticas configurables', 'Integración con Google Sheets'] },
+      { title: 'Orquestación multi-agente', path: '/agents-u5', topics: ['Patrón supervisor + sub-agentes', 'Caso práctico: análisis completo de expediente', 'Cuándo NO usar multi-agente'] },
+    ],
+  },
+  {
+    num: '08',
+    path: '/privacy',
+    label: 'Privacidad, Ética y Secreto Profesional',
+    color: '#6a3a6a',
+    units: [
+      { title: '¿ChatGPT entrena con mis datos?', path: '/privacy', topics: ['Cómo funcionan los datos en cada plataforma', 'Opt-out y configuraciones de privacidad', 'Qué pasa realmente con tu información'] },
+      { title: 'Secreto profesional y IA: marco legal argentino', path: '/privacy-u2', topics: ['Ley 23.187 y ética profesional', 'Qué constituye violación al secreto', 'Posición de los colegios de abogados'] },
+      { title: 'Cómo usar IA con información sensible', path: '/privacy-u3', topics: ['Técnicas de anonimización', 'Qué nunca subir a un LLM público', 'Protocolo seguro por tipo de dato'] },
+      { title: 'Enterprise tiers y modelos locales', path: '/privacy-u4', topics: ['Claude Enterprise vs. Pro', 'Instancias privadas sin entrenamiento', 'Modelos locales (Llama, Mistral)'] },
+      { title: 'Ética profesional en la era LLM', path: '/privacy-u5', topics: ['Deontología aplicada al uso de IA', 'Supervisión obligatoria del profesional', 'Dónde trazar el límite de la delegación'] },
+    ],
+  },
+  {
+    num: '09',
+    path: '/communication',
+    label: 'Comunicación y Posicionamiento',
+    color: '#6a5a2a',
+    units: [
+      { title: 'IA para comunicación con clientes', path: '/communication', topics: ['Prompts por tipo de situación procesal', 'Traducir lenguaje jurídico sin perder rigor', 'Flujo: nota rápida → borrador → envío'] },
+      { title: 'LinkedIn jurídico: estrategia de contenido con IA', path: '/communication-u2', topics: ['4 tipos de contenido que funcionan', 'Calendario mensual generado con IA', 'Lo que no publicar nunca'] },
+      { title: 'Blog y SEO jurídico asistido por IA', path: '/communication-u3', topics: ['Cómo elegir temas que la gente busca', 'Estructura de artículo que posiciona en Google', 'Actualización de contenido envejecido'] },
+      { title: 'Newsletter legal: automatización y segmentación', path: '/communication-u4', topics: ['Segmentación por lista (activos / ex-clientes)', 'Borrador mensual con un prompt', 'Automatización con n8n + Mailchimp'] },
+      { title: 'Video y voz: herramientas IA para abogados', path: '/communication-u5', topics: ['Guión con Claude, edición con Descript', 'Repropósito: 1 video → 4 formatos', 'El primer video paso a paso'] },
+    ],
+  },
+  {
+    num: '10',
+    path: '/practice',
+    label: 'Tu sistema propio: construí y escalá',
+    color: '#4a7a4a',
+    units: [
+      { title: 'Del concepto al sistema', path: '/practice', topics: ['Diferencia entre herramienta y sistema', 'Preguntas estratégicas de diseño', 'De usuario pasivo a arquitecto'] },
+      { title: 'Diseño de flujos de trabajo con IA', path: '/practice-u2', topics: ['Mapeo del proceso actual', 'Dónde insertar IA y dónde no', 'Puntos de control humano obligatorios'] },
+      { title: 'Implementación práctica y validación', path: '/practice-u3', topics: ['Criterios de validación por tipo de tarea', 'Documentación del sistema', 'Escalado progresivo'] },
+      { title: 'Plan de 90 días', path: '/practice-u4', topics: ['Días 1–30: fundación y primeros hábitos', 'Días 31–60: sistematización y primera automatización', 'Días 61–90: escala y métricas'] },
+      { title: 'Escalá: de usuario a arquitecto de IA jurídica', path: '/practice-u5', topics: ['Los 4 niveles de relación con la IA', 'Alcance Legal como modelo de nivel 4', 'El siguiente paso es tuyo'] },
+    ],
+  },
 ]
 
 function CourseMap() {
-    const [expandedBlocks, setExpandedBlocks] = useState([1, 2])
-    const [expandedModules, setExpandedModules] = useState(['m2'])
+  const [expanded, setExpanded] = useState(['01', '02'])
 
-    const toggleBlock = (blockId) => {
-        setExpandedBlocks(prev =>
-            prev.includes(blockId)
-                ? prev.filter(id => id !== blockId)
-                : [...prev, blockId]
-        )
-    }
-
-    const toggleModule = (moduleId) => {
-        setExpandedModules(prev =>
-            prev.includes(moduleId)
-                ? prev.filter(id => id !== moduleId)
-                : [...prev, moduleId]
-        )
-    }
-
-    const getUnitStatus = (unit) => {
-        if (unit.status === 'current') return 'current'
-        if (unit.path) return 'available'
-        return 'pending'
-    }
-
-    return (
-        <div className="page">
-            <PageSEO
-                title="Mapa del Curso"
-                description="Recorrido completo del programa de formación: 8 módulos y sus unidades de IA aplicada al derecho para abogados argentinos."
-                path="/course-map"
-            />
-            <header className="page__header">
-                <span className="page__module-tag">📍 Guía de Navegación</span>
-                <h1 className="page__title">Mapa del Curso</h1>
-                <p className="page__description">
-                    IA para Abogados — Tu recorrido formativo completo
-                </p>
-            </header>
-
-            <div className="page__content">
-                <div className="course-stats">
-                    <div className="course-stat">
-                        <span className="course-stat__number">7</span>
-                        <span className="course-stat__label">Bloques</span>
-                    </div>
-                    <div className="course-stat">
-                        <span className="course-stat__number">10</span>
-                        <span className="course-stat__label">Módulos</span>
-                    </div>
-                    <div className="course-stat">
-                        <span className="course-stat__number">24</span>
-                        <span className="course-stat__label">Unidades</span>
-                    </div>
-                </div>
-
-                <div className="roadmap">
-                    {courseData.map((block) => (
-                        <div key={block.id} className="roadmap-block" style={{ '--block-color': block.color }}>
-                            <button
-                                className={`roadmap-block__header ${expandedBlocks.includes(block.id) ? 'is-expanded' : ''}`}
-                                onClick={() => toggleBlock(block.id)}
-                            >
-                                <span className="roadmap-block__emoji">{block.emoji}</span>
-                                <span className="roadmap-block__number">Bloque {block.id}</span>
-                                <span className="roadmap-block__title">{block.title}</span>
-                                <span className="roadmap-block__toggle">{expandedBlocks.includes(block.id) ? '−' : '+'}</span>
-                            </button>
-
-                            {expandedBlocks.includes(block.id) && (
-                                <div className="roadmap-block__content">
-                                    {block.modules.map((module) => (
-                                        <div key={module.id} className="roadmap-module">
-                                            <button
-                                                className={`roadmap-module__header ${expandedModules.includes(module.id) ? 'is-expanded' : ''}`}
-                                                onClick={() => toggleModule(module.id)}
-                                            >
-                                                <span className="roadmap-module__title">{module.title}</span>
-                                                <span className="roadmap-module__count">{module.units.length} unidades</span>
-                                                <span className="roadmap-module__toggle">{expandedModules.includes(module.id) ? '−' : '+'}</span>
-                                            </button>
-
-                                            {expandedModules.includes(module.id) && (
-                                                <ul className="roadmap-units">
-                                                    {module.units.map((unit) => (
-                                                        <li key={unit.id} className={`roadmap-unit roadmap-unit--${getUnitStatus(unit)}`}>
-                                                            {unit.path ? (
-                                                                <Link to={unit.path} className="roadmap-unit__link">
-                                                                    <span className="roadmap-unit__id">{unit.id}</span>
-                                                                    <span className="roadmap-unit__title">{unit.title}</span>
-                                                                    {unit.status === 'current' && <span className="roadmap-unit__badge">Actual</span>}
-                                                                </Link>
-                                                            ) : (
-                                                                <span className="roadmap-unit__link roadmap-unit__link--disabled">
-                                                                    <span className="roadmap-unit__id">{unit.id}</span>
-                                                                    <span className="roadmap-unit__title">{unit.title}</span>
-                                                                    <span className="roadmap-unit__badge roadmap-unit__badge--pending">Próximamente</span>
-                                                                </span>
-                                                            )}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-
-                <div className="course-legend">
-                    <h4>Leyenda</h4>
-                    <div className="course-legend__items">
-                        <div className="course-legend__item">
-                            <span className="course-legend__dot course-legend__dot--current"></span>
-                            <span>En curso</span>
-                        </div>
-                        <div className="course-legend__item">
-                            <span className="course-legend__dot course-legend__dot--available"></span>
-                            <span>Disponible</span>
-                        </div>
-                        <div className="course-legend__item">
-                            <span className="course-legend__dot course-legend__dot--pending"></span>
-                            <span>Próximamente</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  const toggle = (num) => {
+    setExpanded(prev =>
+      prev.includes(num) ? prev.filter(n => n !== num) : [...prev, num]
     )
+  }
+
+  const totalUnits = courseData.reduce((acc, m) => acc + m.units.length, 0)
+
+  return (
+    <div className="page">
+      <PageSEO
+        title="Mapa del Curso — Legal Intelligence System"
+        description="Recorrido completo del programa: 10 módulos y 51 unidades de IA aplicada al derecho para abogados argentinos."
+        path="/course-map"
+      />
+      <header className="page__header">
+        <span className="page__module-tag">📍 Guía de Navegación</span>
+        <h1 className="page__title">Mapa del Curso</h1>
+        <p className="page__description">
+          Recorrido completo del programa — {courseData.length} módulos, {totalUnits} unidades
+        </p>
+      </header>
+
+      <div className="page__content">
+        <div className="course-stats">
+          <div className="course-stat">
+            <span className="course-stat__number">{courseData.length}</span>
+            <span className="course-stat__label">Módulos</span>
+          </div>
+          <div className="course-stat">
+            <span className="course-stat__number">{totalUnits}</span>
+            <span className="course-stat__label">Unidades</span>
+          </div>
+          <div className="course-stat">
+            <span className="course-stat__number">100%</span>
+            <span className="course-stat__label">Disponible</span>
+          </div>
+        </div>
+
+        <div className="roadmap">
+          {courseData.map((mod) => {
+            const isOpen = expanded.includes(mod.num)
+            return (
+              <div key={mod.num} className="roadmap-block" style={{ '--block-color': mod.color }}>
+                <button
+                  className={`roadmap-block__header ${isOpen ? 'is-expanded' : ''}`}
+                  onClick={() => toggle(mod.num)}
+                >
+                  <span className="roadmap-block__number" style={{ color: mod.color }}>
+                    {mod.num}
+                  </span>
+                  <span className="roadmap-block__title">{mod.label}</span>
+                  <span className="roadmap-block__meta">{mod.units.length} unidades</span>
+                  <span className="roadmap-block__toggle">{isOpen ? '−' : '+'}</span>
+                </button>
+
+                {isOpen && (
+                  <ul className="roadmap-units">
+                    {mod.units.map((unit, i) => (
+                      <li key={i} className="roadmap-unit roadmap-unit--available">
+                        <Link to={unit.path} className="roadmap-unit__link">
+                          <div className="roadmap-unit__main">
+                            <span className="roadmap-unit__id">
+                              U{String(i + 1).padStart(2, '0')}
+                            </span>
+                            <span className="roadmap-unit__title">{unit.title}</span>
+                          </div>
+                          <ul className="roadmap-unit__topics">
+                            {unit.topics.map((topic, j) => (
+                              <li key={j}>{topic}</li>
+                            ))}
+                          </ul>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default CourseMap
