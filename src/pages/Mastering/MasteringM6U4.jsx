@@ -8,459 +8,216 @@ function MasteringM6U4() {
     return (
         <div className="page">
             <PageSEO
-                title="Gemini Deep Research para Doctrina Jurídica · M6 U4"
-                description="Cómo usar la investigación profunda de Gemini para analizar doctrina, sintetizar múltiples fuentes y producir informes fundamentados."
+                title="Claude API: construir tu primer asistente jurídico sin programar · M5 U4"
+                description="Cómo acceder a la API de Claude, construir un asistente jurídico básico usando herramientas no-code, y entender la diferencia entre claude.ai y la API directa."
                 path="/mastering-u4"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 6 · Unidad 4</span>
-                <h1 className="page__title">Gemini Deep Research para investigación doctrinal</h1>
+                <span className="page__module-tag">Módulo 5 · Unidad 4</span>
+                <h1 className="page__title">Claude API: tu primer asistente sin programar</h1>
                 <p className="page__description">
-                    Cómo usar la investigación profunda de Gemini para analizar doctrina jurídica, sintetizar múltiples fuentes y producir informes fundamentados.
+                    La diferencia entre usar Claude en claude.ai y tener un Claude
+                    configurado específicamente para vos, integrado en tu propio sitio
+                    o herramienta.
                 </p>
             </header>
 
             <div className="page__content">
-                {/* Sección 1: Introducción */}
-                <section id="intro" className="page__section">
-                    <h2 className="page__section-title">1. ¿Qué hace diferente a Gemini Deep Research?</h2>
+
+                <section id="que-es" className="page__section">
+                    <h2 className="page__section-title">1. API vs. claude.ai: la distinción importante</h2>
                     <article className="long-form-content">
                         <p>
-                            Google Gemini tiene una funcionalidad llamada <strong>Deep Research</strong> que se diferencia de otras herramientas de IA por su capacidad de hacer investigaciones autónomas y extensas.
+                            Cuando usás claude.ai, estás usando la interfaz que Anthropic diseñó para vos.
+                            Cuando accedés a la API de Claude, tenés el mismo modelo pero podés:
                         </p>
-
-                        <h3>¿Cómo funciona?</h3>
-                        <p>Cuando le pedís una investigación profunda, Gemini:</p>
-                        <ol className="application-list">
-                            <li><strong>Planifica:</strong> Te muestra qué va a investigar y cómo</li>
-                            <li><strong>Investiga:</strong> Navega decenas de sitios web durante varios minutos</li>
-                            <li><strong>Sintetiza:</strong> Produce un informe estructurado con fuentes</li>
-                            <li><strong>Itera:</strong> Podés pedirle que profundice o corrija</li>
-                        </ol>
-
-                        <div className="comparison-grid">
-                            <div className="comparison-box">
-                                <h4>🔍 Perplexity</h4>
-                                <p>Respuestas rápidas con algunas fuentes. Ideal para consultas puntuales.</p>
-                            </div>
-                            <div className="comparison-box comparison-box--good">
-                                <h4>🔬 Gemini Deep Research</h4>
-                                <p>Investigación exhaustiva de 5-15 minutos. Produce informes de múltiples páginas con síntesis doctrinal.</p>
-                            </div>
-                        </div>
-
+                        <ul className="application-list">
+                            <li><strong>Definir el system prompt:</strong> Las instrucciones que el usuario nunca ve, que configuran el comportamiento del modelo para cada interacción</li>
+                            <li><strong>Integrarlo en cualquier superficie:</strong> Tu sitio web, una herramienta interna, un bot de WhatsApp, un flujo de n8n</li>
+                            <li><strong>Controlar la experiencia del usuario:</strong> Qué puede preguntar, cómo responde, con qué limitaciones</li>
+                            <li><strong>Escalar sin límite de sesiones:</strong> La API no tiene restricciones de conversaciones simultáneas como claude.ai</li>
+                        </ul>
                         <blockquote className="concept-quote">
-                            Si Perplexity es el bibliotecario que te encuentra un libro rápido, Gemini Deep Research es el investigador que lee 50 artículos y te hace un estado del arte.
+                            Alcance Legal Penal — el asistente de este mismo sitio — está construido
+                            sobre la API de Claude. Lo que aprendés en esta unidad es exactamente
+                            cómo funciona ese sistema.
                         </blockquote>
                     </article>
                 </section>
 
-                {/* Sección 2: Configuración */}
-                <section id="configuracion" className="page__section">
-                    <h2 className="page__section-title">2. Cómo acceder y configurar Deep Research</h2>
+                <section id="como-funciona" className="page__section">
+                    <h2 className="page__section-title">2. Cómo funciona la API</h2>
                     <article className="long-form-content">
-                        <h3>Paso 1: Acceder a Gemini</h3>
-                        <p>Andá a <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">gemini.google.com</a> e iniciá sesión con tu cuenta de Google.</p>
-                        <div className="highlight-success">
-                            <strong>Requisito:</strong> Deep Research requiere Gemini Advanced ($20/mes) incluido en Google One AI Premium.
+                        <p>
+                            Cada llamada a la API tiene esta estructura básica:
+                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>System prompt</strong> — Las instrucciones permanentes: quién es el asistente, qué puede y no puede responder, qué tono usar, qué fuentes considerar. El usuario nunca lo ve.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Mensaje del usuario</strong> — Lo que escribe el usuario en cada turno de conversación.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Historial de conversación</strong> — Los turnos anteriores, que se envían junto con el mensaje nuevo para que el modelo mantenga contexto.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Respuesta de Claude</strong> — El texto generado, que tu aplicación muestra al usuario.
+                            </div>
+                        </div>
+                        <p>
+                            Eso es todo. La complejidad no está en la API — está en el diseño del
+                            system prompt y en cómo conectás la API con la interfaz del usuario.
+                        </p>
+                    </article>
+                </section>
+
+                <section id="sin-codigo" className="page__section">
+                    <h2 className="page__section-title">3. Construir un asistente sin código</h2>
+                    <article className="long-form-content">
+                        <p>
+                            Hay tres caminos según tu nivel técnico:
+                        </p>
+
+                        <h3>Camino 1: n8n o Make (el más accesible)</h3>
+                        <p>
+                            Usás n8n o Make (M6 U2) como intermediario. El flujo:
+                        </p>
+                        <div className="flow-steps">
+                            <div className="flow-step">
+                                <strong>Interfaz:</strong> Un formulario de Google, un chat en tu sitio
+                                (Tawk.to, Crisp), o un chat de WhatsApp Business.
+                            </div>
+                            <div className="flow-step">
+                                <strong>n8n recibe el mensaje</strong> del usuario, agrega el system prompt
+                                que vos configuraste, y llama a la API de Claude.
+                            </div>
+                            <div className="flow-step">
+                                <strong>Claude responde</strong> y n8n envía esa respuesta de vuelta
+                                al usuario en la misma interfaz.
+                            </div>
+                        </div>
+                        <p>
+                            Este camino funciona perfectamente para un asistente de consultas básicas
+                            (estado de causa, documentos necesarios para un trámite, preguntas frecuentes
+                            sobre honorarios). Sin escribir una línea de código.
+                        </p>
+
+                        <h3>Camino 2: Poe o similares</h3>
+                        <p>
+                            Plataformas como Poe (poe.com) te permiten crear bots con un system prompt
+                            personalizado y compartirlos con un link. No requiere infraestructura propia.
+                            Limitación: la interfaz es la de Poe, no la tuya.
+                        </p>
+
+                        <h3>Camino 3: Bolt.new o similar (con algo de asistencia)</h3>
+                        <p>
+                            Herramientas como Bolt.new generan código de aplicaciones completas a partir
+                            de una descripción en lenguaje natural. Le describís el asistente jurídico
+                            que querés, Bolt genera el código, y vos lo desplegás en Vercel o similar.
+                            Requiere algo de criterio técnico pero no programación manual.
+                        </p>
+                    </article>
+                </section>
+
+                <section id="system-prompt" className="page__section">
+                    <h2 className="page__section-title">4. El system prompt: el corazón del asistente</h2>
+                    <article className="long-form-content">
+                        <p>
+                            El system prompt es lo que diferencia un asistente genérico de uno especializado.
+                            Para un asistente jurídico, los elementos clave:
+                        </p>
+
+                        <h3>Ejemplo: Asistente de consultas para estudio laboral</h3>
+                        <div className="full-prompt-example">
+                            <p>Sos el asistente virtual del Estudio Jurídico [Nombre]. Tu función es responder consultas iniciales de personas que buscan asesoramiento en derecho laboral argentino.</p>
+                            <p>PODÉS RESPONDER: preguntas generales sobre LCT, montos orientativos de indemnización (aclarando que son estimaciones), documentación necesaria para iniciar una consulta, cómo es el proceso de reclamo laboral, plazos de prescripción generales.</p>
+                            <p>NO PODÉS: dar consejo legal específico sobre un caso concreto, prometer resultados, citar jurisprudencia específica como si fuera garantizada. Para eso invitás al usuario a coordinar una consulta con el estudio.</p>
+                            <p>SIEMPRE: al final de tu respuesta, si la pregunta sugiere una situación concreta, invitá al usuario a coordinar una consulta gratuita de 20 minutos al [número].</p>
+                            <p>TONO: profesional pero accesible. El usuario puede ser una persona sin formación jurídica.</p>
                         </div>
 
-                        <h3>Paso 2: Activar Deep Research</h3>
-                        <p>En el chat de Gemini, cuando escribas tu consulta, vas a ver un botón o opción para activar "Deep Research". Hacé clic antes de enviar.</p>
-
-                        <h3>Paso 3: Revisar el plan de investigación</h3>
-                        <p>Gemini te mostrará qué piensa investigar. Ejemplo:</p>
-                        <pre className="code-block">
-                            {`PLAN DE INVESTIGACIÓN
-
-Voy a investigar sobre "responsabilidad civil de 
-plataformas digitales en Argentina":
-
-1. Marco normativo aplicable
-   - Código Civil y Comercial
-   - Ley de Defensa del Consumidor
-   - Normativa específica de comercio electrónico
-
-2. Jurisprudencia reciente
-   - Fallos de CSJN
-   - Cámaras de Apelación nacionales
-
-3. Doctrina
-   - Autores especializados en derecho digital
-   - Artículos académicos recientes
-
-4. Derecho comparado
-   - Tendencias en la UE y EEUU
-
-¿Querés que modifique algo antes de empezar?`}
-                        </pre>
-                        <p>Podés pedirle que agregue o quite temas antes de que empiece.</p>
-
-                        <h3>Paso 4: Esperar la investigación</h3>
-                        <p>Deep Research puede tardar entre 5 y 15 minutos. Durante ese tiempo, Gemini:</p>
-                        <ul className="application-list">
-                            <li>Visita decenas de páginas web</li>
-                            <li>Analiza el contenido encontrado</li>
-                            <li>Identifica patrones y contradicciones</li>
-                            <li>Organiza la información por temas</li>
-                        </ul>
                         <div className="highlight-warning">
-                            <strong>Tip:</strong> Podés abrir otra pestaña y trabajar mientras. Gemini te avisa cuando termina.
+                            <strong>Límites del sistema:</strong> El system prompt define qué puede y no puede
+                            responder el asistente. Esto es crucial para la responsabilidad profesional:
+                            un asistente que promete resultados específicos o da consejo legal detallado
+                            crea un riesgo. El system prompt es donde controlás ese límite.
                         </div>
                     </article>
                 </section>
 
-                {/* Sección 3: Prompts efectivos */}
-                <section id="prompts" className="page__section">
-                    <h2 className="page__section-title">3. Prompts efectivos para investigación doctrinal</h2>
+                <section id="costos" className="page__section">
+                    <h2 className="page__section-title">5. Costos reales de la API</h2>
                     <article className="long-form-content">
                         <p>
-                            La clave de Deep Research está en formular bien la pregunta inicial. Cuanto más específico seas, mejor resultado obtenés.
+                            A diferencia de claude.ai (suscripción fija), la API cobra por tokens usados.
+                            Para un asistente de consultas de un estudio pequeño:
                         </p>
-
-                        <h3>Prompt 1: Estado del arte sobre un tema</h3>
-                        <div className="prompt-example">
-                            <div className="prompt-label">PROMPT</div>
-                            <pre className="code-block">
-                                {`Hacé una investigación profunda sobre el estado actual
-de la doctrina jurídica argentina respecto a [TEMA].
-
-Incluí:
-1. EVOLUCIÓN HISTÓRICA: Cómo se trató el tema en los
-   últimos 20 años
-   
-2. POSICIONES DOCTRINALES: Identificá las principales
-   corrientes y sus exponentes
-   
-3. JURISPRUDENCIA CLAVE: Fallos que marcaron tendencia
-   
-4. DEBATES ACTUALES: Puntos donde no hay consenso
-   
-5. TENDENCIAS: Hacia dónde parece ir la doctrina
-
-Citá autores con nombre completo y publicación.
-Priorizá fuentes argentinas pero incluí derecho 
-comparado relevante.`}
-                            </pre>
+                        <div className="table-container">
+                            <table className="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Escenario</th>
+                                        <th>Consultas/mes</th>
+                                        <th>Costo estimado USD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Estudio pequeño — consultas básicas</td>
+                                        <td>~200</td>
+                                        <td>~$3–8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estudio mediano — análisis de documentos</td>
+                                        <td>~500</td>
+                                        <td>~$15–30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uso intensivo con contexto largo</td>
+                                        <td>~1000</td>
+                                        <td>~$50–100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <h3>Prompt 2: Comparación de posturas doctrinales</h3>
-                        <div className="prompt-example">
-                            <div className="prompt-label">PROMPT</div>
-                            <pre className="code-block">
-                                {`Investigá las distintas posiciones doctrinales sobre
-[cuestión jurídica específica].
-
-Organizá tu análisis así:
-
-| Postura | Exponentes | Argumentos | Críticas |
-|---------|------------|------------|----------|
-|         |            |            |          |
-
-Al final, indicá cuál parece ser la posición 
-mayoritaria y si hay jurisprudencia que haya 
-adoptado alguna de estas posturas.`}
-                            </pre>
-                        </div>
-
-                        <h3>Prompt 3: Fundamentación para escrito judicial</h3>
-                        <div className="prompt-example">
-                            <div className="prompt-label">PROMPT</div>
-                            <pre className="code-block">
-                                {`Necesito fundamentación doctrinal para sostener que
-[tu tesis jurídica].
-
-Buscá:
-1. Autores argentinos que sostengan esta posición
-2. Artículos de doctrina que desarrollen este argumento
-3. Fallos que hayan adoptado esta interpretación
-4. Contraargumentos que podría usar la contraparte
-   y cómo refutarlos
-
-Formato: Dame citas textuales que pueda usar en un
-escrito judicial, con referencia bibliográfica completa.`}
-                            </pre>
-                        </div>
-
-                        <h3>Prompt 4: Análisis de instituto jurídico</h3>
-                        <div className="prompt-example">
-                            <div className="prompt-label">PROMPT</div>
-                            <pre className="code-block">
-                                {`Analizá el instituto jurídico de [nombre del instituto]
-en el derecho argentino actual.
-
-Estructura:
-1. CONCEPTO: Definición doctrinal
-2. NATURALEZA JURÍDICA: Debate sobre su clasificación
-3. ELEMENTOS: Requisitos para su configuración
-4. EFECTOS: Consecuencias jurídicas
-5. CASOS DE APLICACIÓN: Supuestos típicos
-6. PROBLEMAS PRÁCTICOS: Dificultades en su aplicación
-
-Usá doctrina actualizada post-CCCN cuando corresponda.`}
-                            </pre>
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 4: Síntesis de múltiples fuentes */}
-                <section id="sintesis" className="page__section">
-                    <h2 className="page__section-title">4. Síntesis de múltiples fuentes: el poder real de Deep Research</h2>
-                    <article className="long-form-content">
                         <p>
-                            Donde más brilla Gemini Deep Research es cuando tenés que integrar información de <strong>muchas fuentes distintas</strong>.
+                            Para la mayoría de los estudios independientes, el costo de la API para
+                            un asistente de consultas básicas es mínimo — menos que un café por semana.
                         </p>
-
-                        <h3>Ejemplo: Informe sobre nueva regulación</h3>
-                        <pre className="code-block">
-                            {`MI PROMPT:
-"Necesito un informe completo sobre la nueva regulación
-de teletrabajo en Argentina (Ley 27.555 y reglamentación).
-
-Incluí:
-- Análisis del texto legal
-- Interpretaciones doctrinales publicadas
-- Cómo la están aplicando los tribunales
-- Problemas prácticos reportados por empresas y sindicatos
-- Comparación con regulaciones de países vecinos"
-
-RESULTADO DE GEMINI (estructura del informe):
-
-1. MARCO NORMATIVO (3 páginas)
-   - Ley 27.555: análisis artículo por artículo
-   - Decreto reglamentario 27/2021
-   - Resoluciones del Ministerio de Trabajo
-
-2. DOCTRINA (4 páginas)
-   - Posición de [Autor 1]: enfatiza flexibilidad...
-   - Posición de [Autor 2]: critica ambigüedad...
-   - Debate sobre reversibilidad...
-
-3. JURISPRUDENCIA INICIAL (2 páginas)
-   - Primeros fallos aplicando la ley
-   - Tendencias emergentes
-
-4. PROBLEMÁTICA PRÁCTICA (2 páginas)
-   - Provisión de elementos de trabajo
-   - Desconexión digital
-   - Control y privacidad
-
-5. DERECHO COMPARADO (2 páginas)
-   - Chile, Uruguay, España, Portugal
-
-6. CONCLUSIONES Y RECOMENDACIONES (1 página)
-
-TOTAL: Informe de 14 páginas con 47 fuentes citadas`}
-                        </pre>
-
-                        <div className="highlight-success">
-                            <strong>Tiempo empleado:</strong> 12 minutos de investigación automática + 20 minutos de revisión y edición. Un informe así normalmente llevaría 2-3 días de trabajo manual.
-                        </div>
                     </article>
                 </section>
 
-                {/* Sección 5: Caso práctico */}
-                <section id="caso-practico" className="page__section">
-                    <h2 className="page__section-title">5. Caso práctico: Preparar alegato con fundamentación doctrinal</h2>
+                <section id="checklist" className="page__section">
+                    <h2 className="page__section-title">6. Checklist de esta unidad</h2>
                     <article className="long-form-content">
-                        <div className="case-study-box">
-                            <p><strong>Situación:</strong> Representás al actor en un juicio por daños derivados de publicidad engañosa en redes sociales. Necesitás fundamentación doctrinal sólida para tu alegato.</p>
-                            <p><strong>Tesis a defender:</strong> Las plataformas tienen responsabilidad objetiva por la publicidad que alojan.</p>
-                        </div>
-
-                        <h3>Paso 1: Investigación inicial</h3>
-                        <pre className="code-block">
-                            {`MI PROMPT A GEMINI DEEP RESEARCH:
-
-"Investigá la responsabilidad civil de las plataformas
-digitales por contenido publicitario en Argentina.
-
-Enfocate específicamente en:
-1. Si hay responsabilidad objetiva o subjetiva
-2. Aplicación del art. 40 de la Ley de Defensa del 
-   Consumidor a plataformas
-3. Doctrina sobre el concepto de 'proveedor' en 
-   economía digital
-4. Jurisprudencia argentina sobre publicidad en redes
-5. Casos de otros países que podrían ser citables
-
-Necesito fundamentación para sostener responsabilidad
-objetiva de la plataforma."`}
-                        </pre>
-
-                        <h3>Paso 2: Revisar el informe (20 minutos)</h3>
-                        <p>Gemini entregó un informe de 18 páginas. Puntos clave:</p>
-                        <ul className="application-list">
-                            <li>Identificó 3 autores argentinos que sostienen responsabilidad objetiva</li>
-                            <li>Encontró 2 fallos de Cámara favorables a mi tesis</li>
-                            <li>Citó doctrina europea sobre el tema</li>
-                            <li>Advirtió sobre contraargumentos basados en inmunidad de intermediarios</li>
-                        </ul>
-
-                        <h3>Paso 3: Profundizar en puntos específicos</h3>
-                        <pre className="code-block">
-                            {`MI PROMPT DE SEGUIMIENTO:
-
-"De la doctrina de Lorenzetti sobre responsabilidad
-de plataformas que mencionaste, necesito:
-
-1. Cita textual que pueda usar en el alegato
-2. En qué libro/artículo está publicado
-3. Si hay otros autores que citen o adhieran a 
-   esa posición
-4. Si hay jurisprudencia que haya citado a Lorenzetti
-   en este tema"`}
-                        </pre>
-
-                        <h3>Paso 4: Verificación y uso</h3>
-                        <p>Con la información obtenida:</p>
-                        <ol className="application-list">
-                            <li>Verifiqué las citas en las fuentes originales ✅</li>
-                            <li>Busqué los fallos citados en SAIJ para confirmar ✅</li>
-                            <li>Incorporé 3 citas doctrinales al alegato</li>
-                            <li>Incluí anticipación de contraargumentos</li>
-                        </ol>
-
-                        <div className="highlight-success">
-                            <strong>Resultado:</strong> Un alegato con fundamentación doctrinal de nivel académico, preparado en una tarde en lugar de una semana.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 6: Errores comunes */}
-                <section id="errores" className="page__section">
-                    <h2 className="page__section-title">6. Errores comunes y cómo evitarlos</h2>
-                    <article className="long-form-content">
-                        <div className="comparison-grid">
-                            <div className="comparison-box comparison-box--bad">
-                                <h4>❌ Error: Usar citas sin verificar el original</h4>
-                                <p>Gemini puede parafrasear incorrectamente o atribuir ideas al autor equivocado.</p>
-                                <p><strong>Solución:</strong> SIEMPRE buscá la fuente original antes de citar en un escrito.</p>
-                            </div>
-                            <div className="comparison-box comparison-box--bad">
-                                <h4>❌ Error: Prompts demasiado amplios</h4>
-                                <p>"Investigá sobre contratos" genera informes genéricos e inútiles.</p>
-                                <p><strong>Solución:</strong> Sé específico: qué tipo de contrato, qué aspecto, para qué jurisdicción.</p>
-                            </div>
-                            <div className="comparison-box comparison-box--bad">
-                                <h4>❌ Error: No revisar el plan de investigación</h4>
-                                <p>Gemini puede enfocarse en aspectos que no te interesan.</p>
-                                <p><strong>Solución:</strong> Antes de que arranque, ajustá el plan a tus necesidades.</p>
-                            </div>
-                            <div className="comparison-box comparison-box--bad">
-                                <h4>❌ Error: Esperar que encuentre todo</h4>
-                                <p>Doctrina reciente o de editoriales cerradas puede no estar indexada.</p>
-                                <p><strong>Solución:</strong> Complementá con búsquedas manuales en La Ley, El Derecho, etc.</p>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 7: Flujo de trabajo integrado */}
-                <section id="flujo" className="page__section">
-                    <h2 className="page__section-title">7. Flujo de trabajo: integrando las 4 herramientas</h2>
-                    <article className="long-form-content">
-                        <p>
-                            Ahora que dominás las 4 herramientas del módulo, veamos cómo combinarlas en un flujo de trabajo profesional:
-                        </p>
-
-                        <pre className="code-block">
-                            {`FLUJO DE TRABAJO INTEGRADO
-
-1️⃣ INVESTIGACIÓN INICIAL
-   └── Gemini Deep Research: Estado del arte del tema
-   
-2️⃣ VERIFICACIÓN DE NORMATIVA
-   └── Perplexity: Confirmar vigencia en InfoLeg
-   
-3️⃣ BÚSQUEDA DE JURISPRUDENCIA ESPECÍFICA
-   └── Manus: Navegar SAIJ y extraer fallos
-   
-4️⃣ ANÁLISIS DEL CASO CONCRETO
-   └── Claude Projects: Aplicar doctrina al caso
-   
-5️⃣ REDACCIÓN DE ESCRITOS
-   └── ChatGPT Custom GPT: Generar borradores
-   
-6️⃣ REVISIÓN Y VERIFICACIÓN
-   └── Claude: Revisar coherencia y citas`}
-                        </pre>
-
-                        <div className="highlight-success">
-                            <strong>El profesional que domina este flujo</strong> puede producir trabajo de calidad en una fracción del tiempo tradicional, sin sacrificar rigor ni responsabilidad.
-                        </div>
-                    </article>
-                </section>
-
-                {/* Sección 8: Ejercicio */}
-                <section id="ejercicio" className="page__section">
-                    <h2 className="page__section-title">8. Ejercicio: Tu primera investigación profunda</h2>
-                    <article className="long-form-content">
-                        <div className="exercise-box">
-                            <h3>🎯 Objetivo</h3>
-                            <p>Realizar una investigación doctrinal completa con Gemini Deep Research sobre un tema de tu interés profesional.</p>
-
-                            <h3>📋 Pasos</h3>
-                            <ol className="application-list">
-                                <li><strong>Elegí un tema:</strong> Algo que tengas que investigar pronto o que te interese profundizar.</li>
-                                <li><strong>Formulá el prompt:</strong> Usá la estructura de esta unidad.</li>
-                                <li><strong>Revisá el plan:</strong> Antes de que arranque, ajustalo si es necesario.</li>
-                                <li><strong>Esperá el resultado:</strong> Si bien usando el tiempo para otras tareas.</li>
-                                <li><strong>Analizá el informe:</strong> ¿Qué encontró? ¿Qué falta?</li>
-                                <li><strong>Verificá 3 citas:</strong> Andá a las fuentes originales y confirmá.</li>
-                                <li><strong>Documentá:</strong> Guardá el informe para uso futuro.</li>
-                            </ol>
-
-                            <h3>💡 Ideas de temas para practicar</h3>
-                            <ul className="application-list">
-                                <li>Responsabilidad del Estado por omisión</li>
-                                <li>Daño moral en despido discriminatorio</li>
-                                <li>Cláusulas abusivas en contratos de adhesión digitales</li>
-                                <li>Validez de notificaciones electrónicas</li>
-                                <li>Derecho de arrepentimiento en compras online</li>
-                            </ul>
-
-                            <h3>✅ Criterio de éxito</h3>
-                            <p>Obtuviste un informe que:</p>
-                            <ul className="application-list">
-                                <li>Cita al menos 3 autores con referencias verificables</li>
-                                <li>Identifica distintas posiciones sobre el tema</li>
-                                <li>Te ahorra tiempo significativo respecto a investigación manual</li>
+                        <div className="checklist-box">
+                            <ul className="checklist">
+                                <li>☐ Entiendo la diferencia entre claude.ai y la API de Claude</li>
+                                <li>☐ Creé una cuenta en console.anthropic.com y obtuve una API key</li>
+                                <li>☐ Entiendo qué va en un system prompt y qué lo diferencia de un prompt de usuario</li>
+                                <li>☐ Escribí un system prompt para un asistente de mi área de práctica</li>
+                                <li>☐ Probé llamar a la API al menos una vez (con n8n o Postman)</li>
+                                <li>☐ Entiendo los límites éticos y de responsabilidad de un asistente jurídico automatizado</li>
                             </ul>
                         </div>
                     </article>
                 </section>
 
-                {/* Cierre del módulo */}
-                <section className="page__section">
-                    <div className="highlight-success" style={{ padding: '2rem', textAlign: 'center' }}>
-                        <h3>🎓 ¡Módulo 6 Completado!</h3>
-                        <p>Ahora dominás las 4 herramientas clave de IA para la práctica jurídica:</p>
-                        <ul style={{ textAlign: 'left', display: 'inline-block' }}>
-                            <li><strong>Claude Projects:</strong> Gestión integral de casos</li>
-                            <li><strong>ChatGPT:</strong> Análisis de contratos y documentos</li>
-                            <li><strong>Perplexity/Manus:</strong> Investigación en tiempo real</li>
-                            <li><strong>Gemini Deep Research:</strong> Investigación doctrinal profunda</li>
-                        </ul>
-                        <p style={{ marginTop: '1rem' }}>En el próximo módulo, aplicarás estas herramientas a la <strong>comunicación jurídica profesional</strong>.</p>
-                    </div>
-                </section>
-
-                {/* Footer de navegación */}
                 <div className="unit-navigation">
                     <div className="unit-nav-prev">
                         <Link to="/mastering-u3" className="unit-nav-link">
                             <span className="unit-nav-label">← Unidad anterior</span>
-                            <span className="unit-nav-title">M6 U3: Perplexity/Manus</span>
+                            <span className="unit-nav-title">M5 U3: Artifacts</span>
                         </Link>
                     </div>
                     <div className="unit-status">
-                        <span className="status-badge status-badge--current">✅ Módulo Completado</span>
+                        <span className="status-badge status-badge--current">📖 Unidad Actual</span>
                     </div>
                     <div className="next-unit">
-                        <span className="next-label">Próximo módulo:</span>
-                        <Link to="/communication" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            Módulo 7 – Comunicación jurídica con IA →
+                        <span className="next-label">Próxima unidad:</span>
+                        <Link to="/mastering-u5" className="next-title" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            U5 – MCP servers: Claude conectado a tus fuentes →
                         </Link>
                     </div>
                 </div>

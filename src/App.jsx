@@ -35,6 +35,7 @@ import MasteringM6U1 from './pages/Mastering/MasteringM6U1'
 import MasteringM6U2 from './pages/Mastering/MasteringM6U2'
 import MasteringM6U3 from './pages/Mastering/MasteringM6U3'
 import MasteringM6U4 from './pages/Mastering/MasteringM6U4'
+import MasteringM6U5 from './pages/Mastering/MasteringM6U5'
 import CommunicationM7U1 from './pages/Communication/CommunicationM7U1'
 import PracticeM8U1 from './pages/Practice/PracticeM8U1'
 import PracticeM8U2 from './pages/Practice/PracticeM8U2'
@@ -92,6 +93,7 @@ function App() {
         <Route path="/mastering-u2" element={<MasteringM6U2 />} />
         <Route path="/mastering-u3" element={<MasteringM6U3 />} />
         <Route path="/mastering-u4" element={<MasteringM6U4 />} />
+        <Route path="/mastering-u5" element={<MasteringM6U5 />} />
         <Route path="/communication" element={<CommunicationM7U1 />} />
         <Route path="/practice" element={<PracticeM8U1 />} />
         <Route path="/practice-u2" element={<PracticeM8U2 />} />

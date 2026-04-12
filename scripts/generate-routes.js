@@ -47,6 +47,7 @@ const routes = [
   '/mastering-u2',
   '/mastering-u3',
   '/mastering-u4',
+  '/mastering-u5',
   '/communication',
   '/practice',
   '/practice-u2',
