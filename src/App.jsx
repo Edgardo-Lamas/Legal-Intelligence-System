@@ -1,5 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider } from './contexts/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import PageLayout from './components/PageLayout/PageLayout'
+import Login from './pages/Login/Login'
+import Pricing from './pages/Pricing/Pricing'
 import Overview from './pages/Overview/Overview'
 import Foundations from './pages/Foundations/Foundations'
 import FoundationsM1U2 from './pages/Foundations/FoundationsM1U2'
@@ -60,67 +64,76 @@ import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <PageLayout>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Navigate to="/overview" replace />} />
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/foundations" element={<Foundations />} />
-        <Route path="/foundations-u2" element={<FoundationsM1U2 />} />
-        <Route path="/foundations-u3" element={<FoundationsM1U3 />} />
-        <Route path="/foundations-u4" element={<FoundationsM1U4 />} />
-        <Route path="/foundations-u5" element={<FoundationsM1U5 />} />
-        <Route path="/prompt-engineering" element={<PromptEngineeringM2U1 />} />
-        <Route path="/prompt-engineering-u2" element={<PromptEngineeringM2U2 />} />
-        <Route path="/prompt-engineering-u3" element={<PromptEngineeringM2U3 />} />
-        <Route path="/prompt-engineering-u4" element={<PromptEngineeringM2U4 />} />
-        <Route path="/prompt-engineering-u5" element={<PromptEngineeringM2U5 />} />
-        <Route path="/prompt-engineering-u6" element={<PromptEngineeringM2U6 />} />
-        <Route path="/prompt-engineering-u7" element={<PromptEngineeringM2U7 />} />
-        <Route path="/solo-practice" element={<SoloPracticeM3U1 />} />
-        <Route path="/solo-practice-u2" element={<SoloPracticeM3U2 />} />
-        <Route path="/solo-practice-u3" element={<SoloPracticeM3U3 />} />
-        <Route path="/solo-practice-u4" element={<SoloPracticeM3U4 />} />
-        <Route path="/solo-practice-u5" element={<SoloPracticeM3U5 />} />
-        <Route path="/gemini" element={<GeminiM4U1 />} />
-        <Route path="/gemini-u2" element={<GeminiM4U2 />} />
-        <Route path="/gemini-u3" element={<GeminiM4U3 />} />
-        <Route path="/gemini-u4" element={<GeminiM4U4 />} />
-        <Route path="/ecosystem" element={<EcosystemM5U1 />} />
-        <Route path="/ecosystem-u2" element={<EcosystemM5U2 />} />
-        <Route path="/ecosystem-u3" element={<EcosystemM5U3 />} />
-        <Route path="/ecosystem-u4" element={<EcosystemM5U4 />} />
-        <Route path="/ecosystem-u5" element={<EcosystemM5U5 />} />
-        <Route path="/mastering" element={<MasteringM6U1 />} />
-        <Route path="/mastering-u2" element={<MasteringM6U2 />} />
-        <Route path="/mastering-u3" element={<MasteringM6U3 />} />
-        <Route path="/mastering-u4" element={<MasteringM6U4 />} />
-        <Route path="/mastering-u5" element={<MasteringM6U5 />} />
-        <Route path="/communication" element={<CommunicationM7U1 />} />
-        <Route path="/communication-u2" element={<CommunicationM9U2 />} />
-        <Route path="/communication-u3" element={<CommunicationM9U3 />} />
-        <Route path="/communication-u4" element={<CommunicationM9U4 />} />
-        <Route path="/communication-u5" element={<CommunicationM9U5 />} />
-        <Route path="/practice" element={<PracticeM8U1 />} />
-        <Route path="/practice-u2" element={<PracticeM8U2 />} />
-        <Route path="/practice-u3" element={<PracticeM8U3 />} />
-        <Route path="/practice-u4" element={<PracticeM8U4 />} />
-        <Route path="/practice-u5" element={<PracticeM8U5 />} />
-        <Route path="/privacy" element={<PrivacyM8U1 />} />
-        <Route path="/privacy-u2" element={<PrivacyM8U2 />} />
-        <Route path="/privacy-u3" element={<PrivacyM8U3 />} />
-        <Route path="/privacy-u4" element={<PrivacyM8U4 />} />
-        <Route path="/privacy-u5" element={<PrivacyM8U5 />} />
-        <Route path="/agents" element={<AgentsM7U1 />} />
-        <Route path="/agents-u2" element={<AgentsM7U2 />} />
-        <Route path="/agents-u3" element={<AgentsM7U3 />} />
-        <Route path="/agents-u4" element={<AgentsM7U4 />} />
-        <Route path="/agents-u5" element={<AgentsM7U5 />} />
-        <Route path="/course-map" element={<CourseMap />} />
-        <Route path="/glossary" element={<Glossary />} />
-        <Route path="/notes" element={<Notes />} />
-      </Routes>
-    </PageLayout>
+    <AuthProvider>
+      <PageLayout>
+        <ScrollToTop />
+        <Routes>
+          {/* Rutas públicas */}
+          <Route path="/" element={<Navigate to="/overview" replace />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/pricing" element={<Pricing />} />
+
+          {/* Rutas protegidas */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/foundations" element={<Foundations />} />
+            <Route path="/foundations-u2" element={<FoundationsM1U2 />} />
+            <Route path="/foundations-u3" element={<FoundationsM1U3 />} />
+            <Route path="/foundations-u4" element={<FoundationsM1U4 />} />
+            <Route path="/foundations-u5" element={<FoundationsM1U5 />} />
+            <Route path="/prompt-engineering" element={<PromptEngineeringM2U1 />} />
+            <Route path="/prompt-engineering-u2" element={<PromptEngineeringM2U2 />} />
+            <Route path="/prompt-engineering-u3" element={<PromptEngineeringM2U3 />} />
+            <Route path="/prompt-engineering-u4" element={<PromptEngineeringM2U4 />} />
+            <Route path="/prompt-engineering-u5" element={<PromptEngineeringM2U5 />} />
+            <Route path="/prompt-engineering-u6" element={<PromptEngineeringM2U6 />} />
+            <Route path="/prompt-engineering-u7" element={<PromptEngineeringM2U7 />} />
+            <Route path="/solo-practice" element={<SoloPracticeM3U1 />} />
+            <Route path="/solo-practice-u2" element={<SoloPracticeM3U2 />} />
+            <Route path="/solo-practice-u3" element={<SoloPracticeM3U3 />} />
+            <Route path="/solo-practice-u4" element={<SoloPracticeM3U4 />} />
+            <Route path="/solo-practice-u5" element={<SoloPracticeM3U5 />} />
+            <Route path="/gemini" element={<GeminiM4U1 />} />
+            <Route path="/gemini-u2" element={<GeminiM4U2 />} />
+            <Route path="/gemini-u3" element={<GeminiM4U3 />} />
+            <Route path="/gemini-u4" element={<GeminiM4U4 />} />
+            <Route path="/ecosystem" element={<EcosystemM5U1 />} />
+            <Route path="/ecosystem-u2" element={<EcosystemM5U2 />} />
+            <Route path="/ecosystem-u3" element={<EcosystemM5U3 />} />
+            <Route path="/ecosystem-u4" element={<EcosystemM5U4 />} />
+            <Route path="/ecosystem-u5" element={<EcosystemM5U5 />} />
+            <Route path="/mastering" element={<MasteringM6U1 />} />
+            <Route path="/mastering-u2" element={<MasteringM6U2 />} />
+            <Route path="/mastering-u3" element={<MasteringM6U3 />} />
+            <Route path="/mastering-u4" element={<MasteringM6U4 />} />
+            <Route path="/mastering-u5" element={<MasteringM6U5 />} />
+            <Route path="/communication" element={<CommunicationM7U1 />} />
+            <Route path="/communication-u2" element={<CommunicationM9U2 />} />
+            <Route path="/communication-u3" element={<CommunicationM9U3 />} />
+            <Route path="/communication-u4" element={<CommunicationM9U4 />} />
+            <Route path="/communication-u5" element={<CommunicationM9U5 />} />
+            <Route path="/practice" element={<PracticeM8U1 />} />
+            <Route path="/practice-u2" element={<PracticeM8U2 />} />
+            <Route path="/practice-u3" element={<PracticeM8U3 />} />
+            <Route path="/practice-u4" element={<PracticeM8U4 />} />
+            <Route path="/practice-u5" element={<PracticeM8U5 />} />
+            <Route path="/privacy" element={<PrivacyM8U1 />} />
+            <Route path="/privacy-u2" element={<PrivacyM8U2 />} />
+            <Route path="/privacy-u3" element={<PrivacyM8U3 />} />
+            <Route path="/privacy-u4" element={<PrivacyM8U4 />} />
+            <Route path="/privacy-u5" element={<PrivacyM8U5 />} />
+            <Route path="/agents" element={<AgentsM7U1 />} />
+            <Route path="/agents-u2" element={<AgentsM7U2 />} />
+            <Route path="/agents-u3" element={<AgentsM7U3 />} />
+            <Route path="/agents-u4" element={<AgentsM7U4 />} />
+            <Route path="/agents-u5" element={<AgentsM7U5 />} />
+            <Route path="/course-map" element={<CourseMap />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/notes" element={<Notes />} />
+          </Route>
+        </Routes>
+      </PageLayout>
+    </AuthProvider>
   )
 }
 

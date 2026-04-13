@@ -14,6 +14,8 @@ const indexHtml = readFileSync(resolve(distDir, 'index.html'), 'utf-8')
 
 // Todas las rutas definidas en App.jsx
 const routes = [
+  '/login',
+  '/pricing',
   '/overview',
   '/foundations',
   '/foundations-u2',

@@ -360,6 +360,47 @@
   letter-spacing: 0.08em;
 }
 
+.nav-footer__user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  gap: var(--sp-2);
+}
+
+.nav-footer__email {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: rgba(200, 196, 188, 0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.nav-footer__signout {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(200, 196, 188, 0.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 150ms, color 150ms, border-color 150ms;
+}
+
+.nav-footer__signout:hover {
+  background: rgba(220, 60, 60, 0.10);
+  border-color: rgba(220, 60, 60, 0.25);
+  color: rgba(255, 120, 120, 0.75);
+}
+
 /* ── Mobile toggle button ── */
 .nav-toggle {
   display: none;

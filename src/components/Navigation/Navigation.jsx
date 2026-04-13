@@ -1,5 +1,6 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useAuth } from '../../contexts/AuthContext'
 import './Navigation.css'
 
 /* ── Module definitions with progress data ── */
@@ -317,8 +318,15 @@ function ModuleItem({ mod, onLinkClick }) {
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [dark, setDark] = useDarkMode()
+  const { user, signOut } = useAuth()
+  const navigate = useNavigate()
 
   const closeNav = () => setIsOpen(false)
+
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/login')
+  }
 
   return (
     <>
@@ -417,6 +425,17 @@ function Navigation() {
         {/* Footer */}
         <div className="nav-footer">
           <span className="nav-footer__total">10 módulos · 51 unidades</span>
+          {user && (
+            <div className="nav-footer__user">
+              <span className="nav-footer__email">{user.email}</span>
+              <button className="nav-footer__signout" onClick={handleSignOut} title="Cerrar sesión">
+                <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+                  <path d="M6 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/>
+                  <path d="M11 11l3-3-3-3M14 8H6" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </nav>
 
