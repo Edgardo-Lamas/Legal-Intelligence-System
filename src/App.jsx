@@ -6,9 +6,6 @@ import FoundationsM1U2 from './pages/Foundations/FoundationsM1U2'
 import FoundationsM1U3 from './pages/Foundations/FoundationsM1U3'
 import FoundationsM1U4 from './pages/Foundations/FoundationsM1U4'
 import FoundationsM1U5 from './pages/Foundations/FoundationsM1U5'
-import Systems from './pages/Systems/Systems'
-import AnalysisPatterns from './pages/AnalysisPatterns/AnalysisPatterns'
-import AutomationAgents from './pages/AutomationAgents/AutomationAgents'
 import Glossary from './pages/Glossary/Glossary'
 import Notes from './pages/Notes/Notes'
 import PromptEngineeringM2U1 from './pages/PromptEngineering/PromptEngineeringM2U1'
@@ -73,9 +70,6 @@ function App() {
         <Route path="/foundations-u3" element={<FoundationsM1U3 />} />
         <Route path="/foundations-u4" element={<FoundationsM1U4 />} />
         <Route path="/foundations-u5" element={<FoundationsM1U5 />} />
-        <Route path="/systems" element={<Systems />} />
-        <Route path="/analysis-patterns" element={<AnalysisPatterns />} />
-        <Route path="/automation-agents" element={<AutomationAgents />} />
         <Route path="/prompt-engineering" element={<PromptEngineeringM2U1 />} />
         <Route path="/prompt-engineering-u2" element={<PromptEngineeringM2U2 />} />
         <Route path="/prompt-engineering-u3" element={<PromptEngineeringM2U3 />} />

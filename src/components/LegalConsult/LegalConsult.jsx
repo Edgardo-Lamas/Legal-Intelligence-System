@@ -194,23 +194,6 @@ function ArticleHighlighted({ text }) {
     )
 }
 
-/* ─── Scale Icon ─────────────────────────────────────────── */
-function ScalesIcon() {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3v18" />
-            <path d="M4 21h16" />
-            <path d="M4 9l4-6 4 6" />
-            <path d="M4 9h8" />
-            <path d="M12 9l4-6 4 6" />
-            <path d="M12 9h8" />
-            <path d="M4 6c0 1.657-1.791 3-4 3" />
-            <path d="M8 6c0 1.657 1.791 3 4 3" />
-            <path d="M12 6c0 1.657-1.791 3-4 3" />
-            <path d="M16 6c0 1.657 1.791 3 4 3" />
-        </svg>
-    )
-}
 
 function SendIcon() {
     return (
@@ -264,6 +247,9 @@ export default function LegalConsult() {
     const [status, setStatus] = useState('idle') // idle | loading | error
     const [errorMsg, setErrorMsg] = useState('')
     const [initialized, setInitialized] = useState(false)
+    const [showCallout, setShowCallout] = useState(() => {
+        try { return localStorage.getItem('lc-callout-dismissed') !== 'true' } catch { return true }
+    })
 
     const messagesEndRef = useRef(null)
     const inputRef = useRef(null)
@@ -324,6 +310,16 @@ export default function LegalConsult() {
         setStatus('idle')
         setErrorMsg('')
     }
+
+    const dismissCallout = useCallback(() => {
+        try { localStorage.setItem('lc-callout-dismissed', 'true') } catch {}
+        setShowCallout(false)
+    }, [])
+
+    const openFromCallout = useCallback(() => {
+        setIsOpen(true)
+        dismissCallout()
+    }, [dismissCallout])
 
     const isEmpty = messages.length === 0
 
@@ -496,6 +492,39 @@ export default function LegalConsult() {
                     </p>
                 </div>
             </aside>
+
+            {/* Contextual Callout */}
+            {!isOpen && showCallout && (
+                <div className="lc-callout" role="complementary" aria-label="Alcance Legal Penal — asistente jurídico">
+                    <button
+                        className="lc-callout__close"
+                        onClick={dismissCallout}
+                        aria-label="Cerrar aviso"
+                    >
+                        <CloseIcon />
+                    </button>
+                    <div className="lc-callout__icon">
+                        <svg viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2v16M3 18h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M3 7l3.5-5L10 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M3 7h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M10 7l3.5-5L17 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M10 7h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                    </div>
+                    <span className="lc-callout__eyebrow">Asistente jurídico</span>
+                    <span className="lc-callout__title">Alcance Legal Penal</span>
+                    <p className="lc-callout__desc">
+                        Consultá el CPP PBA con IA. Artículos, plazos y estrategia de defensa en tiempo real.
+                    </p>
+                    <button className="lc-callout__cta" onClick={openFromCallout}>
+                        <span>Hacer una consulta</span>
+                        <svg viewBox="0 0 16 16" fill="none" width="12" height="12">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            )}
 
             {/* Floating Button */}
             <button
