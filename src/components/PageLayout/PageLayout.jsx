@@ -1,14 +1,15 @@
+import { Outlet } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import LegalConsult from '../LegalConsult/LegalConsult'
 import './PageLayout.css'
 
-function PageLayout({ children }) {
+function PageLayout() {
     return (
         <div className="page-layout">
             <Navigation />
             <main className="page-layout__content">
                 <div className="page-layout__inner">
-                    {children}
+                    <Outlet />
                 </div>
             </main>
             <LegalConsult />

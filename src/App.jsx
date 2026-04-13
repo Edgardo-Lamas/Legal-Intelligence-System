@@ -65,16 +65,16 @@ import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <AuthProvider>
-      <PageLayout>
-        <ScrollToTop />
-        <Routes>
-          {/* Rutas públicas */}
-          <Route path="/" element={<Navigate to="/overview" replace />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/pricing" element={<Pricing />} />
+      <ScrollToTop />
+      <Routes>
+        {/* Rutas públicas — sin nav */}
+        <Route path="/" element={<Navigate to="/overview" replace />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/pricing" element={<Pricing />} />
 
-          {/* Rutas protegidas */}
-          <Route element={<ProtectedRoute />}>
+        {/* Rutas protegidas — con nav */}
+        <Route element={<ProtectedRoute />}>
+          <Route element={<PageLayout />}>
             <Route path="/overview" element={<Overview />} />
             <Route path="/foundations" element={<Foundations />} />
             <Route path="/foundations-u2" element={<FoundationsM1U2 />} />
@@ -131,8 +131,8 @@ function App() {
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/notes" element={<Notes />} />
           </Route>
-        </Routes>
-      </PageLayout>
+        </Route>
+      </Routes>
     </AuthProvider>
   )
 }
