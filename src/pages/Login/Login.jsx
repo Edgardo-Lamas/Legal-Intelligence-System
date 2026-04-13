@@ -8,7 +8,6 @@ export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
-    const [info, setInfo] = useState('')
     const [loading, setLoading] = useState(false)
 
     const { signIn, signUp } = useAuth()
@@ -17,7 +16,6 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
-        setInfo('')
         setLoading(true)
 
         try {
@@ -28,9 +26,7 @@ export default function Login() {
             } else {
                 const { error } = await signUp(email, password)
                 if (error) throw error
-                setInfo('Revisá tu casilla de correo para confirmar el registro.')
-                setEmail('')
-                setPassword('')
+                navigate('/overview')
             }
         } catch (err) {
             const msg = err.message || 'Ocurrió un error. Intentá nuevamente.'
@@ -77,13 +73,13 @@ export default function Login() {
                 <div className="login-card__tabs">
                     <button
                         className={`login-card__tab ${mode === 'signin' ? 'login-card__tab--active' : ''}`}
-                        onClick={() => { setMode('signin'); setError(''); setInfo('') }}
+                        onClick={() => { setMode('signin'); setError('') }}
                     >
                         Ingresar
                     </button>
                     <button
                         className={`login-card__tab ${mode === 'signup' ? 'login-card__tab--active' : ''}`}
-                        onClick={() => { setMode('signup'); setError(''); setInfo('') }}
+                        onClick={() => { setMode('signup'); setError('') }}
                     >
                         Registrarse
                     </button>
@@ -144,15 +140,6 @@ export default function Login() {
                         </div>
                     )}
 
-                    {info && (
-                        <div className="login-alert login-alert--info">
-                            <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
-                                <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.25"/>
-                                <path d="M8 7v4M8 5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                            </svg>
-                            {info}
-                        </div>
-                    )}
 
                     <button
                         type="submit"
