@@ -1,0 +1,71 @@
+/* ─────────────────────────────────────────────
+   404 — página no encontrada
+   Fondo oscuro explícito, como Login y Pricing.
+   ───────────────────────────────────────────── */
+
+.notfound-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c1018;
+    padding: 24px;
+}
+
+.notfound-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 420px;
+}
+
+.notfound-card__mark {
+    width: 40px;
+    height: 40px;
+    color: #c9a84c;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.notfound-card__code {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #f0ece2;
+    letter-spacing: -0.02em;
+}
+
+.notfound-card__title {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #f0ece2;
+    margin: 12px 0 8px;
+}
+
+.notfound-card__text {
+    font-size: 0.95rem;
+    color: rgba(200, 196, 188, 0.55);
+    line-height: 1.6;
+    margin: 0 0 28px;
+}
+
+.notfound-card__cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.45);
+    border-radius: 8px;
+    color: #c9a84c;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 150ms, color 150ms;
+}
+
+.notfound-card__cta:hover {
+    background: rgba(201, 168, 76, 0.22);
+    color: #e5cf8f;
+}

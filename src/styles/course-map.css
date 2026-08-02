@@ -179,11 +179,62 @@
 
 .roadmap-unit__link {
     display: flex;
-    align-items: center;
-    gap: var(--space-3);
+    align-items: flex-start;
+    gap: var(--space-4);
     padding: var(--space-3) var(--space-4);
     text-decoration: none;
     transition: background-color var(--transition-base);
+}
+
+/* Columna izquierda: id + título de la unidad (ancho fijo para que
+   no se pise con la lista de temas) */
+.roadmap-unit__main {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex: 0 0 250px;
+    min-width: 0;
+}
+
+/* Columna derecha: temas de la unidad */
+.roadmap-unit__topics {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.roadmap-unit__topics li {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    padding-left: var(--space-4);
+    position: relative;
+}
+
+.roadmap-unit__topics li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--block-color, var(--color-accent));
+    border-radius: 50%;
+}
+
+@media (max-width: 720px) {
+    .roadmap-unit__link {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    .roadmap-unit__main {
+        flex: none;
+    }
 }
 
 .roadmap-unit__link:hover {

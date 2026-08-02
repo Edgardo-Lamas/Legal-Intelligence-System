@@ -12,7 +12,7 @@
  */
 
 const SITE_NAME = 'Legal Intelligence System'
-const BASE_URL = 'https://edgardo-lamas.github.io/Legal-Intelligence-System'
+const BASE_URL = 'https://legal-intelligence-system-wine.vercel.app'
 
 function PageSEO({ title, description, path }) {
   const fullTitle = title

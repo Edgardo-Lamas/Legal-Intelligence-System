@@ -4,6 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import PageLayout from './components/PageLayout/PageLayout'
 import Login from './pages/Login/Login'
 import Pricing from './pages/Pricing/Pricing'
+import NotFound from './pages/NotFound/NotFound'
 import Overview from './pages/Overview/Overview'
 import Foundations from './pages/Foundations/Foundations'
 import FoundationsM1U2 from './pages/Foundations/FoundationsM1U2'
@@ -132,6 +133,9 @@ function App() {
             <Route path="/notes" element={<Notes />} />
           </Route>
         </Route>
+
+        {/* Catch-all: sin esto una URL desconocida renderiza en blanco */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AuthProvider>
   )

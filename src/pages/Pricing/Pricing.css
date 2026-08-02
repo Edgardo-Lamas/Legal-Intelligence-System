@@ -4,7 +4,10 @@
 
 .pricing-page {
     min-height: 100vh;
-    background: var(--bg);
+    /* Página diseñada en oscuro (tarjetas, glow y textos claros fijos):
+       el fondo va explícito porque var(--bg) no existe en los tokens
+       y el tema claro del body la dejaba ilegible. */
+    background: #0c1018;
     position: relative;
     overflow: hidden;
 }
@@ -48,7 +51,10 @@
 
 /* ── Back link ───────────────────────────────── */
 .pricing-back {
-    display: inline-flex;
+    /* flex (no inline-flex): ocupa su propio renglón y no comparte
+       línea con el eyebrow centrado del header */
+    display: flex;
+    width: fit-content;
     align-items: center;
     gap: var(--sp-2);
     font-family: var(--font-ui);
@@ -114,6 +120,12 @@
     font-family: var(--font-ui);
     font-size: var(--text-sm);
     color: rgba(201, 168, 76, 0.80);
+}
+
+.pricing-beta-notice strong {
+    /* el strong global hereda el color del tema claro y desaparece
+       sobre este fondo oscuro */
+    color: #e5cf8f;
 }
 
 .pricing-beta-notice__dot {
