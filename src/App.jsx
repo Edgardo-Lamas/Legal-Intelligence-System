@@ -12,7 +12,6 @@ import FoundationsM1U3 from './pages/Foundations/FoundationsM1U3'
 import FoundationsM1U4 from './pages/Foundations/FoundationsM1U4'
 import FoundationsM1U5 from './pages/Foundations/FoundationsM1U5'
 import Glossary from './pages/Glossary/Glossary'
-import Notes from './pages/Notes/Notes'
 import PromptEngineeringM2U1 from './pages/PromptEngineering/PromptEngineeringM2U1'
 import PromptEngineeringM2U2 from './pages/PromptEngineering/PromptEngineeringM2U2'
 import PromptEngineeringM2U3 from './pages/PromptEngineering/PromptEngineeringM2U3'
@@ -130,7 +129,6 @@ function App() {
             <Route path="/agents-u5" element={<AgentsM7U5 />} />
             <Route path="/course-map" element={<CourseMap />} />
             <Route path="/glossary" element={<Glossary />} />
-            <Route path="/notes" element={<Notes />} />
           </Route>
         </Route>
 

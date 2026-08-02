@@ -34,15 +34,6 @@ graph TD
     linkStyle default stroke:#7a7a7a,stroke-width:2px
 `
 
-const sections = [
-    { id: 'core-concepts', title: 'Core Concepts' },
-    { id: 'models-vs-agents', title: 'Modelos vs Agentes' },
-    { id: 'chatgpt-vs-gemini', title: 'Comparativa: ChatGPT vs Gemini' },
-    { id: 'system-architectures', title: 'System Architectures' },
-    { id: 'validation-reasoning', title: 'Validation & Reasoning Criteria' },
-    { id: 'risks-errors', title: 'Risks, Errors & Bad Practices' },
-]
-
 function Foundations() {
     return (
         <div className="page">

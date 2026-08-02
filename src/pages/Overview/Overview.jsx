@@ -32,7 +32,7 @@ function Overview() {
                     </div>
                     <div className="hero-stat">
                         <span className="hero-stat__num">100%</span>
-                        <span className="hero-stat__label">Completado</span>
+                        <span className="hero-stat__label">Disponible</span>
                     </div>
                 </div>
             </div>

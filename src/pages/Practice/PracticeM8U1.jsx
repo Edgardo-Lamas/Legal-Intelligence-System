@@ -8,12 +8,12 @@ function PracticeM8U1() {
     return (
         <div className="page">
             <PageSEO
-                title="Del Concepto al Sistema · M8 U1"
+                title="Del Concepto al Sistema · M10 U1"
                 description="El punto de inflexión del programa: cómo pasar de usar herramientas de IA aisladas a diseñar sistemas de trabajo coherentes para la práctica jurídica."
                 path="/practice"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 8 · Unidad 1</span>
+                <span className="page__module-tag">Módulo 10 · Unidad 1</span>
                 <h1 className="page__title">Del concepto al sistema</h1>
                 <p className="page__description">
                     De usar herramientas aisladas a diseñar sistemas de trabajo coherentes.

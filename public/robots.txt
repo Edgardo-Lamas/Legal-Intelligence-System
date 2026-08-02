@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /$
+Allow: /login
+Allow: /pricing
+
+# El curso requiere cuenta: para un crawler estas rutas solo devuelven
+# la pantalla de login, así que no tiene sentido indexarlas.
+Disallow: /overview
+Disallow: /foundations
+Disallow: /prompt-engineering
+Disallow: /solo-practice
+Disallow: /gemini
+Disallow: /ecosystem
+Disallow: /mastering
+Disallow: /communication
+Disallow: /practice
+Disallow: /privacy
+Disallow: /agents
+Disallow: /course-map
+Disallow: /glossary
+
+Sitemap: https://legal-intelligence-system-wine.vercel.app/sitemap.xml

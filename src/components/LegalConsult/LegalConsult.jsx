@@ -85,7 +85,7 @@ async function queryMCP(userQuery) {
 /* ─── Response Formatter ─────────────────────────────────── */
 function formatResponse(text) {
     // Highlight article references
-    const articleRegex = /(Arts?\.\s*\d+(?:\s*(?:bis|ter|quáter)?)?(?:\s*(?:y|,)\s*\d+)*\s*(?:CPP\s*PBA|CPPN|CN|CCyC)?|artículos?\s+\d+(?:\s*y\s*\d+)*|inc(?:iso|\.)\s*\d+(?:°|º)?|ley\s+\d+[\.\d]*)/gi
+    const articleRegex = /(Arts?\.\s*\d+(?:\s*(?:bis|ter|quáter)?)?(?:\s*(?:y|,)\s*\d+)*\s*(?:CPP\s*PBA|CPPN|CN|CCyC)?|artículos?\s+\d+(?:\s*y\s*\d+)*|inc(?:iso|\.)\s*\d+(?:°|º)?|ley\s+\d+[.\d]*)/gi
 
     const parts = []
     let lastIndex = 0
@@ -312,7 +312,7 @@ export default function LegalConsult() {
     }
 
     const dismissCallout = useCallback(() => {
-        try { localStorage.setItem('lc-callout-dismissed', 'true') } catch {}
+        try { localStorage.setItem('lc-callout-dismissed', 'true') } catch { /* localStorage puede no estar disponible */ }
         setShowCallout(false)
     }, [])
 

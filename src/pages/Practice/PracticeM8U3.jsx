@@ -8,12 +8,12 @@ function PracticeM8U3() {
     return (
         <div className="page">
             <PageSEO
-                title="Implementación y Validación del Sistema · M8 U3"
+                title="Implementación y Validación del Sistema · M10 U3"
                 description="Cómo llevar los diseños de flujos a la realidad y validarlos para que sean confiables, sostenibles y responsables."
                 path="/practice-u3"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 8 · Unidad 3</span>
+                <span className="page__module-tag">Módulo 10 · Unidad 3</span>
                 <h1 className="page__title">Implementación práctica y validación del sistema</h1>
                 <p className="page__description">
                     Cómo llevar los diseños a la realidad y validarlos para que sean confiables, sostenibles y responsables.
@@ -326,7 +326,7 @@ function PracticeM8U3() {
                     <div className="unit-nav-prev">
                         <Link to="/practice-u2" className="unit-nav-link">
                             <span className="unit-nav-label">← Unidad anterior</span>
-                            <span className="unit-nav-title">M8 U2: Diseño de flujos de trabajo con IA</span>
+                            <span className="unit-nav-title">M10 U2: Diseño de flujos de trabajo con IA</span>
                         </Link>
                     </div>
                     <div className="unit-status">

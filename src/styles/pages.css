@@ -194,7 +194,8 @@
 @media (max-width: 900px) {
     .hero-section {
         margin: calc(var(--sp-16) * -1) calc(var(--sp-5) * -1) var(--sp-8);
-        padding: var(--sp-12) var(--sp-5);
+        /* el padding-top debe superar los ~56px del botón de menú fijo */
+        padding: calc(var(--sp-16) + var(--sp-2)) var(--sp-5) var(--sp-12);
     }
 
     .page__title {
@@ -209,7 +210,7 @@
 @media (max-width: 480px) {
     .hero-section {
         margin: calc(var(--sp-16) * -1) calc(var(--sp-4) * -1) var(--sp-8);
-        padding: var(--sp-10) var(--sp-4);
+        padding: calc(var(--sp-16) + var(--sp-2)) var(--sp-4) var(--sp-10);
     }
 
     .hero-stats {

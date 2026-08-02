@@ -187,13 +187,6 @@ const BookIcon = () => (
   </svg>
 )
 
-const EditIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-  </svg>
-)
-
 const ChevronDown = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="6 9 12 15 18 9"/>
@@ -256,9 +249,13 @@ function ModuleItem({ mod, onLinkClick }) {
   const isAnyUnitActive = mod.units.some(u => location.pathname === u.path)
   const [open, setOpen] = useState(isAnyUnitActive)
 
-  useEffect(() => {
+  // Auto-expandir al navegar a una unidad del módulo, derivado en render
+  // (patrón "adjusting state when props change" — evita el setState en effect)
+  const [prevUnitActive, setPrevUnitActive] = useState(isAnyUnitActive)
+  if (isAnyUnitActive !== prevUnitActive) {
+    setPrevUnitActive(isAnyUnitActive)
     if (isAnyUnitActive) setOpen(true)
-  }, [isAnyUnitActive])
+  }
 
   return (
     <li className={`nav-module ${open ? 'nav-module--open' : ''}`}>
@@ -407,16 +404,6 @@ function Navigation() {
               >
                 <span className="nav-link__icon"><BookIcon /></span>
                 Glosario
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/notes"
-                className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
-                onClick={closeNav}
-              >
-                <span className="nav-link__icon"><EditIcon /></span>
-                Notas
               </NavLink>
             </li>
           </ul>

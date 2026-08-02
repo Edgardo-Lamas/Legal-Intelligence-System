@@ -8,12 +8,12 @@ function PracticeM8U2() {
     return (
         <div className="page">
             <PageSEO
-                title="Diseño de Flujos de Trabajo con IA · M8 U2"
+                title="Diseño de Flujos de Trabajo con IA · M10 U2"
                 description="Cómo pasar de una idea general de uso de IA a una estructura operativa sostenible en tu estudio jurídico."
                 path="/practice-u2"
             />
             <header className="page__header">
-                <span className="page__module-tag">Módulo 8 · Unidad 2</span>
+                <span className="page__module-tag">Módulo 10 · Unidad 2</span>
                 <h1 className="page__title">Diseño de flujos de trabajo con IA</h1>
                 <p className="page__description">
                     Cómo pasar de una idea general de "uso de IA" a una estructura operativa sostenible.
@@ -354,7 +354,7 @@ function PracticeM8U2() {
                     <div className="unit-nav-prev">
                         <Link to="/practice" className="unit-nav-link">
                             <span className="unit-nav-label">← Unidad anterior</span>
-                            <span className="unit-nav-title">M8 U1: Del concepto al sistema</span>
+                            <span className="unit-nav-title">M10 U1: Del concepto al sistema</span>
                         </Link>
                     </div>
                     <div className="unit-status">
